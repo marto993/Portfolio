@@ -4,10 +4,16 @@ Portfolio personal desarrollado con React, Vite y Tailwind CSS, desplegado autom
 
 ## 🚀 Despliegue Automático
 
-Este proyecto se despliega automáticamente en GitHub Pages usando GitHub Actions. Cada push a la rama `main` activa el despliegue.
+Este proyecto se despliega automáticamente en GitHub Pages usando GitHub Actions. Cada push a la rama `main` activa el despliegue automáticamente.
 
 ### URL del Sitio
 - **Producción**: https://marto993.github.io/Portfolio
+
+### Configuración de Despliegue
+- **Repositorio**: `Portfolio`
+- **Rama**: `main`
+- **Base path**: `/Portfolio/`
+- **Workflow**: `.github/workflows/deploy.yml`
 
 ## 🛠️ Desarrollo Local
 
@@ -64,9 +70,10 @@ src/
 - `VITE_BASE_URL`: URL base del sitio
 
 ### GitHub Pages
-- Configurado para desplegar desde la rama `gh-pages`
-- Build automático con GitHub Actions
-- Base path: `/martin-digeronimo-portfolio/`
+- Configurado para desplegar desde GitHub Actions
+- Build automático con cada push a `main`
+- Base path: `/Portfolio/`
+- Workflow: `.github/workflows/deploy.yml`
 
 ## 📝 Características
 
@@ -85,6 +92,20 @@ src/
 - **Fechas**: date-fns
 - **Automatización**: n8n (formulario de contacto)
 - **Despliegue**: GitHub Pages + GitHub Actions
+
+## 🔄 Cómo Hacer Cambios y Desplegar
+
+### Para hacer cambios:
+1. **Edita los archivos** en tu editor local
+2. **Prueba localmente**: `npm run dev`
+3. **Haz commit**: `git add . && git commit -m "Descripción del cambio"`
+4. **Push a GitHub**: `git push`
+5. **El despliegue es automático** - GitHub Actions se encarga del resto
+
+### Verificar despliegue:
+- Ve a la pestaña **"Actions"** en GitHub
+- Espera a que termine el workflow (2-3 minutos)
+- Visita: https://marto993.github.io/Portfolio
 
 ## 📞 Contacto
 

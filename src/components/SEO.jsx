@@ -22,7 +22,7 @@ export default function SEO({
   useEffect(() => {
     // Actualizar título de la página
     if (title) {
-      document.title = `${title} | Tu Portfolio`;
+      document.title = `${title} | Martín Di Geronimo`;
     }
 
     // Función para actualizar o crear meta tag
@@ -56,7 +56,7 @@ export default function SEO({
     updateMetaTag('og:type', type, true);
     updateMetaTag('og:url', url, true);
     updateMetaTag('og:image', image, true);
-    updateMetaTag('og:site_name', 'Tu Portfolio', true);
+    updateMetaTag('og:site_name', 'Martín Di Geronimo', true);
 
     // Twitter Card tags
     updateMetaTag('twitter:card', 'summary_large_image');
@@ -81,7 +81,7 @@ export default function SEO({
     return () => {
       // Restaurar título por defecto si es necesario
       if (title) {
-        document.title = 'Tu Portfolio';
+        document.title = 'Martín Di Geronimo - Desarrollador & Especialista en Automatizaciones';
       }
     };
   }, [title, description, keywords, image, url, type]);
