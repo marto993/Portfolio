@@ -16,7 +16,7 @@ import { getFeaturedArticles } from './blog/utils/articleUtils';
 const Logo = () => (
   <div className="flex items-center space-x-3">
     <img 
-      src="/assets/MDG.png" 
+      src="/Portfolio/assets/MDG.png" 
       alt="MDG Logo" 
       className="w-10 h-10 object-contain"
     />
