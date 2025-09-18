@@ -11,6 +11,7 @@
     "deploy": "npm run build && echo 'Build completed. Push to main branch to deploy.'"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.23.13",
     "lucide-react": "^0.544.0",

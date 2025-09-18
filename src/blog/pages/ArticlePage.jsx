@@ -142,7 +142,7 @@ export default function ArticlePage({ slug, onBack }) {
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
                     <span className="text-gray-400">Fecha:</span>
-                    <span className="text-white">{new Date(article.date).toLocaleDateString('es-ES')}</span>
+                    <span className="text-white">{new Date(article.date + 'T00:00:00').toLocaleDateString('es-AR', { year: 'numeric', month: 'numeric', day: 'numeric' })}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-400">Categoría:</span>
