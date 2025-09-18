@@ -40,6 +40,10 @@ function App() {
   const [modalCurrentIndex, setModalCurrentIndex] = useState(0);
   const [modalTitle, setModalTitle] = useState('');
   
+  // Estado para el formulario de contacto
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
+  
   // Hook para obtener artículos destacados
   const { articles } = useArticles();
   const featuredArticles = getFeaturedArticles(articles, 3);
@@ -130,7 +134,7 @@ function App() {
   const projects = [
     {
       title: "El Prode",
-      description: "Plataforma completa de pronósticos deportivos desarrollada en 2022 con sistema de puntuación y rankings.",
+      description: "Plataforma completa de pronósticos deportivos desarrollada en 2022 con sistema de puntuación personalizado.",
       images: [
         "/Portfolio/assets/El Prode/1-elprode-index1.png",
         "/Portfolio/assets/El Prode/2-elprode-index2.png",
@@ -262,6 +266,38 @@ function App() {
     setIsImageModalOpen(false);
   };
 
+  // Función para manejar el envío del formulario con Formspree
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        form.reset(); // Limpiar el formulario
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error enviando formulario:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-dark-950">
@@ -368,8 +404,8 @@ function App() {
                 Amplia experiencia en ERP y Automatizaciones
               </p>
               <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-xl">
-                Creo soluciones tecnológicas que optimizan procesos y potencian negocios. 
-                Especializado en crear soluciones a medida.
+                Desarrollo aplicaciones que optimizan procesos empresariales y potencian el crecimiento de los negocios. 
+                Especializado en automatización, integraciones y modernización de sistemas ERP.
               </p>
               
               <div className="flex flex-wrap gap-4 mb-12">
@@ -747,12 +783,32 @@ function App() {
               </div>
 
               <div className="glass-effect rounded-2xl p-8">
-                <form className="space-y-6">
+                {/* Mensajes de estado */}
+                {submitStatus === 'success' && (
+                  <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
+                    <p className="text-green-400">¡Mensaje enviado correctamente! Te responderé pronto.</p>
+                  </div>
+                )}
+                
+                {submitStatus === 'error' && (
+                  <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
+                    <p className="text-red-400">Error al enviar el mensaje. Inténtalo de nuevo o contáctame directamente.</p>
+                  </div>
+                )}
+
+                <form 
+                  action="https://formspree.io/f/xyzdryqb" 
+                  method="POST"
+                  onSubmit={handleFormSubmit}
+                  className="space-y-6"
+                >
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Nombre</label>
                       <input 
                         type="text"
+                        name="name"
+                        required
                         className="w-full px-4 py-3 rounded-lg bg-dark-800/50 border border-gray-700 focus:border-primary-500 focus:outline-none text-white"
                         placeholder="Tu nombre"
                       />
@@ -761,6 +817,8 @@ function App() {
                       <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
                       <input 
                         type="email"
+                        name="email"
+                        required
                         className="w-full px-4 py-3 rounded-lg bg-dark-800/50 border border-gray-700 focus:border-primary-500 focus:outline-none text-white"
                         placeholder="tu@email.com"
                       />
@@ -771,6 +829,8 @@ function App() {
                     <label className="block text-sm font-medium text-gray-300 mb-2">Asunto</label>
                     <input 
                       type="text"
+                      name="subject"
+                      required
                       className="w-full px-4 py-3 rounded-lg bg-dark-800/50 border border-gray-700 focus:border-primary-500 focus:outline-none text-white"
                       placeholder="¿En qué te puedo ayudar?"
                     />
@@ -780,14 +840,29 @@ function App() {
                     <label className="block text-sm font-medium text-gray-300 mb-2">Mensaje</label>
                     <textarea 
                       rows="5"
+                      name="message"
+                      required
                       className="w-full px-4 py-3 rounded-lg bg-dark-800/50 border border-gray-700 focus:border-primary-500 focus:outline-none text-white resize-none"
                       placeholder="Cuéntame sobre tu proyecto o necesidad..."
                     ></textarea>
                   </div>
                   
-                  <button type="submit" className="w-full button-primary inline-flex items-center justify-center gap-2">
-                    <Send size={18} />
-                    Enviar Mensaje
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full button-primary inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                        Enviando...
+                      </>
+                    ) : (
+                      <>
+                        <Send size={18} />
+                        Enviar Mensaje
+                      </>
+                    )}
                   </button>
                 </form>
               </div>

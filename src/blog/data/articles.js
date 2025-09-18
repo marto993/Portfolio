@@ -3,6 +3,382 @@
 
 export const articlesData = [
   {
+    slug: 'bitcoin-criptomonedas-explicacion-tecnica',
+    title: 'Bitcoin y Criptomonedas: Una Explicación Técnica',
+    date: '2025-09-18',
+    excerpt: 'Explicación técnica de Bitcoin, blockchain y criptomonedas, desde su origen hasta las limitaciones actuales y el futuro del dinero digital.',
+    readTime: '10 min',
+    category: 'Tecnología',
+    tags: ['bitcoin', 'blockchain', 'criptomonedas', 'tecnología', 'finanzas'],
+    featured: true,
+    content: `
+      <div class="prose prose-invert prose-lg max-w-none">
+        
+        <div class="bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-xl p-6 mb-8 border border-orange-500/20">
+          <p class="text-xl text-gray-300 leading-relaxed mb-0">Bitcoin representa una revolución en el concepto de dinero digital. Más allá de la especulación, es una tecnología que permite transferir valor sin intermediarios, pero con limitaciones técnicas importantes que debemos entender.</p>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
+          <span class="w-2 h-8 bg-gradient-to-b from-orange-500 to-yellow-500 rounded-full mr-4"></span>
+          El Origen: Satoshi Nakamoto y el Whitepaper
+        </h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">En octubre de 2008, una persona o grupo bajo el pseudónimo <span class="bg-orange-500/20 text-orange-300 px-2 py-1 rounded font-semibold">Satoshi Nakamoto</span> publicó el whitepaper "Bitcoin: A Peer-to-Peer Electronic Cash System". Este documento de 9 páginas describía un sistema de dinero electrónico que funcionaba sin necesidad de confiar en terceros.</p>
+        
+        <div class="bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-xl p-6 mb-8 border border-orange-500/20">
+          <h3 class="text-xl font-semibold text-white mb-4">El Problema del Doble Gasto</h3>
+          <p class="text-gray-300 mb-4">El desafío principal que Bitcoin resolvió fue el "problema del doble gasto": cómo evitar que alguien use el mismo dinero digital dos veces. En sistemas tradicionales, los bancos centrales mantienen registros centralizados. Bitcoin lo resolvió con una red descentralizada.</p>
+          <div class="bg-gray-900 rounded p-4 text-sm font-mono text-gray-300">
+            Problema: ¿Cómo evitar que alguien gaste el mismo Bitcoin dos veces?<br>
+            Solución: Red descentralizada con consenso distribuido
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
+          <span class="w-2 h-8 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full mr-4"></span>
+          Blockchain: La Base Técnica
+        </h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">La <span class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded font-semibold">blockchain</span> es el corazón técnico de Bitcoin. Es una base de datos distribuida que mantiene un registro cronológico e inmutable de todas las transacciones.</p>
+        
+        <div class="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-xl p-6 mb-8 border border-blue-500/20">
+          <h3 class="text-xl font-semibold text-white mb-4">Componentes Técnicos del Blockchain</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <div class="bg-dark-800/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-blue-400 mb-2">Bloques</h4>
+                <p class="text-gray-300 text-sm">Contenedores que agrupan transacciones. Cada bloque contiene un hash del bloque anterior, creando una cadena inmutable.</p>
+              </div>
+              <div class="bg-dark-800/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-cyan-400 mb-2">Hash</h4>
+                <p class="text-gray-300 text-sm">Función criptográfica que convierte datos en una cadena única de caracteres. Cualquier cambio en los datos cambia completamente el hash.</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-dark-800/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-green-400 mb-2">Minería</h4>
+                <p class="text-gray-300 text-sm">Proceso de validación de transacciones mediante resolución de problemas matemáticos complejos (Proof of Work).</p>
+              </div>
+              <div class="bg-dark-800/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-purple-400 mb-2">Consenso</h4>
+                <p class="text-gray-300 text-sm">Mecanismo que permite a la red acordar qué transacciones son válidas sin una autoridad central.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">¿Cómo Funciona una Transacción?</h3>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Cuando envías Bitcoin, el proceso técnico es el siguiente:</p>
+        
+        <div class="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-xl p-6 mb-8 border border-blue-500/20">
+          <ol class="space-y-4 text-gray-300">
+            <li class="flex items-start">
+              <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">1</span>
+              <span><strong class="text-white">Creación de transacción</strong> con clave privada</span>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">2</span>
+              <span><strong class="text-white">Difusión a la red</strong> de nodos</span>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">3</span>
+              <span><strong class="text-white">Validación</strong> por mineros</span>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">4</span>
+              <span><strong class="text-white">Inclusión en bloque</strong> y minado</span>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">5</span>
+              <span><strong class="text-white">Confirmación</strong> por la red</span>
+            </li>
+          </ol>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
+          <span class="w-2 h-8 bg-gradient-to-b from-yellow-500 to-orange-500 rounded-full mr-4"></span>
+          Bitcoin como Oro Digital
+        </h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Una de las características más importantes de Bitcoin es su <span class="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded font-semibold">escasez programada</span>. Solo existirán 21 millones de Bitcoin, y esta limitación está codificada en el protocolo.</p>
+        
+        <div class="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-xl p-6 mb-8 border border-yellow-500/20">
+          <h3 class="text-xl font-semibold text-white mb-4">Halving: Reducción Automática de Recompensas</h3>
+          <p class="text-gray-300 mb-4">Cada 210,000 bloques (aproximadamente cada 4 años), la recompensa por minar se reduce a la mitad. Esto simula la escasez del oro, pero de forma predecible y programática.</p>
+          <div class="bg-gray-900 rounded p-4 text-sm font-mono text-gray-300">
+            2009-2012: 50 BTC por bloque<br>
+            2012-2016: 25 BTC por bloque<br>
+            2016-2020: 12.5 BTC por bloque<br>
+            2020-2024: 6.25 BTC por bloque<br>
+            2024-2028: 3.125 BTC por bloque
+          </div>
+        </div>
+                
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
+          <span class="w-2 h-8 bg-gradient-to-b from-red-500 to-pink-500 rounded-full mr-4"></span>
+          Limitaciones Técnicas Actuales
+        </h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">A pesar de sus innovaciones, Bitcoin tiene limitaciones técnicas importantes que afectan su uso como moneda de pago diario.</p>
+        
+        <div class="bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-xl p-6 mb-8 border border-red-500/20">
+          <h3 class="text-xl font-semibold text-white mb-4">Limitaciones Principales</h3>
+          <div class="space-y-6">
+            <div class="bg-dark-800/50 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-red-400 mb-2">Velocidad de Transacciones</h4>
+              <p class="text-gray-300 text-sm mb-2">Bitcoin genera un nuevo bloque aproximadamente cada 10 minutos. Las transacciones quedan pendientes en la mempool hasta ser incluidas en un bloque, priorizando aquellas con comisiones más altas. Esto puede resultar en tiempos de espera significativos durante períodos de alta demanda.</p>
+              <div class="bg-gray-900 rounded p-3 text-xs font-mono text-gray-300">
+                Tiempo entre bloques: ~10 minutos<br>
+                Transacciones pendientes en mempool<br>
+                Prioridad por comisión (fee) pagada
+              </div>
+            </div>
+            
+            <div class="bg-dark-800/50 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-pink-400 mb-2">Capacidad Limitada por Bloque</h4>
+              <p class="text-gray-300 text-sm mb-2">Originalmente cada bloque tenía un límite de 1MB. El protocolo SegWit (Segregated Witness) implementado en 2017 aumentó efectivamente la capacidad al separar los datos de firma de las transacciones, permitiendo más transacciones por bloque sin aumentar el tamaño base.</p>
+              <div class="bg-gray-900 rounded p-3 text-xs font-mono text-gray-300">
+                Tamaño base de bloque: 1MB<br>
+                SegWit: Separación de datos de firma<br>
+                Capacidad efectiva aumentada
+              </div>
+            </div>
+            
+            <div class="bg-dark-800/50 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-orange-400 mb-2">Costos Variables</h4>
+              <p class="text-gray-300 text-sm mb-2">Las comisiones de transacción varían según la congestión de la red. Durante períodos de alta demanda, las comisiones pueden ser prohibitivamente altas para transacciones pequeñas.</p>
+              <div class="bg-gray-900 rounded p-3 text-xs font-mono text-gray-300">
+                Comisión mínima: Variable<br>
+                Comisión alta demanda: $50-100+ USD
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Soluciones de Segunda Capa</h3>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Para abordar estas limitaciones, se han desarrollado soluciones de segunda capa como Lightning Network.</p>
+        
+        <div class="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl p-6 mb-8 border border-green-500/20">
+          <h4 class="text-xl font-semibold text-white mb-4">Lightning Network</h4>
+          <p class="text-gray-300 mb-4">Una red de canales de pago que permite transacciones instantáneas y de bajo costo fuera de la blockchain principal. Los usuarios abren canales depositando Bitcoin y pueden realizar transacciones ilimitadas casi sin comisiones.</p>
+          <div class="bg-gray-900 rounded p-4 text-sm font-mono text-gray-300">
+            Ventajas:<br>
+            • Transacciones practicamente instantáneas<br>
+            • Comisiones mínimas<br>
+            • Escalabilidad mejorada <br>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
+          <span class="w-2 h-8 bg-gradient-to-b from-purple-500 to-indigo-500 rounded-full mr-4"></span>
+          Bitcoin vs Ethereum: Diferentes Propósitos
+        </h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Mientras Bitcoin se enfoca en ser una reserva de valor, <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded font-semibold">Ethereum</span> se diseñó como una plataforma para aplicaciones descentralizadas y contratos inteligentes.</p>
+        
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-gradient-to-br from-orange-500/10 to-yellow-500/10 rounded-xl p-6 border border-orange-500/20">
+            <h4 class="text-lg font-semibold text-orange-400 mb-4 flex items-center">
+              <span class="w-1 h-6 bg-orange-400 rounded-full mr-3"></span>
+              Bitcoin
+            </h4>
+            <ul class="space-y-2 text-gray-300 text-sm">
+              <li>• <strong>Propósito:</strong> Reserva de valor digital</li>
+              <li>• <strong>Consenso:</strong> Proof of Work</li>
+              <li>• <strong>Programabilidad:</strong> Limitada</li>
+              <li>• <strong>Enfoque:</strong> Seguridad y descentralización</li>
+            </ul>
+          </div>
+          
+          <div class="bg-gradient-to-br from-purple-500/10 to-indigo-500/10 rounded-xl p-6 border border-purple-500/20">
+            <h4 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
+              <span class="w-1 h-6 bg-purple-400 rounded-full mr-3"></span>
+              Ethereum
+            </h4>
+            <ul class="space-y-2 text-gray-300 text-sm">
+              <li>• <strong>Propósito:</strong> Plataforma de aplicaciones</li>
+              <li>• <strong>Consenso:</strong> Proof of Stake</li>
+              <li>• <strong>Programabilidad:</strong> Completa (Smart Contracts)</li>
+              <li>• <strong>Enfoque:</strong> Flexibilidad y funcionalidad</li>
+            </ul>
+          </div>
+        </div>
+        
+        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Smart Contracts</h3>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Los contratos inteligentes son programas que se ejecutan automáticamente cuando se cumplen ciertas condiciones. Ethereum los popularizó, pero Bitcoin también tiene capacidades limitadas de scripting.</p>
+        
+        <div class="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-xl p-6 mb-8 border border-purple-500/20">
+          <h4 class="text-xl font-semibold text-white mb-4">Casos de Uso de Smart Contracts</h4>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start">
+              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span><strong class="text-white">DeFi (Finanzas Descentralizadas)</strong> - Préstamos, intercambios, seguros</span>
+            </li>
+            <li class="flex items-start">
+              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span><strong class="text-white">NFTs</strong> - Tokens únicos, muy utilizados para arte digital e invesión de real state</span>
+            </li>
+            <li class="flex items-start">
+              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span><strong class="text-white">DAOs</strong> - Organizaciones autónomas descentralizadas</span>
+            </li>
+            <li class="flex items-start">
+              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span><strong class="text-white">Supply Chain</strong> - Trazabilidad de productos</span>
+            </li>
+          </ul>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
+          <span class="w-2 h-8 bg-gradient-to-b from-green-500 to-teal-500 rounded-full mr-4"></span>
+          El Potencial: Dinero Sin Fronteras
+        </h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">La característica más revolucionaria de Bitcoin es su capacidad de permitir <span class="bg-green-500/20 text-green-300 px-2 py-1 rounded font-semibold">transferencias de valor sin fronteras</span>. Esto tiene implicaciones profundas para la inclusión financiera global.</p>
+        
+        <div class="bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-xl p-6 mb-8 border border-green-500/20">
+          <h3 class="text-xl font-semibold text-white mb-4">Casos de Uso Globales</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <div class="bg-dark-800/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-green-400 mb-2">Remesas</h4>
+                <p class="text-gray-300 text-sm">Envío de dinero a familiares en otros países sin intermediarios bancarios costosos. Especialmente valioso en países con sistemas bancarios limitados.</p>
+              </div>
+              <div class="bg-dark-800/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-teal-400 mb-2">Protección contra Inflación</h4>
+                <p class="text-gray-300 text-sm">En países con alta inflación, Bitcoin puede servir como reserva de valor más estable que la moneda local.</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-dark-800/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-blue-400 mb-2">Inclusión Financiera</h4>
+                <p class="text-gray-300 text-sm">Personas sin acceso a bancos tradicionales pueden participar en la economía global usando solo un smartphone.</p>
+              </div>
+              <div class="bg-dark-800/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-purple-400 mb-2">Comercio Internacional</h4>
+                <p class="text-gray-300 text-sm">Empresas pueden realizar pagos internacionales sin depender de sistemas bancarios tradicionales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
+          <span class="w-2 h-8 bg-gradient-to-b from-red-500 to-orange-500 rounded-full mr-4"></span>
+          Los Riesgos de la Autocustodia
+        </h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Aunque la autocustodia es una característica fundamental de Bitcoin, también presenta riesgos importantes que a menudo se pasan por alto.</p>
+        
+        <div class="bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl p-6 mb-8 border border-red-500/20">
+          <h3 class="text-xl font-semibold text-white mb-4">Riesgos Principales</h3>
+          <div class="space-y-6">
+            <div class="bg-dark-800/50 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-red-400 mb-2">Pérdida de Claves Privadas</h4>
+              <p class="text-gray-300 text-sm mb-2">Si pierdes tu clave privada o frase semilla, pierdes acceso permanente a tus Bitcoin. No hay recuperación posible, a diferencia de los bancos tradicionales.</p>
+              <div class="bg-gray-900 rounded p-3 text-xs font-mono text-gray-300">
+                "Sin clave privada = Sin Bitcoin"<br>
+                No hay servicio al cliente para recuperar fondos
+              </div>
+            </div>
+            
+            <div class="bg-dark-800/50 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-orange-400 mb-2">Transparencia de la Blockchain</h4>
+              <p class="text-gray-300 text-sm mb-2">Todas las transacciones son públicas y rastreables. Esto puede comprometer la privacidad y hacer a los usuarios vulnerables a ataques dirigidos.</p>
+              <div class="bg-gray-900 rounded p-3 text-xs font-mono text-gray-300">
+                Todas las transacciones son públicas<br>
+                Direcciones pueden ser vinculadas a individuos a través de su IP
+              </div>
+            </div>
+            
+            <div class="bg-dark-800/50 rounded-lg p-4">
+              <h4 class="text-lg font-semibold text-yellow-400 mb-2">Complejidad Técnica</h4>
+              <p class="text-gray-300 text-sm mb-2">Gestionar Bitcoin de forma segura requiere conocimiento técnico. Errores comunes incluyen usar exchanges como wallets, no hacer backups, o usar software inseguro.</p>
+              <div class="bg-gray-900 rounded p-3 text-xs font-mono text-gray-300">
+                Errores comunes:<br>
+                • Usar exchanges como wallets<br>
+                • No hacer backups de claves<br>
+                • Usar software no verificado
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">El Dilema de la Adopción</h3>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">La adopción masiva de Bitcoin enfrenta un dilema fundamental: mientras más personas lo usen, más valioso se vuelve, pero también más complejo de usar de forma segura.</p>
+        
+        <div class="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-xl p-6 mb-8 border border-yellow-500/20">
+          <h4 class="text-xl font-semibold text-white mb-4">El Reto de la Usabilidad</h4>
+          <p class="text-gray-300 mb-4">Para que Bitcoin sea adoptado masivamente, debe ser tan fácil de usar como el dinero tradicional, pero sin sacrificar la seguridad y descentralización que lo hacen único.</p>
+          <div class="bg-gray-900 rounded p-4 text-sm font-mono text-gray-300">
+            Desafío: Simplicidad vs Seguridad<br>
+            Solución: Educación + Herramientas mejores<br>
+            Resultado: Adopción gradual y responsable
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
+          <span class="w-2 h-8 bg-gradient-to-b from-indigo-500 to-purple-500 rounded-full mr-4"></span>
+          El Futuro: Evolución Continua
+        </h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Bitcoin continúa evolucionando. Las mejoras técnicas, las soluciones de segunda capa y la adopción institucional están moldeando su futuro como reserva de valor digital.</p>
+        
+        <div class="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-xl p-6 mb-8 border border-indigo-500/20">
+          <h3 class="text-xl font-semibold text-white mb-4">Tendencias Futuras</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <div class="bg-dark-800/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-indigo-400 mb-2">Adopción Institucional</h4>
+                <p class="text-gray-300 text-sm">Empresas y gobiernos comenzando a considerar Bitcoin como reserva de valor oficial.</p>
+              </div>
+              <div class="bg-dark-800/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-purple-400 mb-2">Mejoras Técnicas</h4>
+                <p class="text-gray-300 text-sm">Taproot, Schnorr signatures y otras mejoras que mejoran la privacidad y eficiencia.</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-dark-800/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-blue-400 mb-2">Soluciones de Segunda Capa</h4>
+                <p class="text-gray-300 text-sm">Lightning Network y otras tecnologías que resuelven las limitaciones de escalabilidad.</p>
+              </div>
+              <div class="bg-dark-800/50 rounded-lg p-4">
+                <h4 class="text-lg font-semibold text-green-400 mb-2">Regulación</h4>
+                <p class="text-gray-300 text-sm">Marco regulatorio más claro que facilite la adopción empresarial.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
+          <span class="w-2 h-8 bg-gradient-to-b from-emerald-500 to-teal-500 rounded-full mr-4"></span>
+          Conclusión
+        </h2>
+        
+        <div class="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-xl p-8 mb-8 border border-emerald-500/20">
+          <p class="text-gray-300 leading-relaxed mb-6 text-lg">Bitcoin representa una innovación fundamental en el concepto de dinero digital. Su diseño como reserva de valor programáticamente escasa, combinado con su capacidad de transferir valor sin fronteras, lo posiciona como una alternativa viable al sistema financiero tradicional.</p>
+          
+          <p class="text-gray-300 leading-relaxed mb-6 text-lg">Sin embargo, sus limitaciones técnicas actuales - velocidad, costos y complejidad de uso - lo hacen más adecuado como reserva de valor que como moneda de pago diario. La evolución hacia soluciones de segunda capa como Lightning Network está abordando estos desafíos.</p>
+          
+          <p class="text-gray-300 leading-relaxed mb-6 text-lg">El futuro de Bitcoin dependerá de su capacidad para equilibrar la seguridad y descentralización con la usabilidad necesaria para la adopción masiva. Mientras tanto, continúa demostrando su valor como herramienta para la inclusión financiera global y la protección contra la inflación.</p>
+          
+          <p class="text-gray-300 leading-relaxed mb-0 text-lg">La revolución de las criptomonedas apenas comienza, y Bitcoin, como pionero, seguirá evolucionando para cumplir su visión original de dinero digital verdaderamente descentralizado.</p>
+        </div>
+        
+        <div class="border-t border-gray-700 my-12"></div>
+        
+        <div class="bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-xl p-6 border border-orange-500/20">
+          <p class="text-gray-400 italic text-center mb-0">
+            ¿Te interesa aprender más sobre Bitcoin, blockchain o automatizaciones con criptomonedas? Contáctame para una consulta sobre cómo estas tecnologías pueden aplicarse en tu proyecto.
+          </p>
+        </div>
+      </div>
+    `
+  },
+  {
     slug: 'mi-carrera-desarrollo',
     title: 'Mi carrera en desarrollo de software',
     date: '2025-08-30',

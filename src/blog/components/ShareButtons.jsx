@@ -15,7 +15,7 @@ export default function ShareButtons({ article, baseUrl }) {
     return null;
   }
 
-  const siteUrl = baseUrl || (typeof window !== 'undefined' ? window.location.origin : '');
+  const siteUrl = (baseUrl || (typeof window !== 'undefined' ? window.location.origin : '')) + "/Portfolio/";
   const articleUrl = `${siteUrl}#blog/${article.slug}`;
   const shareText = `${article.title} - ${article.excerpt}`;
 
