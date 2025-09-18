@@ -24,8 +24,8 @@ Este proyecto se despliega automáticamente en GitHub Pages usando GitHub Action
 ### Instalación
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/martin-digeronimo-portfolio.git
-cd martin-digeronimo-portfolio
+git clone https://github.com/marto993/Portfolio.git
+cd portfolio
 
 # Instalar dependencias
 npm install

@@ -9,6 +9,8 @@ import ArticlePage from './blog/pages/ArticlePage';
 import SEO from './components/SEO';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import ImageCarousel from './components/ImageCarousel';
+import ImageModal from './components/ImageModal';
 import { useArticles } from './blog/hooks/useArticles';
 import { getFeaturedArticles } from './blog/utils/articleUtils';
 
@@ -31,6 +33,12 @@ function App() {
   const [currentArticle, setCurrentArticle] = useState(null);
   const [activeSection, setActiveSection] = useState('hero');
   const [scrollProgress, setScrollProgress] = useState(0);
+  
+  // Estado para el modal de imágenes
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+  const [modalImages, setModalImages] = useState([]);
+  const [modalCurrentIndex, setModalCurrentIndex] = useState(0);
+  const [modalTitle, setModalTitle] = useState('');
   
   // Hook para obtener artículos destacados
   const { articles } = useArticles();
@@ -123,15 +131,39 @@ function App() {
     {
       title: "El Prode",
       description: "Plataforma completa de pronósticos deportivos desarrollada en 2022 con sistema de puntuación y rankings.",
-      image: "/api/placeholder/400/250",
-      technologies: ["React", "Node.js", "Express", "PostgreSQL"],
+      images: [
+        "/Portfolio/assets/El Prode/1-elprode-index1.png",
+        "/Portfolio/assets/El Prode/2-elprode-index2.png",
+        "/Portfolio/assets/El Prode/3-elprode-index3.png",
+        "/Portfolio/assets/El Prode/4-elprode-login.png",
+        "/Portfolio/assets/El Prode/5-elprode-recupera.png",
+        "/Portfolio/assets/El Prode/6-elprode-posiciones.png",
+        "/Portfolio/assets/El Prode/7-elprode-pronosticos.png",
+        "/Portfolio/assets/El Prode/8-elprode-simulador.png"
+      ],
+      technologies: ["PHP", "MySQL", "HTML", "Bootstrap", "JavaScript", "jQuery"],
       github: "#",
       demo: "#"
     },
     {
       title: "BoxTaller",
       description: "Sistema de gestión para talleres mecánicos desarrollado en 2025 con funcionalidades completas de administración.",
-      image: "/api/placeholder/400/250",
+      images: [
+        "/Portfolio/assets/BoxTaller/1-boxtaller-login.png",
+        "/Portfolio/assets/BoxTaller/2-boxtaller-dashboard.png",
+        "/Portfolio/assets/BoxTaller/3-boxtaller-ordenes.png",
+        "/Portfolio/assets/BoxTaller/4-boxtaller-clientes.png",
+        "/Portfolio/assets/BoxTaller/5-boxtaller-vehiculos.png",
+        "/Portfolio/assets/BoxTaller/6-boxtaller-taller.png",
+        "/Portfolio/assets/BoxTaller/7-boxtaller-estados.png",
+        "/Portfolio/assets/BoxTaller/8-boxtaller-estado-configuracion.png",
+        "/Portfolio/assets/BoxTaller/9-boxtaller-estado-transiciones.png",
+        "/Portfolio/assets/BoxTaller/10-boxtaller-nueva-orden.png",
+        "/Portfolio/assets/BoxTaller/11-boxtaller-nuevo-cliente.png",
+        "/Portfolio/assets/BoxTaller/12-boxtaller-nuevo-vehiculo.png",
+        "/Portfolio/assets/BoxTaller/13-boxtaller-orden.png",
+        "/Portfolio/assets/BoxTaller/14-boxtaller-orden-PDF.png",
+      ],
       technologies: ["React", "Node.js", "Express", "MongoDB"],
       github: "#",
       demo: "#"
@@ -215,6 +247,19 @@ function App() {
 
   const handleBackToHome = () => {
     window.location.hash = '#hero';
+  };
+
+  // Función para manejar el click en las imágenes del carrusel
+  const handleImageClick = (imageSrc, imageIndex, projectTitle) => {
+    setModalImages(projects.find(p => p.title === projectTitle)?.images || []);
+    setModalCurrentIndex(imageIndex);
+    setModalTitle(projectTitle);
+    setIsImageModalOpen(true);
+  };
+
+  // Función para cerrar el modal de imágenes
+  const handleCloseImageModal = () => {
+    setIsImageModalOpen(false);
   };
 
   return (
@@ -320,11 +365,11 @@ function App() {
                 <span className="text-white">de Software</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-400 mb-4 font-light">
-                Especialista en ERP y Automatizaciones
+                Amplia experiencia en ERP y Automatizaciones
               </p>
               <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-xl">
-                Creo soluciones tecnológicas innovadoras que optimizan procesos y potencian negocios. 
-                Especializado en desarrollo web full-stack y automatizaciones inteligentes.
+                Creo soluciones tecnológicas que optimizan procesos y potencian negocios. 
+                Especializado en crear soluciones a medida.
               </p>
               
               <div className="flex flex-wrap gap-4 mb-12">
@@ -403,7 +448,7 @@ function App() {
             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Desarrollador de Software con <span className="text-primary-400 font-semibold">+10 años de experiencia</span> en TI, 
               especializado en sistemas ERP y modernización tecnológica. Combino sólidas competencias técnicas con 
-              habilidades de comunicación para gestionar proyectos completos, desde el análisis de requerimientos 
+              habilidades de comunicación para gestionar proyectos completos, con amplia experiencia en el desarrollo de soluciones a medida desde el análisis de requerimientos 
               hasta la implementación, sirviendo como puente efectivo entre avance tecnológico y reglas de negocio.
             </p>
           </div>
@@ -411,14 +456,14 @@ function App() {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="glass-effect rounded-2xl p-8 card-hover">
               <Code className="text-primary-400 mb-4" size={48} />
-              <h3 className="text-2xl font-bold mb-4 text-white">Desarrollo Full-Stack</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Desarrollo a Medida</h3>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Experiencia completa en desarrollo front-end y back-end con React, Node.js, Python, 
-                C# y PHP. Manejo de bases de datos relacionales (MySQL, PostgreSQL) y NoSQL (MongoDB) 
-                con despliegues en cloud (AWS, GCP, Railway).
+                Creo soluciones desde cero utilizando tecnologías modernas con bases de datos robustas y estructuras de datos bien definidas.
+                Mi experiencia incluye desde sistemas legacy en Visual FoxPro hasta arquitecturas en la nube con AWS y GCP. 
+                Cada proyecto lo desarrollo pensando en escalabilidad, rendimiento y mantenibilidad a largo plazo.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['React', 'Node.js', 'Python', 'MongoDB', 'PostgreSQL', 'MySQL', 'C#', 'PHP'].map(tech => (
+                {['React', 'Node.js', 'Python', 'MySQL', 'MongoDB', 'PostgreSQL', 'AWS', 'GCP', 'Railway', 'Visual FoxPro'].map(tech => (
                   <span key={tech} className="bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm">
                     {tech}
                   </span>
@@ -430,9 +475,9 @@ function App() {
               <Zap className="text-accent-400 mb-4" size={48} />
               <h3 className="text-2xl font-bold mb-4 text-white">Automatización de Procesos</h3>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Especialista en crear flujos automatizados con n8n y Zapier que conectan sistemas, 
-                eliminan tareas repetitivas y optimizan procesos empresariales. Experiencia en 
-                integración de APIs y automatización de workflows complejos.
+                Diseño workflows inteligentes con n8n que conectan sistemas heterogéneos y eliminan tareas manuales. 
+                Integro APIs REST, automatizo migraciones de datos y creo pipelines que mejoran la productividad empresarial. 
+                Mi enfoque combina análisis funcional con implementación técnica para lograr soluciones realmente efectivas.
               </p>
               <div className="flex flex-wrap gap-2">
                 {['n8n', 'APIs', 'Webhooks', 'Integrations', 'Workflows'].map(tech => (
@@ -445,14 +490,13 @@ function App() {
 
             <div className="glass-effect rounded-2xl p-8 card-hover">
               <Brain className="text-purple-400 mb-4" size={48} />
-              <h3 className="text-2xl font-bold mb-4 text-white">Liderazgo en Migraciones</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Modernización de Sistemas</h3>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Lideré exitosamente migraciones de sistemas complejos a plataformas de terceros. 
-                Experiencia en análisis de requerimientos, gestión de proyectos y modernización 
-                tecnológica que aporta valor real a los negocios.
+                Liderazgo en migraciones de sistemas legacy a plataformas modernas, gestionando proyectos de larga duración con equipos multidisciplinarios.
+                Desde el mapeo de estructuras de datos mediante análisis funcional, hasta el desarrollo de interfaces de migración, documentación técnica y programas de capacitación masiva.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['Project Management', 'System Migration', 'Requirements Analysis', 'Business Communication'].map(skill => (
+                {['Migración de Sistemas','Migración de Datos','Gestión','Liderazgo de Equipos','Capacitación','Documentación Técnica'].map(skill => (
                   <span key={skill} className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">
                     {skill}
                   </span>
@@ -469,49 +513,29 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Proyectos Destacados</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Una selección de proyectos que demuestran mis habilidades técnicas y creatividad
+              Algunos proyectos independientes en los que he trabajado
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <div key={index} className="glass-effect rounded-2xl overflow-hidden card-hover">
-                <div className="aspect-video bg-gray-800 relative">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent" />
-                </div>
+                <ImageCarousel 
+                  images={project.images}
+                  title={project.title}
+                  onImageClick={(imageSrc, imageIndex) => handleImageClick(imageSrc, imageIndex, project.title)}
+                />
                 
                 <div className="p-8">
                   <h3 className="text-2xl font-bold mb-4 text-white">{project.title}</h3>
                   <p className="text-gray-400 leading-relaxed mb-6">{project.description}</p>
                   
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-2">
                     {project.technologies.map(tech => (
                       <span key={tech} className="bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm">
                         {tech}
                       </span>
                     ))}
-                  </div>
-                  
-                  <div className="flex gap-4">
-                    <a 
-                      href={project.github}
-                      className="flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors"
-                    >
-                      <Github size={20} />
-                      Código
-                    </a>
-                    <a 
-                      href={project.demo}
-                      className="flex items-center gap-2 text-gray-400 hover:text-accent-400 transition-colors"
-                    >
-                      <ExternalLink size={20} />
-                      Demo
-                    </a>
                   </div>
                 </div>
               </div>
@@ -806,6 +830,15 @@ function App() {
             </footer>
           </>
         )}
+
+        {/* Modal de imágenes */}
+        <ImageModal
+          isOpen={isImageModalOpen}
+          images={modalImages}
+          currentIndex={modalCurrentIndex}
+          onClose={handleCloseImageModal}
+          title={modalTitle}
+        />
 
         {/* SEO dinámico */}
         <SEO 
