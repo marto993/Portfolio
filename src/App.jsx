@@ -431,6 +431,7 @@ function App() {
                 >
                   Contactar
                 </button>
+                {/*
                 <a 
                   href="#" 
                   className="button-secondary inline-flex items-center gap-2"
@@ -441,6 +442,7 @@ function App() {
                   <Download size={18} />
                   Descargar CV
                 </a>
+                */}
               </div>
 
               <div className="flex gap-6">
