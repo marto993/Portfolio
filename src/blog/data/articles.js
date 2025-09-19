@@ -380,33 +380,58 @@ export const articlesData = [
   },
   {
     slug: 'mi-carrera-desarrollo',
-    title: 'Mi carrera en desarrollo de software',
+    title: 'Mi carrera',
     date: '2025-08-30',
-    excerpt: 'Un recorrido por mis experiencias como desarrollador Full-Stack, desde Visual FoxPro hasta React y automatizaciones con n8n.',
+    excerpt: 'Un recorrido fugaz por mis experiencias',
     readTime: '5 min',
     category: 'Desarrollo',
-    tags: ['carrera', 'desarrollo', 'experiencia', 'reflexión'],
+    tags: ['carrera', 'desarrollo', 'experiencia', 'reflexión', 'programación'],
     featured: true,
     content: `
       <div class="prose prose-invert prose-lg max-w-none">
-        <h1 class="text-4xl font-bold text-white mb-8 leading-tight bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">Mi carrera en desarrollo de software</h1>
-        
-        <div class="bg-gradient-to-r from-primary-500/10 to-accent-500/10 rounded-xl p-6 mb-8 border border-primary-500/20">
-          <p class="text-xl text-gray-300 leading-relaxed mb-0">Mi trayectoria en el desarrollo comenzó con Visual FoxPro 9 en Giorno S.A. y ha evolucionado hasta liderar migraciones de sistemas legacy, coordinar mesas de ayuda y desarrollar soluciones empresariales modernas. Cada proyecto ha sido un paso hacia la creación de valor real para las empresas.</p>
-        </div>
-        
+       
         <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
           <span class="w-2 h-8 bg-gradient-to-b from-primary-500 to-accent-500 rounded-full mr-4"></span>
-          Los primeros pasos: UTN y Giorno S.A.
+          Los primeros pasos: De la escuela técnica al primer empleo
         </h2>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Mi formación comenzó en la <span class="bg-primary-500/20 text-primary-300 px-2 py-1 rounded font-semibold">UTN Mar del Plata</span>, donde estudié la Tecnicatura Superior en Programación. Aunque no hubo proyectos destacados académicamente, logré formar vínculos duraderos con excelentes profesionales que persisten hasta hoy.</p>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Mi historia en la programación comenzó en la <span class="bg-primary-500/20 text-primary-300 px-2 py-1 rounded font-semibold">escuela técnica</span>, donde rápidamente noté que tenía cierta facilidad para la programación. Esto me llevó a dedicar más tiempo ayudando a mis compañeros a pensar y entender algoritmos, una materia que filtraba muchísimos alumnos - de casi 30 que éramos, solo aprobamos 4.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Mi primer contacto profesional fue como <span class="bg-accent-500/20 text-accent-300 px-2 py-1 rounded font-semibold">pasante en Giorno S.A.</span>, seleccionado por mis profesores de informática. Esta oportunidad me abrió las puertas a mi primer trabajo como desarrollador de software, iniciando un camino de constante aprendizaje y crecimiento.</p>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Los primeros pasos fueron con <span class="bg-accent-500/20 text-accent-300 px-2 py-1 rounded font-semibold">Pascal (Turbo Pascal)</span>, luego dimos el salto a <span class="bg-accent-500/20 text-accent-300 px-2 py-1 rounded font-semibold">C++</span> en el año siguiente, y para el último año utilizamos <span class="bg-accent-500/20 text-accent-300 px-2 py-1 rounded font-semibold">C++ Builder</span> que ya tenía interfaz gráfica y permitía diseñar formularios e interfaces gráficas.</p>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Evolución profesional en Giorno S.A.</h3>
+        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">La Olimpiada Informática Argentina</h3>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Mi carrera en Giorno S.A. fue un camino largo pero de constante aprendizaje. Con el tiempo fui ganando autonomía, recibiendo cada vez tareas y requerimientos más complejos:</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Dado que me destacaba entre mis compañeros, me invitaron a participar de la <span class="bg-gradient-to-r from-primary-500/20 to-accent-500/20 text-white px-3 py-1 rounded-full font-semibold">Olimpiada Informática Argentina</span>. El primer año que participé logré clasificar a la instancia nacional habiendo quedado 4to en la instancia provincial, lo que me hizo merecedor de un viaje para competir en la olimpiada nacional representando a mi provincia - sin lugar a dudas todo un privilegio y una experiencia increíble.</p>
+        
+        <div class="bg-gradient-to-r from-primary-500/10 to-accent-500/10 rounded-xl p-6 mb-8 border border-primary-500/20">
+          <h4 class="text-xl font-semibold text-white mb-4">Logros en la Olimpiada</h4>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-dark-800/50 rounded-lg p-4">
+              <h5 class="text-lg font-semibold text-primary-400 mb-2">Instancia Provincial</h5>
+              <p class="text-gray-300 text-sm">4to lugar - Clasificación a instancia nacional</p>
+            </div>
+            <div class="bg-dark-800/50 rounded-lg p-4">
+              <h5 class="text-lg font-semibold text-accent-400 mb-2">Instancia Nacional</h5>
+              <p class="text-gray-300 text-sm">10mo lugar - Una experiencia invaluable</p>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Mi primer empleo: La pesquera</h3>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Estos logros, sumado a mis buenas relaciones interpersonales con compañeros y docentes, llevaron a que me ofrecieran realizar una <span class="bg-gradient-to-r from-primary-500/20 to-accent-500/20 text-white px-3 py-1 rounded-full font-semibold">pasantía breve de 2 semanas</span> en una de las empresas más grandes de la pesca en Argentina por aquel entonces.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Por supuesto acepté y fue todo un gran éxito. Finalizado el plazo de la pasantía, me ofrecieron un puesto medio tiempo para cuando finalizara la escuela. Esas 2 semanas de pasantía se habían convertido en mi <span class="bg-gradient-to-r from-primary-500/20 to-accent-500/20 text-white px-3 py-1 rounded-full font-semibold">boleto de entrada a mi primer empleo como programador</span>, y vaya que lo fue.</p>
+        
+        <div class="bg-gradient-to-r from-accent-500/10 to-primary-500/10 rounded-xl p-6 mb-8 border border-accent-500/20">
+          <h4 class="text-xl font-semibold text-white mb-4">El camino hacia el empleo completo</h4>
+          <p class="text-gray-300 mb-4">No fue inmediato ni un camino lineal, pero se dio. Finalmente ingresé a trabajar media jornada en la pesquera mientras en paralelo cursaba la tecnicatura superior en programación en la UTN.</p>
+          <p class="text-gray-300 mb-0">Luego de los primeros 6 meses, el trabajo de media jornada se volvió un trabajo de jornada completa, lo que me obligó a cursar mi carrera en horario nocturno. Fueron años de mucho esfuerzo y sacrificio, pero también de mucho aprendizaje y crecimiento personal.</p>
+        </div>
+        
+        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Evolución profesional</h3>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Mi carrera en la empresa fue un camino largo pero de constante aprendizaje. Con el tiempo fui ganando autonomía, recibiendo cada vez tareas y requerimientos más complejos:</p>
         
         <div class="bg-gradient-to-r from-primary-500/10 to-accent-500/10 rounded-xl p-6 mb-8 border border-primary-500/20">
           <div class="grid md:grid-cols-3 gap-6">
@@ -695,11 +720,9 @@ export const articlesData = [
         </h2>
         
         <div class="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-xl p-8 mb-8 border border-emerald-500/20">
-          <p class="text-gray-300 leading-relaxed mb-6 text-lg">Mi carrera en desarrollo de software ha sido un viaje de constante evolución: desde Visual FoxPro en Giorno S.A. hasta liderar migraciones de sistemas complejos, coordinar mesas de ayuda y desarrollar soluciones empresariales modernas.</p>
+          <p class="text-gray-300 leading-relaxed mb-6 text-lg">Cada pequeño proyecto ha sido una oportunidad de aprendizaje: más allá de lo técnico valoro muchísimo la experiencia que obtuve en liquidación de sueldos/cargas sociales, contabilidad, facturación, liquidación de impuestos, comercio internacional, logística y producción. La clave ha sido siempre entender que el desarrollo va más allá del código: requiere comprender el negocio, comunicarse efectivamente y crear valor real.</p>
           
-          <p class="text-gray-300 leading-relaxed mb-6 text-lg">Cada proyecto ha sido una oportunidad de aprendizaje: desde entender la liquidación de sueldos para el Libro de Sueldos Digital hasta crear automatizaciones que eliminan tareas repetitivas. La clave ha sido siempre entender que el desarrollo va más allá del código: requiere comprender el negocio, comunicarse efectivamente y crear valor real.</p>
-          
-          <p class="text-gray-300 leading-relaxed mb-0 text-lg">Hoy, con más de 10 años de experiencia, combino mi sólida base técnica con habilidades de análisis funcional y gestión de proyectos, siempre buscando formas de crear soluciones que realmente impacten positivamente en las empresas.</p>
+          <p class="text-gray-300 leading-relaxed mb-0 text-lg">Hoy combino mi sólida base técnica con habilidades de análisis funcional y gestión de proyectos, siempre buscando formas de crear soluciones que realmente impacten positivamente en el día a día.</p>
         </div>
         
         <div class="border-t border-gray-700 my-12"></div>
@@ -707,153 +730,6 @@ export const articlesData = [
         <div class="bg-gradient-to-r from-primary-500/10 to-accent-500/10 rounded-xl p-6 border border-primary-500/20">
           <p class="text-gray-400 italic text-center mb-0">
             ¿Te interesa conocer más sobre mi experiencia o tienes alguna pregunta sobre desarrollo de software? No dudes en contactarme.
-          </p>
-        </div>
-      </div>
-    `
-  },
-  {
-    slug: 'automatizaciones-n8n',
-    title: 'Automatizaciones con n8n: Transformando procesos empresariales',
-    date: '2025-09-15',
-    excerpt: 'Experiencias reales implementando automatizaciones con n8n: monitor de dólar, tracker de criptomonedas y registro automático de gastos.',
-    readTime: '7 min',
-    category: 'Automatización',
-    tags: ['n8n', 'automatización', 'workflows', 'productividad', 'empresa'],
-    featured: true,
-    content: `
-      <div class="prose prose-invert prose-lg max-w-none">
-        <h1 class="text-4xl font-bold text-white mb-8 leading-tight bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">n8n: La potencia de la automatización autohospedada</h1>
-        
-        <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 mb-8 border border-purple-500/20">
-          <p class="text-xl text-gray-300 leading-relaxed mb-0">En mi experiencia, <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded font-semibold">n8n</span> representa la evolución natural de la automatización: control total, costo cero y versatilidad ilimitada. Desplegado en Railway y AWS, he descubierto que la verdadera potencia está en tener tu propia instancia.</p>
-        </div>
-        
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mr-4"></span>
-          La ventaja del autohospedaje
-        </h2>
-        
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">La verdadera potencia de <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded font-semibold">n8n</span> radica en su capacidad de autohospedaje. A diferencia de herramientas como Zapier o Power Automate, n8n te da control total sobre tus datos y procesos.</p>
-        
-        <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 mb-8 border border-purple-500/20">
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-dark-800/50 rounded-lg p-4">
-              <h4 class="text-lg font-semibold text-green-400 mb-3 flex items-center">
-                <span class="w-1 h-6 bg-green-400 rounded-full mr-3"></span>
-                Control Total
-              </h4>
-              <ul class="space-y-2 text-gray-300 text-sm">
-                <li>• Tus datos permanecen en tu servidor</li>
-                <li>• Sin límites de ejecuciones</li>
-                <li>• Personalización completa</li>
-                <li>• Integración con cualquier API</li>
-              </ul>
-            </div>
-            <div class="bg-dark-800/50 rounded-lg p-4">
-              <h4 class="text-lg font-semibold text-blue-400 mb-3 flex items-center">
-                <span class="w-1 h-6 bg-blue-400 rounded-full mr-3"></span>
-                Costo Cero
-              </h4>
-              <ul class="space-y-2 text-gray-300 text-sm">
-                <li>• Solo pagas por el servidor</li>
-                <li>• Sin suscripciones mensuales</li>
-                <li>• Escalabilidad ilimitada</li>
-                <li>• Sin restricciones de uso</li>
-          </ul>
-            </div>
-          </div>
-        </div>
-      
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full mr-4"></span>
-          Versatilidad en acción
-        </h2>
-        
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">La versatilidad de n8n se demuestra mejor en proyectos que conectan múltiples fuentes de datos. Mi experiencia más completa ha sido un <span class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded font-semibold">bot de Telegram</span> que monitorea todas las cotizaciones del dólar en Argentina.</p>
-        
-        <div class="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-xl p-6 mb-8 border border-blue-500/20">
-          <h3 class="text-xl font-semibold text-white mb-4">Bot de Cotizaciones Dólar</h3>
-          <p class="text-gray-300 mb-4">Un workflow que conecta múltiples APIs para obtener cotizaciones oficiales, mayoristas, CCL, cripto y blue, procesando y enviando notificaciones automáticas a Telegram.</p>
-          <div class="bg-gray-900 rounded p-4 text-sm font-mono text-gray-300">
-            APIs Múltiples → n8n → Procesamiento → Formateo → Telegram Bot
-                </div>
-              </div>
-              
-        <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 mb-8 border border-purple-500/20">
-          <h3 class="text-xl font-semibold text-white mb-4">Registro Automático de Gastos</h3>
-          <p class="text-gray-300 mb-4">El caso que mejor demuestra la potencia de n8n: procesamiento de imágenes con OCR, extracción de datos y registro automático en Google Sheets.</p>
-          <div class="bg-gray-900 rounded p-4 text-sm font-mono text-gray-300">
-            Imagen → OCR → Extracción → Validación → Google Sheets
-          </div>
-        </div>
-        
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">El futuro: Asistente Virtual con IA</h3>
-        <p class="text-gray-300 leading-relaxed mb-6">Actualmente estoy desarrollando un asistente virtual que utilizará modelos de IA para interactuar vía Telegram, capaz de redactar correos, registrar gastos, informar cumpleaños y ejecutar múltiples tareas automatizadas. n8n será el cerebro que conecte todas estas funcionalidades.</p>
-      
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-orange-500 to-red-500 rounded-full mr-4"></span>
-          ¿Por qué n8n?
-        </h2>
-        
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Después de probar múltiples plataformas de automatización, n8n destaca por su enfoque técnico y flexibilidad sin límites.</p>
-        
-        <div class="bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-xl p-6 mb-8 border border-orange-500/20">
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="space-y-4">
-              <div class="flex items-start gap-3">
-                <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-0.5">✓</span>
-                <div>
-                  <h4 class="text-white font-semibold">Sin límites de ejecución</h4>
-                  <p class="text-gray-300 text-sm">Ejecuta tantos workflows como necesites sin restricciones</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-0.5">✓</span>
-                <div>
-                  <h4 class="text-white font-semibold">Control total de datos</h4>
-                  <p class="text-gray-300 text-sm">Tus datos nunca salen de tu servidor</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-0.5">✓</span>
-                <div>
-                  <h4 class="text-white font-semibold">Integración con cualquier API</h4>
-                  <p class="text-gray-300 text-sm">No dependes de integraciones pre-construidas</p>
-                </div>
-              </div>
-            </div>
-            <div class="space-y-4">
-              <div class="flex items-start gap-3">
-                <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-0.5">✓</span>
-                <div>
-                  <h4 class="text-white font-semibold">Código abierto</h4>
-                  <p class="text-gray-300 text-sm">Puedes modificar y extender la funcionalidad</p>
-          </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-0.5">✓</span>
-                <div>
-                  <h4 class="text-white font-semibold">Despliegue flexible</h4>
-                  <p class="text-gray-300 text-sm">Railway, AWS, Docker, Kubernetes</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-0.5">✓</span>
-                <div>
-                  <h4 class="text-white font-semibold">Costo predecible</h4>
-                  <p class="text-gray-300 text-sm">Solo pagas por el servidor, sin sorpresas</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="border-t border-gray-700 my-12"></div>
-        
-        <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20">
-          <p class="text-gray-400 italic text-center mb-0">
-            ¿Interesado en automatizar procesos con n8n? Contáctame para una consulta sobre cómo implementar tu propia instancia y crear workflows personalizados.
           </p>
         </div>
       </div>
