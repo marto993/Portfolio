@@ -26,51 +26,51 @@ export const articlesData = [
           <p>El problema del doble gasto suena simple pero es fundamental: ¿cómo evitas que alguien use el mismo dinero digital dos veces? Los bancos tradicionales lo resuelven manteniendo un registro centralizado. Satoshi lo resolvió con matemáticas e incentivos económicos distribuidos.</p>
         </blockquote>
         
-        <h2>Blockchain: el libro contable que no se puede falsificar</h2>
+        <h2>Blockchain: la cadena más larga es la que vale</h2>
         
-        <p>Cuando empecé a estudiar blockchain, me ayudó pensar en ello como un libro contable compartido que todos pueden ver pero nadie puede alterar. Cada página (bloque) está conectada con la anterior mediante un hash criptográfico.</p>
+        <p>Cuando empecé a investigar sobre blockchain me sorprendió la simpleza (a nivel abstracto) de la solución que propone Satoshi. Cada bloque (pensemos en un bloque como una página de un libro contable) está conectada con el anterior mediante un hash criptográfico único que representa todo su contenido.
         
-        <p>Imaginate que cada bloque es como una página de un libro donde escribís con tinta indeleble. Si alguien quiere cambiar algo en una página anterior, toda la tinta de las páginas siguientes cambiaría de color instantáneamente, haciendo obvio el intento de fraude.</p>
+        <p>¿Qué es un hash criptográfico? Es un algoritmo matemático que transforma cualquier bloque arbitrario de datos en una cadena alfanumérica de longitud fija. Esta cadena, llamada simplemente 'hash', es única para los datos de entrada específicos y siempre tendrá la misma longitud sin importar el tamaño original de los datos. </p>
+
+        <p>Esto significa que si alguien modifica la información de un bloque, el hash de ese bloque cambiará (recordemos que el hash del bloque se genera a partir de su contenido), y por ende modificará el hash del bloque siguiente, y así sucesivamente. </p>
         
-        <p>Pero acá viene lo brillante: no hay una sola copia del libro. Hay miles de copias distribuidas por todo el mundo, y todas se actualizan constantemente. Para falsificar el registro, tendrías que coordinar simultáneamente la alteración de miles de copias. Matemáticamente posible, económicamente inviable.</p>
+        <p>Y acá está la clave: la cadena de bloques más larga es la que vale. Dado que hay multiples copias de las blockchain distribuidas por todo el mundo, quien quiera adulterar una transacción deberá ser capaz de superar en potencia de cómputo (equipos de minería) a la mayoría de los mineros de la red, lo cual es virtualmente imposible.</p>
         
-        <h3>Cómo funciona una transacción (sin el tecnicismo)</h3>
-        
-        <p>Enviar Bitcoin es más simple de lo que parece:</p>
+        <h3>Cómo funciona una transacción (brevemente)</h3>
         
         <ol>
-          <li>Firmás la transacción con tu clave privada (como firmar un cheque)</li>
+          <li>Firmás la transacción con tu clave privada (esto lo hace tu wallet)</li>
           <li>La transacción se propaga por la red</li>
           <li>Los mineros la verifican y la incluyen en un bloque</li>
-          <li>El bloque se añade a la cadena</li>
-          <li>Tu transacción queda confirmada para la eternidad</li>
+          <li>El bloque se añade a la blockchain</li>
+          <li>Tu transacción quedará confirmada luego de 6 confirmaciones (generalmente, se consideran confirmadas cuando han pasado 6 bloques luego de tu transacción)</li>
         </ol>
         
-        <p>El tiempo que tarda depende de dos cosas: cuánto pagás de comisión y qué tan congestionada está la red. Durante el bull run de 2017, las comisiones llegaron a ser ridículas. Era más barato enviar un giro bancario que usar Bitcoin. Irónico, ¿no?</p>
+        <p>El tiempo que tarda depende de dos cosas: cuánto pagás de comisión y qué tan congestionada está la red. Durante el bull run de 2017, las comisiones llegaron a ser ridículas.</p>
         
         <h2>Los 21 millones: escasez programada</h2>
         
-        <p>Una de las cosas que más me gusta de Bitcoin es que su política monetaria está escrita en código, no en las decisiones de políticos o banqueros centrales. Solo van a existir 21 millones de Bitcoin, punto.</p>
+        <p>Una de las cosas que más me gusta de Bitcoin es que su política monetaria está escrita en código. Solo van a existir 21 millones de Bitcoin y se pueden fraccionar con una precisión de 8 decimales (los decimales son llamados 'satoshis').</p>
         
-        <p>Cada 4 años aproximadamente ocurre el "halving": la recompensa por minar se reduce a la mitad. Es como si cada 4 años fuera cada vez más difícil encontrar oro. Pero a diferencia del oro, sabemos exactamente cuánto Bitcoin va a existir y cuándo se va a crear el último.</p>
+        <p>Cada 4 años aproximadamente ocurre el "halving": la recompensa por minar se reduce a la mitad. Es como si cada 4 años fuera cada vez más difícil encontrar oro.</p>
         
         <blockquote>
-          <p>El último Bitcoin se va a minar alrededor del año 2140. Para ese entonces, probablemente ni vos ni yo estemos acá para verlo. Pero el código seguirá funcionando, implacable, siguiendo las reglas que Satoshi escribió hace más de 15 años.</p>
+          <p>El último Bitcoin se va a minar alrededor del año 2140. Para ese entonces los mineros se tendran que conformar con las comisiones (fee) de las transacciones.</p>
         </blockquote>
         
-        <h2>Las limitaciones que nadie quiere admitir</h2>
+        <h2>Las limitaciones</h2>
         
-        <p>Acá es donde me pongo un poco crítico. Bitcoin tiene problemas reales que los maximalists prefieren ignorar.</p>
+        <p>Bitcoin tiene problemas técnicos reales.</p>
         
-        <p>Primero, la velocidad. Bitcoin procesa entre 3 y 7 transacciones por segundo. Visa procesa 65.000. Sí, ya sé que no es una comparación justa porque una es una red de liquidación final y la otra un procesador de pagos. Pero el usuario promedio no entiende esa diferencia técnica.</p>
+        <p>Primero, la velocidad. Bitcoin genera un nuevo bloque aproximadamente cada 10 minutos, lo cual significa que "normalmente" debas esperar de mínimo 1 hora hasta que tu transacción se confirme.</p>
         
-        <p>Segundo, las comisiones. Durante períodos de alta demanda, enviar $10 puede costarte $50 de comisión. Es insostenible para micropagos o para cualquier uso cotidiano en economías en desarrollo.</p>
+        <p>Segundo, las comisiones. BTC se ha apreciado tanto en el último tiempo que las comisiones (fee) no suelen ser "baratas", sobre todo en momentos donde la red está muy congestionada.</p>
         
-        <p>Tercero, la complejidad de uso. Perder tu clave privada significa perder tu dinero para siempre. No hay servicio al cliente, no hay "olvidé mi contraseña". Esa responsabilidad total es liberadora para algunos, aterradora para otros.</p>
+        <p>Tercero, la complejidad de uso. Si bien hoy en día podés acceder a tu Exchange de confianza, depositar dinero, y comprar BTC de forma 'simple', el proceso de retirarlo y autogestionar tu wallet no lo es tanto.</p>
         
-        <h3>Lightning Network: la segunda capa que puede cambiar todo</h3>
+        <h3>Lightning Network: la segunda capa que soluciona varias cosas</h3>
         
-        <p>Lightning Network es la respuesta técnica a las limitaciones de Bitcoin. Es como abrir una pestaña en un bar: depositás dinero una vez, tomás toda la noche, y al final liquidás todo de una vez.</p>
+        <p>Lightning Network es la respuesta técnica a las limitaciones de Bitcoin. Es como abrir una cuenta en un bar (ponele): depositás dinero una vez, tomás toda la noche, y al final liquidás la diferencia de una vez.</p>
         
         <p>Dos personas abren un canal depositando Bitcoin, pueden hacer transacciones ilimitadas entre ellas casi gratis y casi instantáneas, y cuando terminan, cierran el canal y todo se liquida en la blockchain principal.</p>
         
