@@ -83,12 +83,20 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Manejar navegación por hash
+  // Manejar navegación por hash y query parameters
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash;
+      const urlParams = new URLSearchParams(window.location.search);
+      const articleParam = urlParams.get('article');
       
-      if (hash.startsWith('#blog/')) {
+      // Priorizar query parameter sobre hash para URLs compartidas
+      if (articleParam) {
+        setCurrentArticle(articleParam);
+        setCurrentPage('article');
+        // Limpiar el query parameter y usar hash para navegación interna
+        window.history.replaceState({}, '', `${window.location.pathname}#blog/${articleParam}`);
+      } else if (hash.startsWith('#blog/')) {
         const slug = hash.split('/')[1];
         setCurrentArticle(slug);
         setCurrentPage('article');

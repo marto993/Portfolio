@@ -18,7 +18,7 @@ export default function ShareButtons({ article, baseUrl }) {
   }
 
   const siteUrl = (baseUrl || (typeof window !== 'undefined' ? window.location.origin : '')) + "/Portfolio/";
-  const articleUrl = `${siteUrl}#blog/${article.slug}`;
+  const articleUrl = `${siteUrl}?article=${article.slug}`;
   const shareText = `${article.title} - ${article.excerpt}`;
 
   const shareToTwitter = () => {
