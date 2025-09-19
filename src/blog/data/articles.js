@@ -129,7 +129,7 @@ export const articlesData = [
   {
     slug: 'mi-carrera-desarrollo',
     title: 'Mi camino en el desarrollo de software',
-    date: '2025-08-30',
+    date: '2025-09-17',
     excerpt: 'Lecciones, errores y reflexiones luego de más de 10 años en IT.',
     readTime: '6 min',
     category: 'Desarrollo',

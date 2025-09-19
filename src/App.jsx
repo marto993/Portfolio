@@ -156,7 +156,7 @@ function App() {
     },
     {
       title: "BoxTaller",
-      description: "Sistema de gestión para talleres mecánicos desarrollado en 2025 con funcionalidades completas de administración.",
+      description: "Sistema para taller mecánico que permite gestionar clientes, vehículos y órdenes de trabajo con estados y transiciones configurables.",
       images: [
         "/Portfolio/assets/BoxTaller/1-boxtaller-login.png",
         "/Portfolio/assets/BoxTaller/2-boxtaller-dashboard.png",
@@ -589,7 +589,7 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Automatizaciones</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Soluciones que eliminan tareas repetitivas y optimizan procesos empresariales
+              Soluciones que resuelven tareas repetitivas en el día a día
             </p>
           </div>
 
@@ -612,12 +612,13 @@ function App() {
                       </div>
                     ))}
                   </div>
-                  
+                  {/* 
                   <button className="button-primary">
                     Solicitar Automatización Similar
                   </button>
+                   */}
                 </div>
-                
+                {/*
                 <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                   <div className="glass-effect rounded-2xl p-4">
                     <img 
@@ -636,6 +637,7 @@ function App() {
                     />
                   </div>
                 </div>
+                */}
               </div>
             ))}
           </div>
