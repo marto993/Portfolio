@@ -177,24 +177,17 @@ function App() {
   const automations = [
     {
       title: "Monitor de Cotización Dólar",
-      description: "Bot automatizado que notifica 2 veces al día la cotización actual del dólar para mantenerte informado.",
+      description: "Bot de Telegram que notifica al comenzar y al finalizar la jornada bursátil las diferentes cotizaciones del dólar en Argentina.",
       video: "/api/placeholder/400/250",
       workflow: "/api/placeholder/600/400",
-      benefits: ["Información actualizada automáticamente", "Notificaciones programadas", "Sin necesidad de consultar manualmente"]
+      benefits: ["Información actualizada", "Notificaciones programadas", "Integración con Telegram"]
     },
     {
-      title: "Tracker de Criptomonedas",
-      description: "Sistema que monitorea y reporta variaciones de precios de criptomonedas seleccionadas.",
+      title: "Tracker de Gastos",
+      description: "Automatización que procesa imágenes de tickets y facturas para registrar gastos automáticamente en Google Sheets. Extrae datos clave, asigna una categoría y subcategoría, solicita confirmación y permite rechazar registros.",
       video: "/api/placeholder/400/250",
       workflow: "/api/placeholder/600/400",
-      benefits: ["Monitoreo continuo", "Alertas de variaciones", "Selección personalizada de monedas"]
-    },
-    {
-      title: "Registro Automático de Gastos",
-      description: "Automatización que procesa imágenes de tickets y facturas para registrar gastos automáticamente en Google Sheets.",
-      video: "/api/placeholder/400/250",
-      workflow: "/api/placeholder/600/400",
-      benefits: ["Registro automático", "Procesamiento de imágenes", "Integración con Google Sheets"]
+      benefits: ["Registro automático", "Extracción de datos", "Integración con Google Sheets", "Confirmación de registros"]
     }
   ];
 
@@ -878,8 +871,7 @@ function App() {
                   <div className="mb-8 md:mb-0">
                     <Logo />
                     <p className="text-gray-500 mt-4 max-w-md">
-                      Desarrollador Full-Stack especializado en crear soluciones innovadoras 
-                      y automatizaciones que impulsan el crecimiento empresarial.
+                      Especialista en Migración de Sistemas ERP y Automatizaciones
                     </p>
                   </div>
                   
@@ -918,7 +910,7 @@ function App() {
         {/* SEO dinámico */}
         <SEO 
           title={currentPage === 'article' ? 'Artículo del Blog' : currentPage === 'blog' ? 'Blog' : 'Portfolio'}
-          description={currentPage === 'article' ? 'Lee el artículo completo en mi blog' : currentPage === 'blog' ? 'Reflexiones sobre desarrollo, tecnología y automatizaciones' : 'Desarrollador Full-Stack especializado en automatizaciones'}
+          description={currentPage === 'article' ? 'Lee el artículo completo en mi blog' : currentPage === 'blog' ? 'Reflexiones sobre desarrollo, tecnología y automatizaciones' : 'Desarrollador Full-Stack especializado en ERP y automatizaciones'}
         />
       </div>
     </ErrorBoundary>

@@ -17,7 +17,8 @@ export default function SEO({
   keywords, 
   image, 
   url, 
-  type = 'website' 
+  type = 'website',
+  publishedTime 
 }) {
   useEffect(() => {
     // Actualizar título de la página
@@ -57,6 +58,15 @@ export default function SEO({
     updateMetaTag('og:url', url, true);
     updateMetaTag('og:image', image, true);
     updateMetaTag('og:site_name', 'Martín Di Geronimo', true);
+    
+    // Meta tags adicionales para artículos
+    if (type === 'article') {
+      updateMetaTag('article:author', 'Martín Di Geronimo', true);
+      if (publishedTime) {
+        const publishedDate = new Date(publishedTime + 'T00:00:00').toISOString();
+        updateMetaTag('article:published_time', publishedDate, true);
+      }
+    }
 
     // Twitter Card tags
     updateMetaTag('twitter:card', 'summary_large_image');
@@ -81,10 +91,10 @@ export default function SEO({
     return () => {
       // Restaurar título por defecto si es necesario
       if (title) {
-        document.title = 'Martín Di Geronimo - Desarrollador & Especialista en Automatizaciones';
+        document.title = 'Martín Di Geronimo - Especialista en Migración de Sistemas ERP';
       }
     };
-  }, [title, description, keywords, image, url, type]);
+  }, [title, description, keywords, image, url, type, publishedTime]);
 
   return null;
 }

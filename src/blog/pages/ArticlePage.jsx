@@ -4,6 +4,7 @@ import { useArticles } from '../hooks/useArticles';
 import ArticleHeader from '../components/ArticleHeader';
 import ArticleContent from '../components/ArticleContent';
 import ShareButtons from '../components/ShareButtons';
+import SEO from '../../components/SEO';
 
 /**
  * Página individual para mostrar un artículo completo
@@ -80,6 +81,17 @@ export default function ArticlePage({ slug, onBack }) {
 
   return (
     <div className="min-h-screen bg-dark-950">
+      {/* SEO dinámico para el artículo */}
+      <SEO
+        title={article.title}
+        description={article.excerpt}
+        keywords={article.tags ? article.tags.join(', ') : ''}
+        image="/og-image.png"
+        url={`${window.location.origin}/Portfolio/#blog/${article.slug}`}
+        type="article"
+        publishedTime={article.date}
+      />
+
       {/* Barra de progreso de lectura */}
       <div className="fixed top-0 left-0 w-full h-1 bg-gray-800 z-50">
         <div 

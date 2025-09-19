@@ -5,6 +5,7 @@ import { useBlogFilters } from '../hooks/useBlogFilters';
 import BlogCard from '../components/BlogCard';
 import CategoryFilter from '../components/CategoryFilter';
 import TagCloud from '../components/TagCloud';
+import SEO from '../../components/SEO';
 
 /**
  * Página principal del blog que muestra la lista de artículos con filtros
@@ -95,6 +96,16 @@ export default function BlogPage({ onArticleClick }) {
 
   return (
     <div className="min-h-screen bg-dark-950">
+      {/* SEO dinámico para el blog */}
+      <SEO
+        title="Blog - Martín Di Geronimo"
+        description="Reflexiones sobre desarrollo de software, tecnología y criptomonedas"
+        keywords="blog, desarrollo web, tecnología, automatizaciones, react, node.js, n8n, programación, criptomonedas"
+        image="/og-image.png"
+        url={`${window.location.origin}/Portfolio/#blog`}
+        type="website"
+      />
+
       {/* Header del Blog con navegación */}
       <header className="bg-dark-900/80 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-40">
         <div className="container-max py-4">
@@ -142,7 +153,7 @@ export default function BlogPage({ onArticleClick }) {
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Blog</h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Reflexiones sobre desarrollo, tecnología y automatizaciones
+            Reflexiones sobre desarrollo de software, tecnología y criptomonedas
           </p>
         </div>
 
