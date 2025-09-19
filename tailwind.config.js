@@ -86,8 +86,32 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
-      }
+      },
+      typography: {
+        invert: {
+          css: {
+            '--tw-prose-body': '#d1d5db', // text-gray-300
+            '--tw-prose-headings': '#ffffff', // text-white
+            '--tw-prose-lead': '#9ca3af', // text-gray-400
+            '--tw-prose-links': '#60a5fa', // text-primary-400
+            '--tw-prose-bold': '#ffffff', // text-white
+            '--tw-prose-counters': '#9ca3af', // text-gray-400
+            '--tw-prose-bullets': '#4b5563', // text-gray-600
+            '--tw-prose-hr': '#374151', // border-gray-700
+            '--tw-prose-quotes': '#d1d5db', // text-gray-300
+            '--tw-prose-quote-borders': '#3b82f6', // border-primary-500
+            '--tw-prose-captions': '#9ca3af', // text-gray-400
+            '--tw-prose-code': '#34d399', // text-accent-400
+            '--tw-prose-pre-code': '#d1d5db', // text-gray-300
+            '--tw-prose-pre-bg': '#111827', // bg-gray-900
+            '--tw-prose-th-borders': '#374151', // border-gray-700
+            '--tw-prose-td-borders': '#374151', // border-gray-700
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
