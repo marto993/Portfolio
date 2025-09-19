@@ -9,9 +9,11 @@ import ArticlePage from './blog/pages/ArticlePage';
 import SEO from './components/SEO';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
+import Analytics from './components/Analytics';
 import ImageCarousel from './components/ImageCarousel';
 import ImageModal from './components/ImageModal';
 import { useArticles } from './blog/hooks/useArticles';
+import { useAnalytics } from './hooks/useAnalytics';
 import { getFeaturedArticles } from './blog/utils/articleUtils';
 
 // Logo Component
@@ -47,6 +49,9 @@ function App() {
   // Hook para obtener artículos destacados
   const { articles } = useArticles();
   const featuredArticles = getFeaturedArticles(articles, 3);
+  
+  // Hook para analytics
+  const { trackProjectView, trackContactFormSubmit, trackCVDownload } = useAnalytics();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -178,15 +183,15 @@ function App() {
     {
       title: "Monitor de Cotización Dólar",
       description: "Bot de Telegram que notifica al comenzar y al finalizar la jornada bursátil las diferentes cotizaciones del dólar en Argentina.",
-      video: "/api/placeholder/400/250",
-      workflow: "/api/placeholder/600/400",
+      video: "https://placehold.co/200x150",
+      workflow: "https://placehold.co/300x300",
       benefits: ["Información actualizada", "Notificaciones programadas", "Integración con Telegram"]
     },
     {
       title: "Tracker de Gastos",
       description: "Automatización que procesa imágenes de tickets y facturas para registrar gastos automáticamente en Google Sheets. Extrae datos clave, asigna una categoría y subcategoría, solicita confirmación y permite rechazar registros.",
-      video: "/api/placeholder/400/250",
-      workflow: "/api/placeholder/600/400",
+      video: "https://placehold.co/200x150",
+      workflow: "https://placehold.co/300x300",
       benefits: ["Registro automático", "Extracción de datos", "Integración con Google Sheets", "Confirmación de registros"]
     }
   ];
@@ -248,6 +253,7 @@ function App() {
 
   // Función para manejar el click en las imágenes del carrusel
   const handleImageClick = (imageSrc, imageIndex, projectTitle) => {
+    trackProjectView(projectTitle); // Trackear vista del proyecto
     setModalImages(projects.find(p => p.title === projectTitle)?.images || []);
     setModalCurrentIndex(imageIndex);
     setModalTitle(projectTitle);
@@ -278,6 +284,7 @@ function App() {
       });
 
       if (response.ok) {
+        trackContactFormSubmit(); // Trackear envío del formulario
         setSubmitStatus('success');
         form.reset(); // Limpiar el formulario
       } else {
@@ -294,6 +301,8 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-dark-950">
+        {/* Google Analytics */}
+        <Analytics measurementId="G-VZ3LLGQG5Q" />
         <PerformanceOptimizer />
         
         {/* Sistema de Routing del Blog */}
@@ -419,6 +428,7 @@ function App() {
                   className="button-secondary inline-flex items-center gap-2"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackCVDownload()}
                 >
                   <Download size={18} />
                   Descargar CV

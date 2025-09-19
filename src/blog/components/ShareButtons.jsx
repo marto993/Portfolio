@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Share2, Twitter, Linkedin, Facebook, Copy, Check } from 'lucide-react';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 /**
  * Componente para compartir artículos en redes sociales
@@ -9,6 +10,7 @@ import { Share2, Twitter, Linkedin, Facebook, Copy, Check } from 'lucide-react';
  * @returns {JSX.Element} Componente ShareButtons
  */
 export default function ShareButtons({ article, baseUrl }) {
+  const { trackArticleShare } = useAnalytics();
   const [copied, setCopied] = useState(false);
 
   if (!article) {
@@ -20,21 +22,25 @@ export default function ShareButtons({ article, baseUrl }) {
   const shareText = `${article.title} - ${article.excerpt}`;
 
   const shareToTwitter = () => {
+    trackArticleShare(article, 'twitter');
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(articleUrl)}`;
     window.open(twitterUrl, '_blank', 'width=600,height=400');
   };
 
   const shareToLinkedIn = () => {
+    trackArticleShare(article, 'linkedin');
     const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`;
     window.open(linkedinUrl, '_blank', 'width=600,height=400');
   };
 
   const shareToFacebook = () => {
+    trackArticleShare(article, 'facebook');
     const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(articleUrl)}`;
     window.open(facebookUrl, '_blank', 'width=600,height=400');
   };
 
   const copyToClipboard = async () => {
+    trackArticleShare(article, 'copy_link');
     try {
       await navigator.clipboard.writeText(articleUrl);
       setCopied(true);

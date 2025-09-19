@@ -1,5 +1,6 @@
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { formatArticleDate } from '../utils/articleUtils';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 /**
  * Componente para mostrar una vista previa de un artículo del blog
@@ -9,11 +10,16 @@ import { formatArticleDate } from '../utils/articleUtils';
  * @returns {JSX.Element} Componente BlogCard
  */
 export default function BlogCard({ article, onClick }) {
+  const { trackArticleClick } = useAnalytics();
+
   if (!article) {
     return null;
   }
 
   const handleClick = () => {
+    // Trackear el click antes de navegar
+    trackArticleClick(article);
+    
     if (onClick) {
       onClick(article.slug);
     }

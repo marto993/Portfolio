@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { ArrowLeft, Loader, AlertCircle, Home } from 'lucide-react';
 import { useArticles } from '../hooks/useArticles';
+import { useAnalytics } from '../../hooks/useAnalytics';
 import ArticleHeader from '../components/ArticleHeader';
 import ArticleContent from '../components/ArticleContent';
 import ShareButtons from '../components/ShareButtons';
@@ -15,25 +16,56 @@ import SEO from '../../components/SEO';
  */
 export default function ArticlePage({ slug, onBack }) {
   const { articles, loading, error } = useArticles();
+  const { trackArticleView, trackReadingProgress, trackArticleComplete } = useAnalytics();
   const article = articles.find(art => art.slug === slug);
   const [readingProgress, setReadingProgress] = useState(0);
+  const [timeSpent, setTimeSpent] = useState(0);
+  const startTimeRef = useRef(null);
+  const progressTrackedRef = useRef(new Set());
 
   const handleBackToHome = () => {
     window.location.hash = '#hero';
   };
 
-  // Calcular progreso de lectura
+  // Trackear vista del artículo cuando se carga
+  useEffect(() => {
+    if (article && !loading) {
+      trackArticleView(article);
+      startTimeRef.current = Date.now();
+      
+      // Trackear página completa cuando se desmonte
+      return () => {
+        if (startTimeRef.current) {
+          const timeSpentSeconds = Math.round((Date.now() - startTimeRef.current) / 1000);
+          trackArticleComplete(article, timeSpentSeconds);
+        }
+      };
+    }
+  }, [article, loading, trackArticleView, trackArticleComplete]);
+
+  // Calcular progreso de lectura con tracking
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
+      const roundedProgress = Math.round(scrollPercent);
+      
       setReadingProgress(Math.min(scrollPercent, 100));
+
+      // Trackear hitos de progreso (25%, 50%, 75%, 100%)
+      const milestones = [25, 50, 75, 100];
+      milestones.forEach(milestone => {
+        if (roundedProgress >= milestone && !progressTrackedRef.current.has(milestone)) {
+          progressTrackedRef.current.add(milestone);
+          trackReadingProgress(article, milestone);
+        }
+      });
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [article, trackReadingProgress]);
 
   // Scroll suave al inicio del artículo
   useEffect(() => {
