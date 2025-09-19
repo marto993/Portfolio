@@ -1,4 +1,4 @@
-// Datos de los artículos del blog
+// Datos de los artículos del blog - Versión mejorada
 // Este archivo se puede generar automáticamente en el futuro
 
 export const articlesData = [
@@ -6,379 +6,121 @@ export const articlesData = [
     slug: 'bitcoin-criptomonedas-explicacion-tecnica',
     title: 'Bitcoin y Criptomonedas: Una Explicación Técnica',
     date: '2025-09-18',
-    excerpt: 'Explicación técnica de Bitcoin, blockchain y criptomonedas, desde su origen hasta las limitaciones actuales y el futuro del dinero digital.',
-    readTime: '10 min',
+    excerpt: 'Un repaso sobre Bitcoin y Criptomonedas',
+    readTime: '8 min',
     category: 'Tecnología',
     tags: ['bitcoin', 'blockchain', 'criptomonedas', 'tecnología', 'finanzas'],
     featured: true,
     content: `
       <div class="prose prose-invert prose-lg max-w-none">
         
-        <div class="bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-xl p-6 mb-8 border border-orange-500/20">
-          <p class="text-xl text-gray-300 leading-relaxed mb-0">Bitcoin representa una revolución en el concepto de dinero digital. Más allá de la especulación, es una tecnología que permite transferir valor sin intermediarios, pero con limitaciones técnicas importantes que debemos entender.</p>
-        </div>
+        <p class="text-xl text-gray-300 leading-relaxed mb-8">Llevo años tratando de entender Bitcoin más allá del ruido mediático. Como desarrollador, me fascinó la elegancia técnica de la solución. Este artículo es mi intento de explicar Bitcoin desde la perspectiva técnica.</p>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-orange-500 to-yellow-500 rounded-full mr-4"></span>
-          El Origen: Satoshi Nakamoto y el Whitepaper
-        </h2>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">El punto de partida: el whitepaper que cambió todo</h2>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">En octubre de 2008, una persona o grupo bajo el pseudónimo <span class="bg-orange-500/20 text-orange-300 px-2 py-1 rounded font-semibold">Satoshi Nakamoto</span> publicó el whitepaper "Bitcoin: A Peer-to-Peer Electronic Cash System". Este documento de 9 páginas describía un sistema de dinero electrónico que funcionaba sin necesidad de confiar en terceros.</p>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">En octubre de 2008, mientras el mundo financiero se desmoronaba, alguien bajo el pseudónimo Satoshi Nakamoto publicó 9 páginas que cambiarían todo: "Bitcoin: A Peer-to-Peer Electronic Cash System".</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">La primera vez que leí ese paper, admito que no entendí completamente la magnitud de lo que proponía. Pero había algo que me llamó la atención: finalmente alguien había resuelto el problema del doble gasto sin necesidad de un tercero de confianza. Eso es... enorme.</p>
         
         <div class="bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-xl p-6 mb-8 border border-orange-500/20">
-          <h3 class="text-xl font-semibold text-white mb-4">El Problema del Doble Gasto</h3>
-          <p class="text-gray-300 mb-4">El desafío principal que Bitcoin resolvió fue el "problema del doble gasto": cómo evitar que alguien use el mismo dinero digital dos veces. En sistemas tradicionales, los bancos centrales mantienen registros centralizados. Bitcoin lo resolvió con una red descentralizada.</p>
-          <div class="bg-gray-900 rounded p-4 text-sm font-mono text-gray-300">
-            Problema: ¿Cómo evitar que alguien gaste el mismo Bitcoin dos veces?<br>
-            Solución: Red descentralizada con consenso distribuido
-          </div>
+          <p class="text-gray-300 mb-4">El problema del doble gasto suena simple pero es fundamental: ¿cómo evitas que alguien use el mismo dinero digital dos veces? Los bancos tradicionales lo resuelven manteniendo un registro centralizado. Satoshi lo resolvió con matemáticas e incentivos económicos distribuidos.</p>
         </div>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full mr-4"></span>
-          Blockchain: La Base Técnica
-        </h2>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Blockchain: el libro contable que no se puede falsificar</h2>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">La <span class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded font-semibold">blockchain</span> es el corazón técnico de Bitcoin. Es una base de datos distribuida que mantiene un registro cronológico e inmutable de todas las transacciones.</p>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Cuando empecé a estudiar blockchain, me ayudó pensar en ello como un libro contable compartido que todos pueden ver pero nadie puede alterar. Cada página (bloque) está conectada con la anterior mediante un hash criptográfico.</p>
         
-        <div class="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-xl p-6 mb-8 border border-blue-500/20">
-          <h3 class="text-xl font-semibold text-white mb-4">Componentes Técnicos del Blockchain</h3>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="space-y-4">
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-lg font-semibold text-blue-400 mb-2">Bloques</h4>
-                <p class="text-gray-300 text-sm">Contenedores que agrupan transacciones. Cada bloque contiene un hash del bloque anterior, creando una cadena inmutable.</p>
-              </div>
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-lg font-semibold text-cyan-400 mb-2">Hash</h4>
-                <p class="text-gray-300 text-sm">Función criptográfica que convierte datos en una cadena única de caracteres. Cualquier cambio en los datos cambia completamente el hash.</p>
-              </div>
-            </div>
-            <div class="space-y-4">
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-lg font-semibold text-green-400 mb-2">Minería</h4>
-                <p class="text-gray-300 text-sm">Proceso de validación de transacciones mediante resolución de problemas matemáticos complejos (Proof of Work).</p>
-              </div>
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-lg font-semibold text-purple-400 mb-2">Consenso</h4>
-                <p class="text-gray-300 text-sm">Mecanismo que permite a la red acordar qué transacciones son válidas sin una autoridad central.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">Imaginate que cada bloque es como una página de un libro donde escribís con tinta indeleble. Si alguien quiere cambiar algo en una página anterior, toda la tinta de las páginas siguientes cambiaría de color instantáneamente, haciendo obvio el intento de fraude.</p>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">¿Cómo Funciona una Transacción?</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">Pero acá viene lo brillante: no hay una sola copia del libro. Hay miles de copias distribuidas por todo el mundo, y todas se actualizan constantemente. Para falsificar el registro, tendrías que coordinar simultáneamente la alteración de miles de copias. Matemáticamente posible, económicamente inviable.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Cuando envías Bitcoin, el proceso técnico es el siguiente:</p>
+        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Cómo funciona una transacción (sin el tecnicismo)</h3>
         
-        <div class="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-xl p-6 mb-8 border border-blue-500/20">
-          <ol class="space-y-4 text-gray-300">
-            <li class="flex items-start">
-              <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">1</span>
-              <span><strong class="text-white">Creación de transacción</strong> con clave privada</span>
-            </li>
-            <li class="flex items-start">
-              <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">2</span>
-              <span><strong class="text-white">Difusión a la red</strong> de nodos</span>
-            </li>
-            <li class="flex items-start">
-              <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">3</span>
-              <span><strong class="text-white">Validación</strong> por mineros</span>
-            </li>
-            <li class="flex items-start">
-              <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">4</span>
-              <span><strong class="text-white">Inclusión en bloque</strong> y minado</span>
-            </li>
-            <li class="flex items-start">
-              <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">5</span>
-              <span><strong class="text-white">Confirmación</strong> por la red</span>
-            </li>
-          </ol>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">Enviar Bitcoin es más simple de lo que parece:</p>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-yellow-500 to-orange-500 rounded-full mr-4"></span>
-          Bitcoin como Oro Digital
-        </h2>
+        <p class="text-gray-300 leading-relaxed mb-4">1. Firmás la transacción con tu clave privada (como firmar un cheque)</p>
+        <p class="text-gray-300 leading-relaxed mb-4">2. La transacción se propaga por la red</p>
+        <p class="text-gray-300 leading-relaxed mb-4">3. Los mineros la verifican y la incluyen en un bloque</p>
+        <p class="text-gray-300 leading-relaxed mb-4">4. El bloque se añade a la cadena</p>
+        <p class="text-gray-300 leading-relaxed mb-6">5. Tu transacción queda confirmada para la eternidad</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Una de las características más importantes de Bitcoin es su <span class="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded font-semibold">escasez programada</span>. Solo existirán 21 millones de Bitcoin, y esta limitación está codificada en el protocolo.</p>
+        <p class="text-gray-300 leading-relaxed mb-6">El tiempo que tarda depende de dos cosas: cuánto pagás de comisión y qué tan congestionada está la red. Durante el bull run de 2017, las comisiones llegaron a ser ridículas. Era más barato enviar un giro bancario que usar Bitcoin. Irónico, ¿no?</p>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Los 21 millones: escasez programada</h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Una de las cosas que más me gusta de Bitcoin es que su política monetaria está escrita en código, no en las decisiones de políticos o banqueros centrales. Solo van a existir 21 millones de Bitcoin, punto.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Cada 4 años aproximadamente ocurre el "halving": la recompensa por minar se reduce a la mitad. Es como si cada 4 años fuera cada vez más difícil encontrar oro. Pero a diferencia del oro, sabemos exactamente cuánto Bitcoin va a existir y cuándo se va a crear el último.</p>
         
         <div class="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-xl p-6 mb-8 border border-yellow-500/20">
-          <h3 class="text-xl font-semibold text-white mb-4">Halving: Reducción Automática de Recompensas</h3>
-          <p class="text-gray-300 mb-4">Cada 210,000 bloques (aproximadamente cada 4 años), la recompensa por minar se reduce a la mitad. Esto simula la escasez del oro, pero de forma predecible y programática.</p>
-          <div class="bg-gray-900 rounded p-4 text-sm font-mono text-gray-300">
-            2009-2012: 50 BTC por bloque<br>
-            2012-2016: 25 BTC por bloque<br>
-            2016-2020: 12.5 BTC por bloque<br>
-            2020-2024: 6.25 BTC por bloque<br>
-            2024-2028: 3.125 BTC por bloque<br>
-            2028-2032: 1.5625 BTC por bloque<br>
-            2032-2036: 0.78125 BTC por bloque<br>
-            2036-2040: 0.390625 BTC por bloque<br>
-            2040-2044: 0.1953125 BTC por bloque<br>
-            2044-2048: 0.09765625 BTC por bloque<br>
-            2048-2052: 0.048828125 BTC por bloque<br>
-          </div>
-        </div>
-                
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-red-500 to-pink-500 rounded-full mr-4"></span>
-          Limitaciones Técnicas Actuales
-        </h2>
-        
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">A pesar de sus innovaciones, Bitcoin tiene limitaciones técnicas importantes que afectan su uso como moneda de pago diario.</p>
-        
-        <div class="bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-xl p-6 mb-8 border border-red-500/20">
-          <h3 class="text-xl font-semibold text-white mb-4">Limitaciones Principales</h3>
-          <div class="space-y-6">
-            <div class="bg-dark-800/50 rounded-lg p-4">
-              <h4 class="text-lg font-semibold text-red-400 mb-2">Velocidad de Transacciones</h4>
-              <p class="text-gray-300 text-sm mb-2">Bitcoin genera un nuevo bloque aproximadamente cada 10 minutos. Las transacciones quedan pendientes en la mempool hasta ser incluidas en un bloque, priorizando aquellas con comisiones más altas. Esto puede resultar en tiempos de espera significativos durante períodos de alta demanda.</p>
-              <div class="bg-gray-900 rounded p-3 text-xs font-mono text-gray-300">
-                Tiempo entre bloques: ~10 minutos<br>
-                Transacciones pendientes en mempool<br>
-                Prioridad por comisión (fee) pagada
-              </div>
-            </div>
-            
-            <div class="bg-dark-800/50 rounded-lg p-4">
-              <h4 class="text-lg font-semibold text-pink-400 mb-2">Capacidad Limitada por Bloque</h4>
-              <p class="text-gray-300 text-sm mb-2">Originalmente cada bloque tenía un límite de 1MB. El protocolo SegWit (Segregated Witness) implementado en 2017 aumentó efectivamente la capacidad al separar los datos de firma de las transacciones, permitiendo más transacciones por bloque sin aumentar el tamaño base.</p>
-              <div class="bg-gray-900 rounded p-3 text-xs font-mono text-gray-300">
-                Tamaño base de bloque: 1MB<br>
-                SegWit: Separación de datos de firma<br>
-                Capacidad efectiva aumentada
-              </div>
-            </div>
-            
-            <div class="bg-dark-800/50 rounded-lg p-4">
-              <h4 class="text-lg font-semibold text-orange-400 mb-2">Costos Variables</h4>
-              <p class="text-gray-300 text-sm mb-2">Las comisiones de transacción varían según la congestión de la red. Durante períodos de alta demanda, las comisiones pueden ser prohibitivamente altas para transacciones pequeñas.</p>
-              <div class="bg-gray-900 rounded p-3 text-xs font-mono text-gray-300">
-                Comisión mínima: Variable<br>
-                Comisión alta demanda: $50-100+ USD
-              </div>
-            </div>
-          </div>
+          <p class="text-gray-300 mb-4">El último Bitcoin se va a minar alrededor del año 2140. Para ese entonces, probablemente ni vos ni yo estemos acá para verlo. Pero el código seguirá funcionando, implacable, siguiendo las reglas que Satoshi escribió hace más de 15 años.</p>
         </div>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Soluciones de Segunda Capa</h3>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Las limitaciones que nadie quiere admitir</h2>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Para abordar estas limitaciones, se han desarrollado soluciones de segunda capa como Lightning Network.</p>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Acá es donde me pongo un poco crítico. Bitcoin tiene problemas reales que los maximalists prefieren ignorar.</p>
         
-        <div class="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl p-6 mb-8 border border-green-500/20">
-          <h4 class="text-xl font-semibold text-white mb-4">Lightning Network</h4>
-          <p class="text-gray-300 mb-4">Una red de canales de pago que permite transacciones instantáneas y de bajo costo fuera de la blockchain principal. Los usuarios abren canales depositando Bitcoin y pueden realizar transacciones ilimitadas casi sin comisiones.</p>
-          <div class="bg-gray-900 rounded p-4 text-sm font-mono text-gray-300">
-            Ventajas:<br>
-            • Transacciones practicamente instantáneas<br>
-            • Comisiones mínimas<br>
-            • Escalabilidad mejorada <br>
-          </div>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">Primero, la velocidad. Bitcoin procesa entre 3 y 7 transacciones por segundo. Visa procesa 65.000. Sí, ya sé que no es una comparación justa porque una es una red de liquidación final y la otra un procesador de pagos. Pero el usuario promedio no entiende esa diferencia técnica.</p>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-purple-500 to-indigo-500 rounded-full mr-4"></span>
-          Bitcoin vs Ethereum: Diferentes Propósitos
-        </h2>
+        <p class="text-gray-300 leading-relaxed mb-6">Segundo, las comisiones. Durante períodos de alta demanda, enviar $10 puede costarte $50 de comisión. Es insostenible para micropagos o para cualquier uso cotidiano en economías en desarrollo.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Mientras Bitcoin se enfoca en ser una reserva de valor, <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded font-semibold">Ethereum</span> se diseñó como una plataforma para aplicaciones descentralizadas y contratos inteligentes.</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Tercero, la complejidad de uso. Perder tu clave privada significa perder tu dinero para siempre. No hay servicio al cliente, no hay "olvidé mi contraseña". Esa responsabilidad total es liberadora para algunos, aterradora para otros.</p>
         
-        <div class="grid md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-gradient-to-br from-orange-500/10 to-yellow-500/10 rounded-xl p-6 border border-orange-500/20">
-            <h4 class="text-lg font-semibold text-orange-400 mb-4 flex items-center">
-              <span class="w-1 h-6 bg-orange-400 rounded-full mr-3"></span>
-              Bitcoin
-            </h4>
-            <ul class="space-y-2 text-gray-300 text-sm">
-              <li>• <strong>Propósito:</strong> Reserva de valor digital</li>
-              <li>• <strong>Consenso:</strong> Proof of Work</li>
-              <li>• <strong>Programabilidad:</strong> Limitada</li>
-              <li>• <strong>Enfoque:</strong> Seguridad y descentralización</li>
-            </ul>
-          </div>
-          
-          <div class="bg-gradient-to-br from-purple-500/10 to-indigo-500/10 rounded-xl p-6 border border-purple-500/20">
-            <h4 class="text-lg font-semibold text-purple-400 mb-4 flex items-center">
-              <span class="w-1 h-6 bg-purple-400 rounded-full mr-3"></span>
-              Ethereum
-            </h4>
-            <ul class="space-y-2 text-gray-300 text-sm">
-              <li>• <strong>Propósito:</strong> Plataforma de aplicaciones</li>
-              <li>• <strong>Consenso:</strong> Proof of Stake</li>
-              <li>• <strong>Programabilidad:</strong> Completa (Smart Contracts)</li>
-              <li>• <strong>Enfoque:</strong> Flexibilidad y funcionalidad</li>
-            </ul>
-          </div>
-        </div>
+        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Lightning Network: la segunda capa que puede cambiar todo</h3>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Smart Contracts</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">Lightning Network es la respuesta técnica a las limitaciones de Bitcoin. Es como abrir una pestaña en un bar: depositás dinero una vez, tomás toda la noche, y al final liquidás todo de una vez.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Los contratos inteligentes son programas que se ejecutan automáticamente cuando se cumplen ciertas condiciones. Ethereum los popularizó, pero Bitcoin también tiene capacidades limitadas de scripting.</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Dos personas abren un canal depositando Bitcoin, pueden hacer transacciones ilimitadas entre ellas casi gratis y casi instantáneas, y cuando terminan, cierran el canal y todo se liquida en la blockchain principal.</p>
         
-        <div class="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-xl p-6 mb-8 border border-purple-500/20">
-          <h4 class="text-xl font-semibold text-white mb-4">Casos de Uso de Smart Contracts</h4>
-          <ul class="space-y-3 text-gray-300">
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">DeFi (Finanzas Descentralizadas)</strong> - Préstamos, intercambios, seguros</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">NFTs</strong> - Tokens únicos, muy utilizados para arte digital e invesión de real state</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">DAOs</strong> - Organizaciones autónomas descentralizadas</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Supply Chain</strong> - Trazabilidad de productos</span>
-            </li>
-          </ul>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">El problema es la experiencia de usuario. Abrir canales, gestionar liquidez, enrutamiento de pagos... Es complejo. Mejoró muchísimo en los últimos años, pero sigue siendo intimidante para el usuario promedio.</p>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-green-500 to-teal-500 rounded-full mr-4"></span>
-          El Potencial: Dinero Sin Fronteras
-        </h2>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Bitcoin vs Ethereum: filosofías diferentes</h2>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">La característica más revolucionaria de Bitcoin es su capacidad de permitir <span class="bg-green-500/20 text-green-300 px-2 py-1 rounded font-semibold">transferencias de valor sin fronteras</span>. Esto tiene implicaciones profundas para la inclusión financiera global.</p>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Como desarrollador, encuentro la comparación Bitcoin vs Ethereum fascinante. Son filosofías completamente diferentes.</p>
         
-        <div class="bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-xl p-6 mb-8 border border-green-500/20">
-          <h3 class="text-xl font-semibold text-white mb-4">Casos de Uso Globales</h3>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="space-y-4">
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-lg font-semibold text-green-400 mb-2">Remesas</h4>
-                <p class="text-gray-300 text-sm">Envío de dinero a familiares en otros países sin intermediarios bancarios costosos. Especialmente valioso en países con sistemas bancarios limitados.</p>
-              </div>
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-lg font-semibold text-teal-400 mb-2">Protección contra Inflación</h4>
-                <p class="text-gray-300 text-sm">En países con alta inflación, Bitcoin puede servir como reserva de valor más estable que la moneda local.</p>
-              </div>
-            </div>
-            <div class="space-y-4">
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-lg font-semibold text-blue-400 mb-2">Inclusión Financiera</h4>
-                <p class="text-gray-300 text-sm">Personas sin acceso a bancos tradicionales pueden participar en la economía global usando solo un smartphone.</p>
-              </div>
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-lg font-semibold text-purple-400 mb-2">Comercio Internacional</h4>
-                <p class="text-gray-300 text-sm">Empresas pueden realizar pagos internacionales sin depender de sistemas bancarios tradicionales.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">Bitcoin es conservador por diseño. Cambia lentamente, prioriza la seguridad sobre la funcionalidad. Es como UNIX: hace una cosa y la hace muy bien.</p>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-red-500 to-orange-500 rounded-full mr-4"></span>
-          Los Riesgos de la Autocustodia
-        </h2>
+        <p class="text-gray-300 leading-relaxed mb-6">Ethereum es experimentalista. Smart contracts, DeFi, NFTs, DAOs... Es un ecosistema completo de experimentación financiera. También es más propenso a bugs, hacks y problemas de escalabilidad.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Aunque la autocustodia es una característica fundamental de Bitcoin, también presenta riesgos importantes que a menudo se pasan por alto.</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Personalmente, creo que ambos tienen su lugar. Bitcoin como reserva de valor digital, Ethereum como plataforma de innovación financiera. No tienen por qué competir.</p>
         
-        <div class="bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl p-6 mb-8 border border-red-500/20">
-          <h3 class="text-xl font-semibold text-white mb-4">Riesgos Principales</h3>
-          <div class="space-y-6">
-            <div class="bg-dark-800/50 rounded-lg p-4">
-              <h4 class="text-lg font-semibold text-red-400 mb-2">Pérdida de Claves Privadas</h4>
-              <p class="text-gray-300 text-sm mb-2">Si pierdes tu clave privada o frase semilla, pierdes acceso permanente a tus Bitcoin. No hay recuperación posible, a diferencia de los bancos tradicionales.</p>
-              <div class="bg-gray-900 rounded p-3 text-xs font-mono text-gray-300">
-                "Sin clave privada = Sin Bitcoin"<br>
-                No hay servicio al cliente para recuperar fondos
-              </div>
-            </div>
-            
-            <div class="bg-dark-800/50 rounded-lg p-4">
-              <h4 class="text-lg font-semibold text-orange-400 mb-2">Transparencia de la Blockchain</h4>
-              <p class="text-gray-300 text-sm mb-2">Todas las transacciones son públicas y rastreables. Esto puede comprometer la privacidad y hacer a los usuarios vulnerables a ataques dirigidos.</p>
-              <div class="bg-gray-900 rounded p-3 text-xs font-mono text-gray-300">
-                Todas las transacciones son públicas<br>
-                Direcciones pueden ser vinculadas a individuos a través de su IP
-              </div>
-            </div>
-            
-            <div class="bg-dark-800/50 rounded-lg p-4">
-              <h4 class="text-lg font-semibold text-yellow-400 mb-2">Complejidad Técnica</h4>
-              <p class="text-gray-300 text-sm mb-2">Gestionar Bitcoin de forma segura requiere conocimiento técnico. Errores comunes incluyen usar exchanges como wallets, no hacer backups, o usar software inseguro.</p>
-              <div class="bg-gray-900 rounded p-3 text-xs font-mono text-gray-300">
-                Errores comunes:<br>
-                • Usar exchanges como wallets<br>
-                • No hacer backups de claves<br>
-                • Usar software no verificado
-              </div>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">El potencial real: dinero sin fronteras</h2>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">El Dilema de la Adopción</h3>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Lo que más me emociona de Bitcoin no es que pueda valer $100.000 o $1.000.000. Es su potencial como dinero verdaderamente global.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6">La adopción masiva de Bitcoin enfrenta un dilema fundamental: mientras más personas lo usen, más valioso se vuelve, pero también más complejo de usar de forma segura.</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Pensá en alguien en un país con hiperinflación. O en una persona que necesita enviar dinero a su familia al otro lado del mundo. O en alguien que vive bajo un régimen autoritario que puede congelar sus cuentas bancarias por pensar diferente.</p>
         
-        <div class="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-xl p-6 mb-8 border border-yellow-500/20">
-          <h4 class="text-xl font-semibold text-white mb-4">El Reto de la Usabilidad</h4>
-          <p class="text-gray-300 mb-4">Para que Bitcoin sea adoptado masivamente, debe ser tan fácil de usar como el dinero tradicional, pero sin sacrificar la seguridad y descentralización que lo hacen único.</p>
-          <div class="bg-gray-900 rounded p-4 text-sm font-mono text-gray-300">
-            Desafío: Simplicidad vs Seguridad<br>
-            Solución: Educación + Herramientas mejores<br>
-            Resultado: Adopción gradual y responsable
-          </div>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">Para estas personas, Bitcoin no es especulación. Es libertad financiera real. Es la diferencia entre tener control sobre su dinero o que otros decidan por ellos.</p>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-indigo-500 to-purple-500 rounded-full mr-4"></span>
-          El Futuro: Evolución Continua
-        </h2>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Los riesgos que pocos discuten</h2>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Bitcoin continúa evolucionando. Las mejoras técnicas, las soluciones de segunda capa y la adopción institucional están moldeando su futuro como reserva de valor digital.</p>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Pero no todo es color de rosa. Hay riesgos reales que la comunidad Bitcoin prefiere no discutir.</p>
         
-        <div class="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-xl p-6 mb-8 border border-indigo-500/20">
-          <h3 class="text-xl font-semibold text-white mb-4">Tendencias Futuras</h3>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="space-y-4">
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-lg font-semibold text-indigo-400 mb-2">Adopción Institucional</h4>
-                <p class="text-gray-300 text-sm">Empresas y gobiernos comenzando a considerar Bitcoin como reserva de valor oficial.</p>
-              </div>
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-lg font-semibold text-purple-400 mb-2">Mejoras Técnicas</h4>
-                <p class="text-gray-300 text-sm">Taproot, Schnorr signatures y otras mejoras que mejoran la privacidad y eficiencia.</p>
-              </div>
-            </div>
-            <div class="space-y-4">
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-lg font-semibold text-blue-400 mb-2">Soluciones de Segunda Capa</h4>
-                <p class="text-gray-300 text-sm">Lightning Network y otras tecnologías que resuelven las limitaciones de escalabilidad.</p>
-              </div>
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-lg font-semibold text-green-400 mb-2">Regulación</h4>
-                <p class="text-gray-300 text-sm">Marco regulatorio más claro que facilite la adopción empresarial.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">La transparencia de la blockchain es un arma de doble filo. Todas las transacciones son públicas. Si alguien vincula tu identidad con una dirección Bitcoin, puede ver todo tu historial financiero. Privacy coins como Monero existen por una razón.</p>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-emerald-500 to-teal-500 rounded-full mr-4"></span>
-          Conclusión
-        </h2>
+        <p class="text-gray-300 leading-relaxed mb-6">La autocustodia requiere conocimiento técnico. La cantidad de Bitcoin perdido para siempre por errores humanos es asombrosa. Algunos estudios estiman que entre 3 y 4 millones de Bitcoin (¡20% del supply total!) están perdidos para siempre.</p>
         
-        <div class="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-xl p-8 mb-8 border border-emerald-500/20">
-          <p class="text-gray-300 leading-relaxed mb-6 text-lg">Bitcoin representa una innovación fundamental en el concepto de dinero digital. Su diseño como reserva de valor programáticamente escasa, combinado con su capacidad de transferir valor sin fronteras, lo posiciona como una alternativa viable al sistema financiero tradicional.</p>
-          
-          <p class="text-gray-300 leading-relaxed mb-6 text-lg">Sin embargo, sus limitaciones técnicas actuales - velocidad, costos y complejidad de uso - lo hacen más adecuado como reserva de valor que como moneda de pago diario. La evolución hacia soluciones de segunda capa como Lightning Network está abordando estos desafíos.</p>
-          
-          <p class="text-gray-300 leading-relaxed mb-6 text-lg">El futuro de Bitcoin dependerá de su capacidad para equilibrar la seguridad y descentralización con la usabilidad necesaria para la adopción masiva. Mientras tanto, continúa demostrando su valor como herramienta para la inclusión financiera global y la protección contra la inflación.</p>
-          
-          <p class="text-gray-300 leading-relaxed mb-0 text-lg">La revolución de las criptomonedas apenas comienza, y Bitcoin, como pionero, seguirá evolucionando para cumplir su visión original de dinero digital verdaderamente descentralizado.</p>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">Y está el riesgo regulatorio. Los gobiernos todavía están en una etapa temprana del análisis sobre cómo tratar con Bitcoin. Prohibiciones, regulaciones extremas o impuestos confiscatorios podrían limitar severamente su adopción.</p>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">¿Qué viene después?</h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Bitcoin está evolucionando constantemente, aunque lentamente. Taproot mejora la privacidad y eficiencia. Lightning Network crece todos los días. La adopción institucional se acelera.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Pero la pregunta real no es si Bitcoin va a "ganar". Es si la humanidad está lista para un dinero que no puede ser controlado por ningún gobierno o corporación.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Personalmente, creo que sí. Pero va a tomar tiempo, educación y mucha paciencia.</p>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Mi perspectiva</h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Bitcoin no va a reemplazar al dólar, ni a ninguna otra moneda. Pero sí representa un experimento monetario sin precedentes que ya cambió cómo pensamos sobre el dinero. Es un software que ha sentado las bases de un nuevo sistema financiero, paralelo al tradicional.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Bitcoin no es perfecto. Pero es un comienzo. Y a veces, un buen comienzo es todo lo que necesitás para cambiar el mundo.</p>
         
         <div class="border-t border-gray-700 my-12"></div>
         
         <div class="bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-xl p-6 border border-orange-500/20">
           <p class="text-gray-400 italic text-center mb-0">
-            ¿Te interesa aprender más sobre Bitcoin, blockchain o automatizaciones con criptomonedas? Contáctame para una consulta sobre cómo estas tecnologías pueden aplicarse en tu proyecto.
+            Si te interesa automatizar procesos con criptomonedas o integrar Bitcoin en tu proyecto, podemos charlar sobre cómo aplicar esta tecnología de manera práctica.
           </p>
         </div>
       </div>
@@ -386,356 +128,135 @@ export const articlesData = [
   },
   {
     slug: 'mi-carrera-desarrollo',
-    title: 'Mi carrera',
+    title: 'Mi camino en el desarrollo de software',
     date: '2025-08-30',
-    excerpt: 'Un recorrido fugaz por mis experiencias',
-    readTime: '5 min',
+    excerpt: 'Lecciones, errores y reflexiones luego de más de 10 años en IT.',
+    readTime: '6 min',
     category: 'Desarrollo',
     tags: ['carrera', 'desarrollo', 'experiencia', 'reflexión', 'programación'],
     featured: true,
     content: `
       <div class="prose prose-invert prose-lg max-w-none">
        
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-primary-500 to-accent-500 rounded-full mr-4"></span>
-          Los primeros pasos: De la escuela técnica al primer empleo
-        </h2>
+        <p class="text-xl text-gray-300 leading-relaxed mb-8">Empezar a escribir sobre mi carrera me da un poco de vértigo. No porque sea una historia épica, sino porque es muy fácil caer en la auto-congratulación o en el síndrome del impostor. Pero bueno, acá vamos: mi recorrido desde un pibe de 16 años que apenas entendía qué era un algoritmo hasta convertirme en alguien que puede liderar migraciones complejas de sistemas ERP.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Mi historia en la programación comenzó en la <span class="bg-primary-500/20 text-primary-300 px-2 py-1 rounded font-semibold">escuela técnica</span>, donde rápidamente noté que tenía cierta facilidad para la programación. Esto me llevó a dedicar más tiempo ayudando a mis compañeros a pensar y entender algoritmos, una materia que filtraba muchísimos alumnos - de casi 30 que éramos, solo aprobamos 4.</p>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Los primeros pasos: cuando programar era casi magia</h2>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Los primeros pasos fueron con <span class="bg-accent-500/20 text-accent-300 px-2 py-1 rounded font-semibold">Pascal (Turbo Pascal)</span>, luego dimos el salto a <span class="bg-accent-500/20 text-accent-300 px-2 py-1 rounded font-semibold">C++</span> en el año siguiente, y para el último año utilizamos <span class="bg-accent-500/20 text-accent-300 px-2 py-1 rounded font-semibold">C++ Builder</span> que ya tenía interfaz gráfica y permitía diseñar formularios e interfaces gráficas.</p>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Mi primer contacto con la programación fue en la escuela técnica con Turbo Pascal. Recuerdo vívidamente la primera vez que logré hacer que la computadora me mostrara "Hola Mundo" en pantalla. Sonará ridículo, pero fue como hacer magia.</p>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">La Olimpiada Informática Argentina</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">Lo que más me llamó la atención no era la tecnología en sí, sino cómo podía resolver problemas complejos dividiéndolos en pasos simples. Ver a mis compañeros sufrir con algoritmos me motivó a ayudarlos. No era que fuera un genio, simplemente me gustaba el proceso de pensar paso a paso.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Dado que me destacaba entre mis compañeros, me invitaron a participar de la <span class="bg-gradient-to-r from-primary-500/20 to-accent-500/20 text-white px-3 py-1 rounded-full font-semibold">Olimpiada Informática Argentina</span>. El primer año que participé logré clasificar a la instancia nacional habiendo quedado 4to en la instancia provincial, lo que me hizo merecedor de un viaje para competir en la olimpiada nacional representando a mi provincia - sin lugar a dudas todo un privilegio y una experiencia increíble.</p>
+        <p class="text-gray-300 leading-relaxed mb-6">De una clase de casi 30 estudiantes, solo 4 aprobamos algoritmos. No porque fuera súper difícil, sino porque requería un tipo de pensamiento que no todos estábamos acostumbrados a ejercitar. Ahí entendí mi primera lección importante: la programación no es sobre memorizar sintaxis, es sobre aprender a pensar.</p>
         
-        <div class="bg-gradient-to-r from-primary-500/10 to-accent-500/10 rounded-xl p-6 mb-8 border border-primary-500/20">
-          <h4 class="text-xl font-semibold text-white mb-4">Logros en la Olimpiada</h4>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-dark-800/50 rounded-lg p-4">
-              <h5 class="text-lg font-semibold text-primary-400 mb-2">Instancia Provincial</h5>
-              <p class="text-gray-300 text-sm">4to lugar - Clasificación a instancia nacional</p>
-            </div>
-            <div class="bg-dark-800/50 rounded-lg p-4">
-              <h5 class="text-lg font-semibold text-accent-400 mb-2">Instancia Nacional</h5>
-              <p class="text-gray-300 text-sm">10mo lugar - Una experiencia invaluable</p>
-            </div>
-          </div>
-        </div>
+        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">La Olimpiada: mi primer "logro" real</h3>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Mi primer empleo: La pesquera</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">Por destacarme entre mis compañeros, me invitaron a participar en la Olimpiada Informática Argentina. Honestamente, no tenía idea de en qué me estaba metiendo.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Estos logros, sumado a mis buenas relaciones interpersonales con compañeros y docentes, llevaron a que me ofrecieran realizar una <span class="bg-gradient-to-r from-primary-500/20 to-accent-500/20 text-white px-3 py-1 rounded-full font-semibold">pasantía breve de 2 semanas</span> en una de las empresas más grandes de la pesca en Argentina por aquel entonces.</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Clasificar 4to en la instancia provincial y llegar a la nacional fue surreal. De repente estaba compitiendo contra pibes de todo el país que sabían cosas que yo ni imaginaba que existían. Fue mi primera experiencia real de síndrome del impostor.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Por supuesto acepté y fue todo un gran éxito. Finalizado el plazo de la pasantía, me ofrecieron un puesto medio tiempo para cuando finalizara la escuela. Esas 2 semanas de pasantía se habían convertido en mi <span class="bg-gradient-to-r from-primary-500/20 to-accent-500/20 text-white px-3 py-1 rounded-full font-semibold">boleto de entrada a mi primer empleo como programador</span>, y vaya que lo fue.</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Terminé 10mo en la nacional. No era medalla, pero para un pibe de provincia que había aprendido programación en la escuela, no estaba mal. Más importante: me di cuenta de que había mucho, MUCHO que aprender.</p>
         
-        <div class="bg-gradient-to-r from-accent-500/10 to-primary-500/10 rounded-xl p-6 mb-8 border border-accent-500/20">
-          <h4 class="text-xl font-semibold text-white mb-4">El camino hacia el empleo completo</h4>
-          <p class="text-gray-300 mb-4">No fue inmediato ni un camino lineal, pero se dio. Finalmente ingresé a trabajar media jornada en la pesquera mientras en paralelo cursaba la tecnicatura superior en programación en la UTN.</p>
-          <p class="text-gray-300 mb-0">Luego de los primeros 6 meses, el trabajo de media jornada se volvió un trabajo de jornada completa, lo que me obligó a cursar mi carrera en horario nocturno. Fueron años de mucho esfuerzo y sacrificio, pero también de mucho aprendizaje y crecimiento personal.</p>
-        </div>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Mi primer trabajo: la pesquera que cambió todo</h2>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Evolución profesional</h3>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">La olimpiada me abrió puertas que ni sabía que existían. Un docente me recomendó para una pasantía de 2 semanas en una empresa pesquera. "Dos semanas", pensé, "¿qué puede salir mal?"</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Mi carrera en la empresa fue un camino largo pero de constante aprendizaje. Con el tiempo fui ganando autonomía, recibiendo cada vez tareas y requerimientos más complejos:</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Esas dos semanas se convirtieron en 9 años de carrera. Fue mi primera lección sobre cómo las oportunidades aparecen disfrazadas de experiencias temporales.</p>
         
-        <div class="bg-gradient-to-r from-primary-500/10 to-accent-500/10 rounded-xl p-6 mb-8 border border-primary-500/20">
-          <div class="grid md:grid-cols-3 gap-6">
-            <div class="text-center">
-              <div class="text-2xl font-bold text-primary-400 mb-2">2012-2015</div>
-              <div class="text-sm text-gray-300 mb-2">Programador JR</div>
-              <div class="text-xs text-gray-400">Análisis funcional y soporte técnico</div>
-            </div>
-            <div class="text-center">
-              <div class="text-2xl font-bold text-accent-400 mb-2">2015-2019</div>
-              <div class="text-sm text-gray-300 mb-2">Programador SSR</div>
-              <div class="text-xs text-gray-400">Desarrollo de módulos complejos</div>
-            </div>
-            <div class="text-center">
-              <div class="text-2xl font-bold text-purple-400 mb-2">2019-2021</div>
-              <div class="text-sm text-gray-300 mb-2">Programador SR/Analista</div>
-              <div class="text-xs text-gray-400">Liderazgo en migraciones</div>
-            </div>
-          </div>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">Al principio era trabajo de medio tiempo mientras cursaba en la UTN. Después se volvió tiempo completo y tuve que pasarme al turno noche. Fueron 2 años de mucho esfuerzo: trabajar de 8 a 17, cursar de 18 a 22, llegar a casa 23hs, dormir, comenzar un nuevo día.</p>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-accent-500 to-primary-500 rounded-full mr-4"></span>
-          El proyecto más desafiante: Libro de Sueldos Digital
-        </h2>
+        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Evolución profesional: de junior a líder de proyecto</h3>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">El proyecto más desafiante de mi carrera fue el desarrollo e implementación del <span class="bg-gradient-to-r from-primary-500/20 to-accent-500/20 text-white px-3 py-1 rounded-full font-semibold">Libro de Sueldos Digital</span>. Este proyecto me obligó a salir completamente de mi zona de confort:</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Mi carrera en la pesquera fue un crecimiento gradual pero constante. Empecé haciendo análisis funcional básico y soporte técnico. Lentamente fui ganando autonomía y responsabilidades más complejas.</p>
         
-        <div class="bg-gradient-to-r from-accent-500/10 to-primary-500/10 rounded-xl p-6 mb-8 border border-accent-500/20">
-          <ol class="space-y-4 text-gray-300">
-            <li class="flex items-start">
-              <span class="bg-accent-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">1</span>
-              <span><strong class="text-white">Análisis previo</strong> y detalle de requerimientos</span>
-            </li>
-            <li class="flex items-start">
-              <span class="bg-accent-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">2</span>
-              <span><strong class="text-white">Desarrollo completo</strong> del módulo LSD</span>
-            </li>
-            <li class="flex items-start">
-              <span class="bg-accent-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">3</span>
-              <span><strong class="text-white">Implementación</strong> junto con la encargada de RRHH</span>
-            </li>
-            <li class="flex items-start">
-              <span class="bg-accent-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-4 mt-0.5 flex-shrink-0">4</span>
-              <span><strong class="text-white">Aprendizaje de liquidación</strong> de sueldos y cargas sociales</span>
-            </li>
-          </ol>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">2012-2015 fueron mis años de "junior real": aprender las reglas del negocio, entender cómo funciona una empresa, cometer errores y aprender de ellos. El código era importante, pero más importante era entender por qué estaba escribiendo ese código.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Fue una experiencia increíblemente enriquecedora que me obligó a aprender sobre liquidación de sueldos y cargas sociales, algo completamente fuera de mi área técnica. Este proyecto me enseñó que el desarrollo de software va más allá del código: requiere entender profundamente el negocio.</p>
+        <p class="text-gray-300 leading-relaxed mb-6">2015-2019 me convertí en el "solucionador de problemas". Cuando algo era complejo o requería entender múltiples áreas de la empresa, me lo asignaban a mí. No porque fuera el mejor programador, sino porque había desarrollado la habilidad de comunicarme con diferentes áreas y traducir necesidades de negocio a requerimientos técnicos.</p>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Liderazgo en migraciones de sistemas</h3>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">El proyecto que me cambió: Libro de Sueldos Digital</h2>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Uno de los desafíos más complejos fue liderar la migración de sistemas legacy. Participé en múltiples reuniones con diferentes referentes de cada área de la empresa para establecer las bases de qué información migrar y cómo:</p>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Si tuviera que elegir el proyecto que más me marcó, sería el desarrollo del Libro de Sueldos Digital. Me sacó completamente de mi zona de confort y me obligó a aprender cosas que jamás pensé que necesitaría.</p>
         
-        <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 mb-8 border border-purple-500/20">
-          <ul class="space-y-3 text-gray-300">
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Coordinación con equipos externos</strong> de desarrollo</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Definición de estructura de datos</strong> para la migración</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Desarrollo de aplicativo</strong> de conexión entre sistemas</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Capacitación de usuarios</strong> en nuevos workflows</span>
-            </li>
-          </ul>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">Tuve que aprender liquidación de sueldos, cargas sociales, leyes laborales. De repente estaba estudiando código laboral argentino como si fuera documentación técnica. Era surreal, pero necesario.</p>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Tecnologías utilizadas</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">El proyecto me enseñó que ser desarrollador va mucho más allá del código. Tenés que entender el negocio tan profundamente como el CTO entiende la tecnología. Esa mentalidad me acompañó el resto de mi carrera.</p>
         
-        <div class="grid md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-dark-800/50 rounded-xl p-6 border border-gray-700">
-            <h4 class="text-lg font-semibold text-primary-400 mb-4 flex items-center">
-              <span class="w-1 h-6 bg-primary-400 rounded-full mr-3"></span>
-              Desarrollo Empresarial
-            </h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm">Visual FoxPro 9</span>
-              <span class="bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm">SQL Server</span>
-              <span class="bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm">Transact-SQL</span>
-              <span class="bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm">Libra</span>
-            </div>
-          </div>
-          
-          <div class="bg-dark-800/50 rounded-xl p-6 border border-gray-700">
-            <h4 class="text-lg font-semibold text-accent-400 mb-4 flex items-center">
-              <span class="w-1 h-6 bg-accent-400 rounded-full mr-3"></span>
-              Desarrollo Web
-            </h4>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-accent-500/20 text-accent-300 px-3 py-1 rounded-full text-sm">PHP</span>
-              <span class="bg-accent-500/20 text-accent-300 px-3 py-1 rounded-full text-sm">Bootstrap 4</span>
-              <span class="bg-accent-500/20 text-accent-300 px-3 py-1 rounded-full text-sm">MySQL</span>
-              <span class="bg-accent-500/20 text-accent-300 px-3 py-1 rounded-full text-sm">jQuery</span>
-            </div>
-          </div>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">Trabajar codo a codo con la encargada de RRHH durante la implementación fue una master class en gestión del cambio. No alcanza con desarrollar algo que funcione técnicamente; tiene que funcionar humanamente también.</p>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mr-4"></span>
-          El Prode: Mi primer proyecto independiente
-        </h2>
+        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Liderando migraciones: cuando el código es lo menos importante</h3>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">La motivación para aprender <span class="bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-white px-3 py-1 rounded-full font-semibold">PHP</span> surgió de una necesidad real: crear una aplicación web que me permitiera gestionar competencias de prode de manera más eficiente, eliminando la dependencia de hojas de cálculo y webs planas.</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Mis últimos años en la pesquera estuvieron dominados por proyectos de migración de sistemas legacy. Era trabajo complejo que requería coordinar múltiples equipos, tanto internos como externos.</p>
         
-        <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 mb-8 border border-purple-500/20">
-          <ul class="space-y-3 text-gray-300">
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Registro automático</strong> de usuarios al evento</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Ingreso independiente</strong> de resultados por usuarios</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Sistema de puntuación</strong> automático</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Gestión completa</strong> desde una plataforma web</span>
-            </li>
-          </ul>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">Lo más difícil no era la parte técnica. Lo más difícil era lograr que 30+ usuarios cambiaran workflows que habían usado durante décadas. Cada reunión era una negociación. Cada decisión técnica tenía ramificaciones políticas internas.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6">El proyecto fue desarrollado con <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded font-semibold">PHP</span>, <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded font-semibold">Bootstrap 4</span>, <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded font-semibold">MySQL</span> y <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded font-semibold">jQuery</span>, desplegado en un servidor VPS con DonWeb. La experiencia de conectarme por SSH y subir archivos para actualizar la aplicación fue mi primer contacto real con el despliegue web.</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Aprendí que en proyectos de migración, el 20% del tiempo lo usás programando y el 80% coordinando, documentando, capacitando y apagando incendios. Es frustrante para alguien que empezó porque le gustaba programar, pero es la realidad de liderar proyectos complejos.</p>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full mr-4"></span>
-          Experiencia diversificada: Mesa de ayuda y desarrollo empresarial
-        </h2>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Mi aventura independiente: El Prode</h2>
         
-        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Mi experiencia se diversificó significativamente, combinando roles técnicos y de coordinación que me permitieron desarrollar habilidades tanto técnicas como de gestión:</p>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Paralelamente a mi trabajo en la pesquera, tenía mi pequeño proyecto personal: El Prode. Empezó porque estaba cansado de gestionar pronósticos deportivos con hojas de Excel.</p>
         
-        <div class="space-y-8 mb-8">
-          <div class="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-xl p-6 border border-blue-500/20">
-            <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-              <span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3">1</span>
-              Grupo NODs - Mesa de Ayuda Registro Civil CBA
-            </h3>
-            <p class="text-gray-300 mb-4">Como Analista Funcional, integré la mesa de ayuda del registro civil actuando como nexo directo entre agentes y equipo de desarrollo.</p>
-            <div class="grid md:grid-cols-2 gap-4">
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-sm font-semibold text-green-400 mb-2">Logros clave</h4>
-                <ul class="space-y-1 text-gray-300 text-sm">
-                  <li>• Reducción de tiempo de respuesta en +33%</li>
-                  <li>• Base de conocimiento para errores recurrentes</li>
-                  <li>• Manual de usuario para trámite de Matrimonio</li>
-                </ul>
-              </div>
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-sm font-semibold text-blue-400 mb-2">Herramientas</h4>
-                <div class="flex flex-wrap gap-1">
-                  <span class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded text-xs">Jira</span>
-                  <span class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded text-xs">Slack</span>
-                  <span class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded text-xs">Canvas</span>
-                  <span class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded text-xs">Redmine</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl p-6 border border-green-500/20">
-            <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-              <span class="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3">2</span>
-              AIPEM Group SA - Programador/Analista Funcional
-            </h3>
-            <p class="text-gray-300 mb-4">Desarrollé soluciones empresariales avanzadas y procesos automatizados que generaron valor agregado significativo para clientes estratégicos.</p>
-            <div class="grid md:grid-cols-2 gap-4">
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-sm font-semibold text-green-400 mb-2">Desarrollos destacados</h4>
-                <ul class="space-y-1 text-gray-300 text-sm">
-                  <li>• Instalador de reportes automatizado</li>
-                  <li>• Restablecimiento de contraseñas vía email</li>
-                  <li>• Optimización de procesos críticos</li>
-                </ul>
-              </div>
-              <div class="bg-dark-800/50 rounded-lg p-4">
-                <h4 class="text-sm font-semibold text-purple-400 mb-2">Herramientas</h4>
-                <div class="flex flex-wrap gap-1">
-                  <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-xs">Visual FoxPro 9</span>
-                  <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-xs">ZenDesk</span>
-                  <span class="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-xs">Favro</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">Era mi excusa perfecta para aprender PHP. Necesitaba algo funcional rápido, y PHP era la herramienta correcta para el trabajo. No el lenguaje más elegante, pero gets things done.</p>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Logros cuantificables</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">El proyecto me enseñó sobre la experiencia completa de desarrollo web: desde conectarme por SSH a un servidor hasta manejar usuarios reales con necesidades reales. También mi primer contacto con el estrés de tener "clientes" (aunque fueran amigos) dependiendo de tu código.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6">A lo largo de mi carrera, he logrado resultados medibles que demuestran el impacto de mi trabajo:</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Más importante: me dio confianza para emprender proyectos propios. Saber que podía conceptualizar, desarrollar, deployar y mantener una aplicación completa fue liberador.</p>
         
-        <div class="grid md:grid-cols-3 gap-6 mb-8">
-          <div class="bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-xl p-6 border border-green-500/20 text-center">
-            <div class="text-3xl font-bold text-green-400 mb-2">+33%</div>
-            <div class="text-gray-300 text-sm">reducción tiempo de respuesta</div>
-            <div class="text-gray-400 text-xs mt-2">Mesa de ayuda</div>
-          </div>
-          <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-xl p-6 border border-blue-500/20 text-center">
-            <div class="text-3xl font-bold text-blue-400 mb-2">100%</div>
-            <div class="text-gray-300 text-sm">automatización procesos</div>
-            <div class="text-gray-400 text-xs mt-2">Instalador reportes</div>
-          </div>
-          <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20 text-center">
-            <div class="text-3xl font-bold text-purple-400 mb-2">30+</div>
-            <div class="text-gray-300 text-sm">usuarios capacitados</div>
-            <div class="text-gray-400 text-xs mt-2">Migración sistemas</div>
-          </div>
-        </div>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Diversificando experiencias: mesa de ayuda y consulting</h2>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-yellow-500 to-orange-500 rounded-full mr-4"></span>
-          Lecciones aprendidas
-        </h2>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Después de la pesquera, decidí diversificar mi experiencia. Trabajé en mesa de ayuda para el Registro Civil de Córdoba y como consultor para una empresa de software ERP.</p>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Más allá del código: Entender el negocio</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">La mesa de ayuda me enseñó sobre la importancia del soporte técnico. No es solo resolver problemas; es comunicar soluciones de manera clara y empática. Cada ticket es una oportunidad de mejorar la experiencia del usuario.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Una de las lecciones más importantes de mi carrera ha sido que el desarrollo de software va mucho más allá del código. Requiere:</p>
+        <p class="text-gray-300 leading-relaxed mb-6">Logré reducir los tiempos de respuesta en más del 33% simplemente organizando mejor los procesos y creando documentación clara. A veces las mejoras más importantes no requieren código nuevo, sino organización y comunicación mejores.</p>
         
-        <div class="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-xl p-6 mb-8 border border-yellow-500/20">
-          <ul class="space-y-3 text-gray-300">
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Entender profundamente el negocio</strong> y sus procesos</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Comunicarse efectivamente</strong> con diferentes áreas</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Documentar procesos</strong> para facilitar la continuidad</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Capacitar usuarios</strong> para asegurar la adopción</span>
-            </li>
-          </ul>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">En el consulting aprendí a trabajar con múltiples clientes simultaneamente. Cada empresa tiene su cultura, sus procesos, sus peculiaridades. Adaptarse rápidamente y agregar valor desde el primer día es un skill que solo se desarrolla con práctica.</p>
         
-        <h3 class="text-2xl font-semibold text-white mb-4 mt-8">De Visual FoxPro a tecnologías modernas</h3>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Las tecnologías que marcaron mi carrera</h2>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Mi evolución desde Visual FoxPro hasta las tecnologías modernas ha sido un viaje de constante adaptación. Cada tecnología aprendida ha sido un paso hacia la creación de soluciones más eficientes y escalables.</p>
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Mi stack tecnológico evolucionó orgánicamente, siempre guiado por necesidades reales más que por hype.</p>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-indigo-500 to-purple-500 rounded-full mr-4"></span>
-          El futuro: Combinando experiencia y modernidad
-        </h2>
+        <p class="text-gray-300 leading-relaxed mb-6">Visual FoxPro fue mi caballo de batalla durante años. Suena vintage, pero era increíblemente productivo para aplicaciones empresariales. Me enseñó sobre bases de datos, interfaz de usuario y lógica de negocio integrada.</p>
         
-        <p class="text-gray-300 leading-relaxed mb-6">Mirando hacia adelante, mi objetivo es combinar mi experiencia sólida en desarrollo empresarial con las tecnologías más modernas:</p>
+        <p class="text-gray-300 leading-relaxed mb-6">PHP me introdujo al desarrollo web. No es el lenguaje más sexy, pero es pragmático. Me permitió crear soluciones rápido y deployar fácil.</p>
         
-        <div class="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-xl p-6 mb-8 border border-indigo-500/20">
-          <ul class="space-y-3 text-gray-300">
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">React y Node.js</strong> para aplicaciones web modernas</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Automatizaciones con n8n</strong> para optimizar procesos</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Cloud computing</strong> con AWS y GCP</span>
-            </li>
-            <li class="flex items-start">
-              <span class="w-2 h-2 bg-indigo-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-              <span><strong class="text-white">Análisis funcional</strong> para proyectos complejos</span>
-            </li>
-          </ul>
-        </div>
+        <p class="text-gray-300 leading-relaxed mb-6">JavaScript y React llegaron después, cuando entendí que el futuro del desarrollo de aplicaciones estaba en el browser. La curva de aprendizaje fue empinada, pero valió la pena.</p>
         
-        <h2 class="text-3xl font-bold text-white mb-6 mt-12 flex items-center">
-          <span class="w-2 h-8 bg-gradient-to-b from-emerald-500 to-teal-500 rounded-full mr-4"></span>
-          Conclusión
-        </h2>
+        <p class="text-gray-300 leading-relaxed mb-6">Node.js cerró el círculo: finalmente podía usar el mismo lenguaje en frontend y backend. La eficiencia mental de no cambiar de contexto constantemente es subestimada.</p>
         
-        <div class="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-xl p-8 mb-8 border border-emerald-500/20">
-          <p class="text-gray-300 leading-relaxed mb-6 text-lg">Cada pequeño proyecto ha sido una oportunidad de aprendizaje: más allá de lo técnico valoro muchísimo la experiencia que obtuve en liquidación de sueldos/cargas sociales, contabilidad, facturación, liquidación de impuestos, comercio internacional, logística y producción. La clave ha sido siempre entender que el desarrollo va más allá del código: requiere comprender el negocio, comunicarse efectivamente y crear valor real.</p>
-          
-          <p class="text-gray-300 leading-relaxed mb-0 text-lg">Hoy combino mi sólida base técnica con habilidades de análisis funcional y gestión de proyectos, siempre buscando formas de crear soluciones que realmente impacten positivamente en el día a día.</p>
-        </div>
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Lecciones aprendidas (a veces de la manera difícil)</h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Después de más de 10 años en esto, hay algunas lecciones que quisiera haber aprendido antes:</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6"><strong>El código es solo un pequeño porcentaje del trabajo.</strong> El resto es comunicación, documentación, testing, deployment, mantenimiento, y gestión de expectativas. Nadie te enseña esto en los cursos de programación.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6"><strong>Entender el negocio es más valioso que conocer el último framework.</strong> React va a ser reemplazado eventualmente. Los principios de cómo funcionan las empresas son eternos.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6"><strong>La documentación no es opcional.</strong> Tu código va a ser mantenido por alguien más (incluso si ese alguien sos vos en 6 meses). Documentar bien es un acto de compasión hacia el futuro.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6"><strong>Los usuarios no leen.</strong> Si tu aplicación requiere un manual de 50 páginas, falló en UX. La simplicidad es la sofisticación definitiva.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6"><strong>Las estimaciones siempre están mal.</strong> Multiplica por 2, y después agregá buffer para lo que no pensaste. Siempre hay algo que no pensaste.</p>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Hacia dónde voy ahora</h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Hoy mi enfoque está en las automatizaciones. Después de años viendo procesos manuales repetitivos en diferentes empresas, estoy convencido de que hay una oportunidad enorme para optimizar workflows con herramientas como n8n.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">También estoy explorando más profundamente el mundo de las APIs y microservicios. La mayoría de las empresas todavía tienen sistemas que no se hablan entre sí. Construir puentes entre esos sistemas es donde veo el mayor valor agregado.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Mi objetivo es combinar mi experiencia en sistemas ERP con tecnologías modernas para crear soluciones que realmente impacten en la productividad empresarial.</p>
+        
+        <h2 class="text-3xl font-bold text-white mb-6 mt-12">Reflexiones finales</h2>
+        
+        <p class="text-gray-300 leading-relaxed mb-6 text-lg">Escribir esto me hizo dar cuenta de cuánto cambié desde aquel pibe que se emocionaba con un "Hola Mundo" en Turbo Pascal. Pero algunas cosas no cambiaron: sigo disfrutando el proceso de resolver problemas complejos y sigo aprendiendo algo nuevo cada día.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">La carrera en desarrollo no es lineal. Hay curvas, retrocesos, cambios de dirección. Lo importante es mantener la curiosidad y la humildad para seguir aprendiendo.</p>
+        
+        <p class="text-gray-300 leading-relaxed mb-6">Y por sobre todo: recordar que detrás de cada sistema, cada aplicación, cada automatización, hay personas reales tratando de hacer su trabajo mejor. Ese es el verdadero propósito de lo que hacemos.</p>
         
         <div class="border-t border-gray-700 my-12"></div>
         
         <div class="bg-gradient-to-r from-primary-500/10 to-accent-500/10 rounded-xl p-6 border border-primary-500/20">
           <p class="text-gray-400 italic text-center mb-0">
-            ¿Te interesa conocer más sobre mi experiencia o tienes alguna pregunta sobre desarrollo de software? No dudes en contactarme.
+            Si llegaste hasta acá, gracias por leer mi historia. Si tenés alguna pregunta o querés charlar sobre desarrollo, automatizaciones, o la vida en general, no dudes en contactarme.
           </p>
         </div>
       </div>
