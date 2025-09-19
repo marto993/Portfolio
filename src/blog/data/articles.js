@@ -111,7 +111,13 @@ export const articlesData = [
             2012-2016: 25 BTC por bloque<br>
             2016-2020: 12.5 BTC por bloque<br>
             2020-2024: 6.25 BTC por bloque<br>
-            2024-2028: 3.125 BTC por bloque
+            2024-2028: 3.125 BTC por bloque<br>
+            2028-2032: 1.5625 BTC por bloque<br>
+            2032-2036: 0.78125 BTC por bloque<br>
+            2036-2040: 0.390625 BTC por bloque<br>
+            2040-2044: 0.1953125 BTC por bloque<br>
+            2044-2048: 0.09765625 BTC por bloque<br>
+            2048-2052: 0.048828125 BTC por bloque<br>
           </div>
         </div>
                 
