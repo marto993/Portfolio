@@ -4,9 +4,9 @@
 export const articlesData = [
   {
     slug: 'bitcoin-criptomonedas-explicacion-tecnica',
-    title: 'Bitcoin y Criptomonedas: Una Explicación Técnica',
+    title: 'Bitcoin y Criptomonedas: sin humo',
     date: '2025-09-18',
-    excerpt: 'Un repaso sobre Bitcoin y Criptomonedas',
+    excerpt: 'Un repaso sobre Bitcoin y las criptomonedas',
     readTime: '8 min',
     category: 'Tecnología',
     tags: ['bitcoin', 'blockchain', 'criptomonedas', 'tecnología', 'finanzas'],
@@ -14,13 +14,13 @@ export const articlesData = [
     content: `
       <div>
         
-        <p>Llevo años tratando de entender Bitcoin más allá del ruido mediático. Como desarrollador, me fascinó la elegancia técnica de la solución. Este artículo es mi intento de explicar Bitcoin desde la perspectiva técnica.</p>
+        <p>Hace algunos años la curiosidad me llevó a investigar Bitcoin más allá del ruido mediático. Como desarrollador, me fascinó la elegancia técnica de la solución. Este artículo es mi intento de explicar Bitcoin desde la perspectiva técnica.</p>
         
         <h2>El punto de partida: el whitepaper que cambió todo</h2>
         
         <p>En octubre de 2008, mientras el mundo financiero se desmoronaba, alguien bajo el pseudónimo Satoshi Nakamoto publicó 9 páginas que cambiarían todo: "Bitcoin: A Peer-to-Peer Electronic Cash System".</p>
         
-        <p>La primera vez que leí ese paper, admito que no entendí completamente la magnitud de lo que proponía. Pero había algo que me llamó la atención: finalmente alguien había resuelto el problema del doble gasto sin necesidad de un tercero de confianza. Eso es... enorme.</p>
+        <p>La primera vez que leí ese paper, admito que no entendí completamente la magnitud de lo que proponía. Pero había algo que me llamó la atención: finalmente alguien había resuelto el problema del doble gasto sin necesidad de un tercero de confianza.</p>
         
         <blockquote>
           <p>El problema del doble gasto suena simple pero es fundamental: ¿cómo evitas que alguien use el mismo dinero digital dos veces? Los bancos tradicionales lo resuelven manteniendo un registro centralizado. Satoshi lo resolvió con matemáticas e incentivos económicos distribuidos.</p>
