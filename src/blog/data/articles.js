@@ -60,68 +60,42 @@ export const articlesData = [
         
         <h2>Las limitaciones</h2>
         
-        <p>Bitcoin tiene problemas técnicos reales.</p>
+        <p>Bitcoin tiene ciertas limitaciones técnicas, exploremos algunas:/p>
         
-        <p>Primero, la velocidad. Bitcoin genera un nuevo bloque aproximadamente cada 10 minutos, lo cual significa que "normalmente" debas esperar de mínimo 1 hora hasta que tu transacción se confirme.</p>
+        <p>La velocidad de una transacción. Bitcoin genera un nuevo bloque aproximadamente cada 10 minutos, lo cual significa que "normalmente" debas esperar de mínimo 1 hora hasta que tu transacción se confirme (6 bloques).</p>
         
-        <p>Segundo, las comisiones. BTC se ha apreciado tanto en el último tiempo que las comisiones (fee) no suelen ser "baratas", sobre todo en momentos donde la red está muy congestionada.</p>
+        <p>Las comisiones. BTC se ha apreciado tanto en el último tiempo que las comisiones (fee) no suelen ser "baratas", sobre todo en momentos donde la red está muy congestionada lo cual suele coincidir con periodos de alta volatilidad.</p>
         
-        <p>Tercero, la complejidad de uso. Si bien hoy en día podés acceder a tu Exchange de confianza, depositar dinero, y comprar BTC de forma 'simple', el proceso de retirarlo y autogestionar tu wallet no lo es tanto.</p>
+        <p>La complejidad de uso. Si bien hoy en día podés acceder a tu Exchange de confianza, depositar dinero, y comprar BTC de forma 'simple', el proceso de retirarlo y autogestionar tu wallet no lo es tanto. Requiere que hayas seleccionado tu wallet de confianza y sepas como gestionarla.</p>
         
-        <h3>Lightning Network: la segunda capa que soluciona varias cosas</h3>
+        <h3>Lightning Network: una solución de segunda capa</h3>
         
-        <p>Lightning Network es la respuesta técnica a las limitaciones de Bitcoin. Es como abrir una cuenta en un bar (ponele): depositás dinero una vez, tomás toda la noche, y al final liquidás la diferencia de una vez.</p>
+        <p>Lightning Network propone transacciones instantáneas y con comisiones mínimas mediante canales de pago fuera de la cadena principal.</p>
+
+        <p>Los canales de pago son contratos inteligentes entre dos participantes que bloquean una cantidad de Bitcoin en la blockchain principal. Una vez establecido el canal, las partes pueden realizar múltiples transacciones entre sí sin necesidad de escribir cada una en la blockchain.</p>
         
-        <p>Dos personas abren un canal depositando Bitcoin, pueden hacer transacciones ilimitadas entre ellas casi gratis y casi instantáneas, y cuando terminan, cierran el canal y todo se liquida en la blockchain principal.</p>
-        
-        <p>El problema es la experiencia de usuario. Abrir canales, gestionar liquidez, enrutamiento de pagos... Es complejo. Mejoró muchísimo en los últimos años, pero sigue siendo intimidante para el usuario promedio.</p>
-        
-        <h2>Bitcoin vs Ethereum: filosofías diferentes</h2>
-        
-        <p>Como desarrollador, encuentro la comparación Bitcoin vs Ethereum fascinante. Son filosofías completamente diferentes.</p>
-        
-        <p>Bitcoin es conservador por diseño. Cambia lentamente, prioriza la seguridad sobre la funcionalidad. Es como UNIX: hace una cosa y la hace muy bien.</p>
-        
-        <p>Ethereum es experimentalista. Smart contracts, DeFi, NFTs, DAOs... Es un ecosistema completo de experimentación financiera. También es más propenso a bugs, hacks y problemas de escalabilidad.</p>
-        
-        <p>Personalmente, creo que ambos tienen su lugar. Bitcoin como reserva de valor digital, Ethereum como plataforma de innovación financiera. No tienen por qué competir.</p>
+        <p>Ahora bien, en la realidad esto sólo es una solución para quienes son mínimamente entusiastas de BTC y conocen el ecosistema (además de requerir fondos previamente). Abrir canales, gestionar liquidez, enrutamiento de pagos... complejo tal vez. De todas formas el ecosistema mejoró muchísimo en los últimos años, pero sigue siendo intimidante para el usuario promedio.</p>
         
         <h2>El potencial real: dinero sin fronteras</h2>
         
-        <p>Lo que más me emociona de Bitcoin no es que pueda valer $100.000 o $1.000.000. Es su potencial como dinero verdaderamente global.</p>
+        <p>Lo que más me atrae de Bitcoin no es que pueda valer $100.000 o $1.000.000. Es su potencial como medio de transferir valor globalmente, sin fronteras.</p>
         
-        <p>Pensá en alguien en un país con hiperinflación. O en una persona que necesita enviar dinero a su familia al otro lado del mundo. O en alguien que vive bajo un régimen autoritario que puede congelar sus cuentas bancarias por pensar diferente.</p>
+        <p>Gracias a bitcoin es posible que alguien de (por ejemplo) Japón pueda enviarle dinero a alguien de (por ejemplo) Canadá sin pedirle permiso a nadie, sólo pagando el coste de la transacción. </p>
         
-        <p>Para estas personas, Bitcoin no es especulación. Es libertad financiera real. Es la diferencia entre tener control sobre su dinero o que otros decidan por ellos.</p>
+        <h2>Riesgos reales</h2>
         
-        <h2>Los riesgos que pocos discuten</h2>
+        <p>La transparencia de la blockchain es un arma de doble filo. Todas las transacciones son públicas. Si alguien vincula tu identidad (o tu IP) con una dirección Bitcoin, puede ver todo tu historial financiero.</p>
         
-        <p>Pero no todo es color de rosa. Hay riesgos reales que la comunidad Bitcoin prefiere no discutir.</p>
-        
-        <p>La transparencia de la blockchain es un arma de doble filo. Todas las transacciones son públicas. Si alguien vincula tu identidad con una dirección Bitcoin, puede ver todo tu historial financiero. Privacy coins como Monero existen por una razón.</p>
-        
-        <p>La autocustodia requiere conocimiento técnico. La cantidad de Bitcoin perdido para siempre por errores humanos es asombrosa. Algunos estudios estiman que entre 3 y 4 millones de Bitcoin (¡20% del supply total!) están perdidos para siempre.</p>
-        
-        <p>Y está el riesgo regulatorio. Los gobiernos todavía están en una etapa temprana del análisis sobre cómo tratar con Bitcoin. Prohibiciones, regulaciones extremas o impuestos confiscatorios podrían limitar severamente su adopción.</p>
-        
-        <h2>¿Qué viene después?</h2>
-        
-        <p>Bitcoin está evolucionando constantemente, aunque lentamente. Taproot mejora la privacidad y eficiencia. Lightning Network crece todos los días. La adopción institucional se acelera.</p>
-        
-        <p>Pero la pregunta real no es si Bitcoin va a "ganar". Es si la humanidad está lista para un dinero que no puede ser controlado por ningún gobierno o corporación.</p>
-        
-        <p>Personalmente, creo que sí. Pero va a tomar tiempo, educación y mucha paciencia.</p>
+        <p>La autocustodia requiere conocimiento técnico. La cantidad de Bitcoin perdido para siempre es enorme. Se estima que entre 3 y 4 millones de Bitcoin (20% del total) están estancados en wallets cuyos dueños ya no tienen acceso a sus claves privadas.</p>
         
         <h2>Mi perspectiva</h2>
         
-        <p>Bitcoin no va a reemplazar al dólar, ni a ninguna otra moneda. Pero sí representa un experimento monetario sin precedentes que ya cambió cómo pensamos sobre el dinero. Es un software que ha sentado las bases de un nuevo sistema financiero, paralelo al tradicional.</p>
-        
-        <p>Bitcoin no es perfecto. Pero es un comienzo. Y a veces, un buen comienzo es todo lo que necesitás para cambiar el mundo.</p>
+        <p>Bitcoin representa un experimento monetario sin precedentes que ya cambió cómo pensamos sobre el dinero. Es un software que ha sentado las bases de un nuevo sistema financiero, paralelo al tradicional.</p>
         
         <hr>
         
         <blockquote>
-          <p><em>Si te interesa automatizar procesos con criptomonedas o integrar Bitcoin en tu proyecto, podemos charlar sobre cómo aplicar esta tecnología de manera práctica.</em></p>
+          <p><em>Si tenés alguna pregunta o comentario, te invito a utilizar el formulario de contacto.</em></p>
         </blockquote>
       </div>
     `
