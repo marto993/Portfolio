@@ -197,9 +197,7 @@ export const articlesData = [
         <p>Node.js cerró el círculo: finalmente podía usar el mismo lenguaje en frontend y backend. La eficiencia mental de no cambiar de contexto constantemente es subestimada.</p>
         
         <h2>Lecciones aprendidas (a veces de la manera difícil)</h2>
-        
-        <p>Después de más de 10 años en esto, hay algunas lecciones que quisiera haber aprendido antes:</p>
-        
+       
         <p><strong>El código es solo un pequeño porcentaje del trabajo.</strong> El resto es comunicación, documentación, testing, deployment, mantenimiento, y gestión de expectativas. Nadie te enseña esto en los cursos de programación.</p>
         
         <p><strong>Entender el negocio es más valioso que conocer el último framework.</strong> React va a ser reemplazado eventualmente. Los principios de cómo funcionan las empresas son eternos.</p>
@@ -208,28 +206,24 @@ export const articlesData = [
         
         <p><strong>Los usuarios no leen.</strong> Si tu aplicación requiere un manual de 50 páginas, falló en UX. La simplicidad es la sofisticación definitiva.</p>
         
-        <p><strong>Las estimaciones siempre están mal.</strong> Multiplica por 2, y después agregá buffer para lo que no pensaste. Siempre hay algo que no pensaste.</p>
+        <h2>Nuevas tecnologías</h2>
         
-        <h2>Hacia dónde voy ahora</h2>
+        <p>Hoy mi enfoque está en las automatizaciones. Después de años viendo procesos manuales repetitivos en diferentes empresas, estoy convencido de que hay una oportunidad enorme para optimizar procesos con herramientas como n8n.</p>
         
-        <p>Hoy mi enfoque está en las automatizaciones. Después de años viendo procesos manuales repetitivos en diferentes empresas, estoy convencido de que hay una oportunidad enorme para optimizar workflows con herramientas como n8n.</p>
-        
-        <p>También estoy explorando más profundamente el mundo de las APIs y microservicios. La mayoría de las empresas todavía tienen sistemas que no se hablan entre sí. Construir puentes entre esos sistemas es donde veo el mayor valor agregado.</p>
+        <p>La mayoría de las empresas todavía tienen sistemas que no se hablan entre sí. Construir puentes entre esos sistemas es donde veo el mayor valor agregado.</p>
         
         <p>Mi objetivo es combinar mi experiencia en sistemas ERP con tecnologías modernas para crear soluciones que realmente impacten en la productividad empresarial.</p>
         
-        <h2>Reflexiones finales</h2>
+        <h2>Reflexión final</h2>
         
-        <p>Escribir esto me hizo dar cuenta de cuánto cambié desde aquel pibe que se emocionaba con un "Hola Mundo" en Turbo Pascal. Pero algunas cosas no cambiaron: sigo disfrutando el proceso de resolver problemas complejos y sigo aprendiendo algo nuevo cada día.</p>
+        <p>Sigo disfrutando del proceso de resolver problemas complejos y aprendiendo algo nuevo día a día.</p>
         
         <p>La carrera en desarrollo no es lineal. Hay curvas, retrocesos, cambios de dirección. Lo importante es mantener la curiosidad y la humildad para seguir aprendiendo.</p>
-        
-        <p>Y por sobre todo: recordar que detrás de cada sistema, cada aplicación, cada automatización, hay personas reales tratando de hacer su trabajo mejor. Ese es el verdadero propósito de lo que hacemos.</p>
         
         <hr>
         
         <blockquote>
-          <p><em>Si llegaste hasta acá, gracias por leer mi historia. Si tenés alguna pregunta o querés charlar sobre desarrollo, automatizaciones, o la vida en general, no dudes en contactarme.</em></p>
+          <p><em>Si llegaste hasta acá, gracias por leerme. Si tenés alguna pregunta o comentario te invito a utilizar el formulario de contacto.</em></p>
         </blockquote>
       </div>
     `
