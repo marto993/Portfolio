@@ -130,89 +130,76 @@ export const articlesData = [
         
         <p>Terminé 10mo en la nacional. No era medalla, pero para un pibe de provincia que había aprendido programación en la escuela, no estaba mal. Más importante: me di cuenta de que había mucho, MUCHO que aprender.</p>
         
-        <h2>Mi primer trabajo: la pesquera que cambió todo</h2>
+        <h2>Mi primer oportunidad: una pasantía</h2>
         
-        <p>La olimpiada me abrió puertas que ni sabía que existían. Un docente me recomendó para una pasantía de 2 semanas en una empresa pesquera. "Dos semanas", pensé, "¿qué puede salir mal?"</p>
+        <p>Pasada la mitad del último año en la técnica, me ofrecen la posibilidad de realizar una pasantía breve (2 semanas) en una empresa pesquera, más precisamente en la oficina de Sistemas. Sin dudarlo acepté, estaba desbordado por la curiosidad de saber cómo es la experiencia real de un programador."</p>
         
-        <p>Esas dos semanas se convirtieron en 9 años de carrera. Fue mi primera lección sobre cómo las oportunidades aparecen disfrazadas de experiencias temporales.</p>
+        <p>El primer día volví a mi casa con un libro de Visual FoxPro (+400 páginas, una belleza) luego de una gran introducción a su entorno de desarrollo y a algunas de las tareas frecuentes del día a día.</p>
+
+        <p>El libro resultó ser más interesante de lo que esperaba y tan sólo la primera tarde-noche debo haber leído unas 60 páginas. Al día siguiente en la oficina pasada la tarde quien era el jefe de sistemas se veía ligeramente sorprendido por mi interés, dedicación y adaptación.</p>
+
+        <p>Para la última jornada de la pasantía ya había realizado mi primer pequeño desarrollo como programador: un resumen de cuenta de clientes. Constaba de un formulario con filtros que emitía dicho reporte, utilizando las clases visuales de la empresa e integrado al menú del sistema de Ventas Mercado Interno.</p>
+
+        <p>Antes de despedirme de los muchachos de la oficina llegó el momento soñado: me ofrecieron el puesto como desarrollador por media jornada (4 horas) al finalizar la escuela.</p>
+
+        <p>Aquí me lo pensé con tranquilidad hasta que definí el futuro de mis estudios: iba a estudiar Tecnicatura Superior en Programación en la UTN.</p>
+
+        <p>Finalmente acepté la propuesta laboral, todo parecía encajar ya que el trabajo quedaba muy cerca de la universidad.</p>
         
-        <p>Al principio era trabajo de medio tiempo mientras cursaba en la UTN. Después se volvió tiempo completo y tuve que pasarme al turno noche. Fueron 2 años de mucho esfuerzo: trabajar de 8 a 17, cursar de 18 a 22, llegar a casa 23hs, dormir, comenzar un nuevo día.</p>
+        <p>Al principio cursaba por la mañana y trabajaba por la tarde, pero esta situación duró tan sólo algunos meses. Antes de llegar al primer año el trabajo se volvió a tiempo completo y tuve que pasarme a cursar en el turno noche. Fueron 2 años de mucho esfuerzo: trabajar de 8 a 17, cursar de 18 a 22, llegar a casa 23hs, dormir, comenzar un nuevo día.</p>
         
-        <h3>Evolución profesional: de junior a líder de proyecto</h3>
+        <h3>Evolución profesional: de junior a liderar proyectos</h3>
         
-        <p>Mi carrera en la pesquera fue un crecimiento gradual pero constante. Empecé haciendo análisis funcional básico y soporte técnico. Lentamente fui ganando autonomía y responsabilidades más complejas.</p>
+        <p>Fueron años de un crecimiento gradual pero constante. Comencé haciendo informes, análisis funcional básico, soporte, correcciones en la base de datos. Poco a poco fui ganando autonomía y capacidad de acción (cualquier día te puede tocar apagar un incendio).</p>
         
-        <p>2012-2015 fueron mis años de "junior real": aprender las reglas del negocio, entender cómo funciona una empresa, cometer errores y aprender de ellos. El código era importante, pero más importante era entender por qué estaba escribiendo ese código.</p>
+        <p>2012-2015 podría resumirse en: aprender las reglas del negocio, entender cómo funciona una empresa, cometer errores y aprender de ellos. El código era importante, pero más importante era entender el impacto que iba a tener.</p>
         
-        <p>2015-2019 me convertí en el "solucionador de problemas". Cuando algo era complejo o requería entender múltiples áreas de la empresa, me lo asignaban a mí. No porque fuera el mejor programador, sino porque había desarrollado la habilidad de comunicarme con diferentes áreas y traducir necesidades de negocio a requerimientos técnicos.</p>
+        <p>2015-2019 En desarrollo...</p>
         
-        <h2>El proyecto que me cambió: Libro de Sueldos Digital</h2>
+        <h2>Libro de Sueldos Digital</h2>
         
-        <p>Si tuviera que elegir el proyecto que más me marcó, sería el desarrollo del Libro de Sueldos Digital. Me sacó completamente de mi zona de confort y me obligó a aprender cosas que jamás pensé que necesitaría.</p>
+        <p>Uno de los proyectos más destacados que me tocó desarrollar es sin duda el libro de sueldos digital. </p>
         
-        <p>Tuve que aprender liquidación de sueldos, cargas sociales, leyes laborales. De repente estaba estudiando código laboral argentino como si fuera documentación técnica. Era surreal, pero necesario.</p>
+        <p></p>
         
-        <p>El proyecto me enseñó que ser desarrollador va mucho más allá del código. Tenés que entender el negocio tan profundamente como el CTO entiende la tecnología. Esa mentalidad me acompañó el resto de mi carrera.</p>
+        <h3>Liderando migraciones</h3>
         
-        <p>Trabajar codo a codo con la encargada de RRHH durante la implementación fue una master class en gestión del cambio. No alcanza con desarrollar algo que funcione técnicamente; tiene que funcionar humanamente también.</p>
+        <p>Luego de cambios en la dirección de la empresa, hubo cambios de sistemas y eso requirió migraciones de datos. Era trabajo complejo que requería coordinar esfuerzos de múltiples equipos, tanto internos como externos.</p>
+      
+        <h2>En paralelo y por hobby: El Prode</h2>
         
-        <h3>Liderando migraciones: cuando el código es lo menos importante</h3>
+        <p>El Prode comenzó producto de una necesidad y un deseo: cada vez que organizaba un prode del mundial tenía que gestionar todo a mano con Excel y estaba con ganas de incursionar en el desarrollo web.</p>
         
-        <p>Mis últimos años en la pesquera estuvieron dominados por proyectos de migración de sistemas legacy. Era trabajo complejo que requería coordinar múltiples equipos, tanto internos como externos.</p>
+        <p>Debía elegír una tecnología web para el desarrollo y fué PHP, podría decir que por su documentación oficial y su comunidad. Sobre todo la documentación, me recordaba mucho a aquel viejo libro de Visual FoxPro.</p>
         
-        <p>Lo más difícil no era la parte técnica. Lo más difícil era lograr que 30+ usuarios cambiaran workflows que habían usado durante décadas. Cada reunión era una negociación. Cada decisión técnica tenía ramificaciones políticas internas.</p>
+        <p>En este proyecto pude vivir la experiencia completa de desarrollo web: desde conectarme por SSH a un servidor hasta manejar usuarios reales con necesidades reales. También mi primer contacto con el estrés de tener "clientes" (aunque fueran amigos) dependiendo de tu código.</p>
         
-        <p>Aprendí que en proyectos de migración, el 20% del tiempo lo usás programando y el 80% coordinando, documentando, capacitando y apagando incendios. Es frustrante para alguien que empezó porque le gustaba programar, pero es la realidad de liderar proyectos complejos.</p>
         
-        <h2>Mi aventura independiente: El Prode</h2>
+        <h2>Diversificando experiencias: Analista Funcional mesa de ayuda y Desarrollador/Analista</h2>
         
-        <p>Paralelamente a mi trabajo en la pesquera, tenía mi pequeño proyecto personal: El Prode. Empezó porque estaba cansado de gestionar pronósticos deportivos con hojas de Excel.</p>
-        
-        <p>Era mi excusa perfecta para aprender PHP. Necesitaba algo funcional rápido, y PHP era la herramienta correcta para el trabajo. No el lenguaje más elegante, pero gets things done.</p>
-        
-        <p>El proyecto me enseñó sobre la experiencia completa de desarrollo web: desde conectarme por SSH a un servidor hasta manejar usuarios reales con necesidades reales. También mi primer contacto con el estrés de tener "clientes" (aunque fueran amigos) dependiendo de tu código.</p>
-        
-        <p>Más importante: me dio confianza para emprender proyectos propios. Saber que podía conceptualizar, desarrollar, deployar y mantener una aplicación completa fue liberador.</p>
-        
-        <h2>Diversificando experiencias: mesa de ayuda y consulting</h2>
-        
-        <p>Después de la pesquera, decidí diversificar mi experiencia. Trabajé en mesa de ayuda para el Registro Civil de Córdoba y como consultor para una empresa de software ERP.</p>
-        
-        <p>La mesa de ayuda me enseñó sobre la importancia del soporte técnico. No es solo resolver problemas; es comunicar soluciones de manera clara y empática. Cada ticket es una oportunidad de mejorar la experiencia del usuario.</p>
-        
-        <p>Logré reducir los tiempos de respuesta en más del 33% simplemente organizando mejor los procesos y creando documentación clara. A veces las mejoras más importantes no requieren código nuevo, sino organización y comunicación mejores.</p>
-        
-        <p>En el consulting aprendí a trabajar con múltiples clientes simultaneamente. Cada empresa tiene su cultura, sus procesos, sus peculiaridades. Adaptarse rápidamente y agregar valor desde el primer día es un skill que solo se desarrolla con práctica.</p>
-        
-        <h2>Las tecnologías que marcaron mi carrera</h2>
+        <p>En construcción.</p>
+
+        <h2>Las tecnologías</h2>
         
         <p>Mi stack tecnológico evolucionó orgánicamente, siempre guiado por necesidades reales más que por hype.</p>
         
         <p>Visual FoxPro fue mi caballo de batalla durante años. Suena vintage, pero era increíblemente productivo para aplicaciones empresariales. Me enseñó sobre bases de datos, interfaz de usuario y lógica de negocio integrada.</p>
         
-        <p>PHP me introdujo al desarrollo web. No es el lenguaje más sexy, pero es pragmático. Me permitió crear soluciones rápido y deployar fácil.</p>
+        <p>PHP me introdujo al desarrollo web. Me permitió crear soluciones rápido y me obligó a gestionar mi propio servidor.</p>
         
-        <p>JavaScript y React llegaron después, cuando entendí que el futuro del desarrollo de aplicaciones estaba en el browser. La curva de aprendizaje fue empinada, pero valió la pena.</p>
+        <p>Después vino React.</p>
         
-        <p>Node.js cerró el círculo: finalmente podía usar el mismo lenguaje en frontend y backend. La eficiencia mental de no cambiar de contexto constantemente es subestimada.</p>
+        <p>Node.js cerró el círculo: finalmente podía usar el mismo lenguaje en frontend y backend.</p>
         
-        <h2>Lecciones aprendidas (a veces de la manera difícil)</h2>
+        <h2>Lecciones aprendidas</h2>
        
-        <p><strong>El código es solo un pequeño porcentaje del trabajo.</strong> El resto es comunicación, documentación, testing, deployment, mantenimiento, y gestión de expectativas. Nadie te enseña esto en los cursos de programación.</p>
+        <p><strong>El código es solo un pequeño porcentaje del trabajo.</strong> El resto es comunicación, documentación, testing, deployment, mantenimiento, y gestión de expectativas.</p>
         
-        <p><strong>Entender el negocio es más valioso que conocer el último framework.</strong> React va a ser reemplazado eventualmente. Los principios de cómo funcionan las empresas son eternos.</p>
+        <p><strong>Entender el negocio es más valioso que conocer el último framework.</strong></p>
         
-        <p><strong>La documentación no es opcional.</strong> Tu código va a ser mantenido por alguien más (incluso si ese alguien sos vos en 6 meses). Documentar bien es un acto de compasión hacia el futuro.</p>
+        <p><strong>La documentación no es opcional.</strong> Tu código va a ser mantenido por alguien (y quizás ese alguien sos vos en 3 años).</p>
         
-        <p><strong>Los usuarios no leen.</strong> Si tu aplicación requiere un manual de 50 páginas, falló en UX. La simplicidad es la sofisticación definitiva.</p>
-        
-        <h2>Nuevas tecnologías</h2>
-        
-        <p>Hoy mi enfoque está en las automatizaciones. Después de años viendo procesos manuales repetitivos en diferentes empresas, estoy convencido de que hay una oportunidad enorme para optimizar procesos con herramientas como n8n.</p>
-        
-        <p>La mayoría de las empresas todavía tienen sistemas que no se hablan entre sí. Construir puentes entre esos sistemas es donde veo el mayor valor agregado.</p>
-        
-        <p>Mi objetivo es combinar mi experiencia en sistemas ERP con tecnologías modernas para crear soluciones que realmente impacten en la productividad empresarial.</p>
+        <p><strong>Los usuarios no leen.</strong> Simplificar es el camino.</p>
         
         <h2>Reflexión final</h2>
         
