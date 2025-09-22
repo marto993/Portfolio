@@ -14,7 +14,7 @@ import ImageCarousel from './components/ImageCarousel';
 import ImageModal from './components/ImageModal';
 import { useArticles } from './blog/hooks/useArticles';
 import { useAnalytics } from './hooks/useAnalytics';
-import { getFeaturedArticles } from './blog/utils/articleUtils';
+import { getFeaturedArticles, calculateReadTime } from './blog/utils/articleUtils';
 
 // Logo Component
 const Logo = () => (
@@ -674,12 +674,10 @@ function App() {
                 >
                   <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
                     <time>{article.date}</time>
-                    {article.readTime && (
-                      <>
-                        <span>•</span>
-                        <span>{article.readTime}</span>
-                      </>
-                    )}
+                    <>
+                      <span>•</span>
+                      <span>{calculateReadTime(article.content)}</span>
+                    </>
                     {article.featured && (
                       <>
                         <span>•</span>

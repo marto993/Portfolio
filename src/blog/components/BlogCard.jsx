@@ -1,5 +1,5 @@
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
-import { formatArticleDate } from '../utils/articleUtils';
+import { formatArticleDate, calculateReadTime } from '../utils/articleUtils';
 import { useAnalytics } from '../../hooks/useAnalytics';
 
 /**
@@ -49,15 +49,13 @@ export default function BlogCard({ article, onClick }) {
             {formatArticleDate(article.date)}
           </time>
         </div>
-        {article.readTime && (
-          <>
-            <span className="text-gray-600">•</span>
-            <div className="flex items-center gap-1">
-              <Clock size={16} className="text-accent-400" />
-              <span>{article.readTime}</span>
-            </div>
-          </>
-        )}
+        <>
+          <span className="text-gray-600">•</span>
+          <div className="flex items-center gap-1">
+            <Clock size={16} className="text-accent-400" />
+            <span>{calculateReadTime(article.content)}</span>
+          </div>
+        </>
       </div>
 
       {/* Categoría */}

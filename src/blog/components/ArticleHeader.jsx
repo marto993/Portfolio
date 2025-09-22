@@ -1,5 +1,5 @@
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
-import { formatArticleDate } from '../utils/articleUtils';
+import { formatArticleDate, calculateReadTime } from '../utils/articleUtils';
 import { getRelativeTime } from '../utils/dateUtils';
 
 /**
@@ -56,12 +56,10 @@ export default function ArticleHeader({ article, onBack }) {
           </span>
         </div>
 
-        {article.readTime && (
-          <div className="flex items-center gap-2">
-            <Clock size={16} className="text-accent-400" />
-            <span>{article.readTime}</span>
-          </div>
-        )}
+        <div className="flex items-center gap-2">
+          <Clock size={16} className="text-accent-400" />
+          <span>{calculateReadTime(article.content)}</span>
+        </div>
 
         {article.author && (
           <div className="flex items-center gap-2">

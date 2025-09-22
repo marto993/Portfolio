@@ -4,10 +4,9 @@
 export const articlesData = [
   {
     slug: 'bitcoin-criptomonedas-explicacion-tecnica',
-    title: 'Bitcoin y Criptomonedas: sin humo',
+    title: 'Bitcoin y Criptomonedas',
     date: '2025-09-18',
-    excerpt: 'Un repaso sobre Bitcoin y las criptomonedas',
-    readTime: '8 min',
+    excerpt: 'Un repaso sobre qué es Bitcoin y qué propone.',
     category: 'Tecnología',
     tags: ['bitcoin', 'blockchain', 'criptomonedas', 'tecnología', 'finanzas'],
     featured: true,
@@ -18,7 +17,7 @@ export const articlesData = [
         
         <h2>El punto de partida: el whitepaper que cambió todo</h2>
         
-        <p>En octubre de 2008, mientras el mundo financiero se desmoronaba, alguien bajo el pseudónimo Satoshi Nakamoto publicó 9 páginas que cambiarían todo: "Bitcoin: A Peer-to-Peer Electronic Cash System".</p>
+        <p>En octubre de 2008 mientras el mundo financiero se sacudía a causa de la crísis financiera de los bancos estadounidenses, alguien bajo el pseudónimo Satoshi Nakamoto publicó 9 páginas que provocarían una revolución: "Bitcoin: A Peer-to-Peer Electronic Cash System".</p>
         
         <p>La primera vez que leí ese paper, admito que no entendí completamente la magnitud de lo que proponía. Pero había algo que me llamó la atención: finalmente alguien había resuelto el problema del doble gasto sin necesidad de un tercero de confianza.</p>
         
@@ -105,7 +104,6 @@ export const articlesData = [
     title: 'Mi camino en el desarrollo de software',
     date: '2025-09-17',
     excerpt: 'Lecciones, errores y reflexiones luego de más de 10 años en IT.',
-    readTime: '6 min',
     category: 'Desarrollo',
     tags: ['carrera', 'desarrollo', 'experiencia', 'reflexión', 'programación'],
     featured: true,

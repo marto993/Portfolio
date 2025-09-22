@@ -6,6 +6,7 @@ import ArticleHeader from '../components/ArticleHeader';
 import ArticleContent from '../components/ArticleContent';
 import ShareButtons from '../components/ShareButtons';
 import SEO from '../../components/SEO';
+import { calculateReadTime } from '../utils/articleUtils';
 
 /**
  * Página individual para mostrar un artículo completo
@@ -157,7 +158,7 @@ export default function ArticlePage({ slug, onBack }) {
             </div>
             
             <div className="text-sm text-gray-500">
-              {article.readTime} de lectura
+              {calculateReadTime(article.content)} de lectura
             </div>
           </div>
         </div>
@@ -192,12 +193,10 @@ export default function ArticlePage({ slug, onBack }) {
                     <span className="text-gray-400">Categoría:</span>
                     <span className="text-white">{article.category}</span>
                   </div>
-                  {article.readTime && (
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Tiempo de lectura:</span>
-                      <span className="text-white">{article.readTime}</span>
-                    </div>
-                  )}
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Tiempo de lectura:</span>
+                    <span className="text-white">{calculateReadTime(article.content)}</span>
+                  </div>
                   {article.tags && (
                     <div className="flex justify-between">
                       <span className="text-gray-400">Tags:</span>
