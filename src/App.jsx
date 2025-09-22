@@ -431,9 +431,8 @@ function App() {
                 >
                   Contactar
                 </button>
-                {/*
                 <a 
-                  href="#" 
+                  href="https://drive.google.com/file/d/1PrfgVgnTxrxoS25L5hCIJLl4wjIYhLli/view?usp=sharing" 
                   className="button-secondary inline-flex items-center gap-2"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -442,7 +441,6 @@ function App() {
                   <Download size={18} />
                   Descargar CV
                 </a>
-                */}
               </div>
 
               <div className="flex gap-6">

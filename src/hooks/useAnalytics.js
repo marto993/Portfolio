@@ -24,7 +24,6 @@ export const useAnalytics = () => {
       article_slug: article.slug,
       article_category: article.category,
       article_tags: article.tags?.join(', ') || '',
-      // Evitar depender de readTime en los datos; se puede calcular en backend si es necesario
       article_featured: article.featured || false,
       event_category: 'blog',
       event_label: 'article_interaction'
