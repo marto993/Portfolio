@@ -23,7 +23,7 @@ export default function SEO({
   useEffect(() => {
     // Actualizar título de la página
     if (title) {
-      document.title = `${title} | Martín Di Geronimo`;
+      document.title = `${title}`;
     }
 
     // Función para actualizar o crear meta tag
@@ -60,7 +60,7 @@ export default function SEO({
     updateMetaTag('og:site_name', 'Martín Di Geronimo', true);
     
     // Meta tags adicionales para artículos
-    if (type === 'article') {
+    if (type === 'article' || type === 'Article') {
       updateMetaTag('article:author', 'Martín Di Geronimo', true);
       if (publishedTime) {
         const publishedDate = new Date(publishedTime + 'T00:00:00').toISOString();
