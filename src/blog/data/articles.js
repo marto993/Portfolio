@@ -114,21 +114,23 @@ export const articlesData = [
        
         <p>Empezar a escribir sobre mi carrera me da un poco de vértigo. No porque sea una historia épica, sino porque es muy fácil caer en la auto-congratulación o en el síndrome del impostor. Pero bueno, acá vamos: mi recorrido desde un pibe de 16 años que apenas entendía qué era un algoritmo hasta convertirme en alguien que puede liderar migraciones complejas de sistemas ERP.</p>
         
-        <h2>Los primeros pasos: cuando programar era casi magia</h2>
+        <h2>Los primeros pasos: EET N°5</h2>
         
-        <p>Mi primer contacto con la programación fue en la escuela técnica con Turbo Pascal. Recuerdo vívidamente la primera vez que logré hacer que la computadora me mostrara "Hola Mundo" en pantalla. Sonará ridículo, pero fue como hacer magia.</p>
+        <p>Mi primer contacto con la programación fue en la escuela técnica N°5 de Mar del Plata, utilizando Turbo Pascal. Recuerdo la primera vez que logré ejecutar mi primer programa, una mezcla de "hola mundo" con calculadora de operaciones básicas. Parecía como hacer magia.</p>
         
-        <p>Lo que más me llamó la atención no era la tecnología en sí, sino cómo podía resolver problemas complejos dividiéndolos en pasos simples. Ver a mis compañeros sufrir con algoritmos me motivó a ayudarlos. No era que fuera un genio, simplemente me gustaba el proceso de pensar paso a paso.</p>
+        <p>Lo que más me llamó la atención no era el lenguaje en sí (resultaba obvio que Pascal era una herramienta antigua y cuyo propósito es méramente pedagógico), sino cómo podía resolver problemas complejos dividiéndolos en pasos simples, el famoso "divide y vencerás".</p>
+
+        <p>Ver a mis compañeros de clase en su mayoría sufrir con Algoritmos (nombre de la materia) me motivó a ayudarlos. No es que fuera un genio, simplemente me gustaba el proceso de pensar paso a paso.
         
-        <p>De una clase de casi 30 estudiantes, solo 4 aprobamos algoritmos. No porque fuera súper difícil, sino porque requería un tipo de pensamiento que no todos estábamos acostumbrados a ejercitar. Ahí entendí mi primera lección importante: la programación no es sobre memorizar sintaxis, es sobre aprender a pensar.</p>
+        <p>De una clase de casi 30 estudiantes, solo 4 o 5 aprobamos esta materia. No porque fuera súper difícil sino porque requería un tipo de pensamiento que no estábamos acostumbrados a ejercitar. En el primer año aprendí lecciones importantes: Programar no es sobre memorizar sintaxis, es sobre aprender a pensar. Y el ya mencionado "divide y vencerás".</p>
         
-        <h3>La Olimpiada: mi primer "logro" real</h3>
+        <h3>La Olimpiada: mi primer logro sin saberlo</h3>
         
-        <p>Por destacarme entre mis compañeros, me invitaron a participar en la Olimpiada Informática Argentina. Honestamente, no tenía idea de en qué me estaba metiendo.</p>
+        <p>Por destacarme entre mis compañeros me invitaron a participar en la Olimpiada Informática Argentina. No tenía idea de en qué me estaba metiendo, pero sonaba realmente interesante.</p>
         
-        <p>Clasificar 4to en la instancia provincial y llegar a la nacional fue surreal. De repente estaba compitiendo contra pibes de todo el país que sabían cosas que yo ni imaginaba que existían. Fue mi primera experiencia real de síndrome del impostor.</p>
+        <p>Luego de 3 horas de olimpiada (y algunas semanas después) Clasificar 4to en la instancia provincial, lo que me hizo meritorio de la clasificación a la competencia Nacional en la Universidad de La Matanza. Un viaje increíble con compañeros y docentes que hasta el día de hoy recuerdo con todo lujo de detalles.</p>
         
-        <p>Terminé 10mo en la nacional. No era medalla, pero para un pibe de provincia que había aprendido programación en la escuela, no estaba mal. Más importante: me di cuenta de que había mucho, MUCHO que aprender.</p>
+        <p>Finalicé 10mo en la nacional. No estaba mal aunque no logré clasificar al mundial que ese año se disputó en Egipto.</p>
         
         <h2>Mi primer oportunidad: una pasantía</h2>
         
@@ -173,7 +175,6 @@ export const articlesData = [
         <p>Debía elegír una tecnología web para el desarrollo y fué PHP, podría decir que por su documentación oficial y su comunidad. Sobre todo la documentación, me recordaba mucho a aquel viejo libro de Visual FoxPro.</p>
         
         <p>En este proyecto pude vivir la experiencia completa de desarrollo web: desde conectarme por SSH a un servidor hasta manejar usuarios reales con necesidades reales. También mi primer contacto con el estrés de tener "clientes" (aunque fueran amigos) dependiendo de tu código.</p>
-        
         
         <h2>Diversificando experiencias: Analista Funcional mesa de ayuda y Desarrollador/Analista</h2>
         
