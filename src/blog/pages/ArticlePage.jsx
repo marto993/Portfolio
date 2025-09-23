@@ -119,7 +119,7 @@ export default function ArticlePage({ slug, onBack }) {
         title={article.title}
         description={article.excerpt}
         keywords={article.tags ? article.tags.join(', ') : ''}
-        image="/og-image.png"
+        image="/Portfolio/assets/MDG.png"
         url={`${window.location.origin}/Portfolio/#blog/${article.slug}`}
         type="article"
         publishedTime={article.date}
