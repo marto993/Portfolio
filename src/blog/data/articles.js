@@ -122,7 +122,7 @@ export const articlesData = [
         
         <p>De una clase de casi 30 estudiantes, solo 4 o 5 aprobamos esta materia. No porque fuera súper difícil sino porque requería un tipo de pensamiento que no estábamos acostumbrados a ejercitar. En el primer año aprendí lecciones importantes: Programar no es sobre memorizar sintaxis, es sobre aprender a pensar. Y el ya mencionado "divide y vencerás".</p>
         
-        <h3>La Olimpiada: mi primer logro sin saberlo</h3>
+        <h3>La Olimpiada Informática Argentina</h3>
         
         <p>Por destacarme entre mis compañeros me invitaron a participar en la Olimpiada Informática Argentina. No tenía idea de en qué me estaba metiendo, pero sonaba realmente interesante.</p>
         
@@ -150,12 +150,22 @@ export const articlesData = [
         
         <h3>Evolución profesional: de junior a liderar proyectos</h3>
         
-        <p>Fueron años de un crecimiento gradual pero constante. Comencé haciendo informes, análisis funcional básico, soporte, correcciones en la base de datos. Poco a poco fui ganando autonomía y capacidad de acción (cualquier día te puede tocar apagar un incendio).</p>
+        <p>Fueron años de crecimiento gradual pero constante. Comencé haciendo informes, análisis funcional básico, soporte, correcciones en la base de datos. Poco a poco fui ganando autonomía y capacidad de acción (cualquier día te puede tocar apagar un incendio).</p>
         
-        <p>2012-2015 podría resumirse en: aprender las reglas del negocio, entender cómo funciona una empresa, cometer errores y aprender de ellos. El código era importante, pero más importante era entender el impacto que iba a tener.</p>
+        <p>2012-2015: En estos primeros años aprendí las reglas del negocio, entendí cómo funciona una empresa en cada una de sus áreas y cómo estas interactuan a través del sistema. El código era importante, pero más importante era entender el impacto real que tenía.</p>
         
-        <p>2015-2019 En desarrollo...</p>
+        <p>Año 2015, primer punto de inflexión: el líder de TI deja la empresa. Esto provocó una rotación de puestos dentro del equipo que incluyó la contratación de un nuevo programador.</p>
+
+        <p>Luego de estos cambios en el equipo fui encargado de capacitar al nuevo integrante e introducirlo al entorno de desarrollo, los sistemas que se utilizaban y a las tareas del día a día que anteriormente me tocaba desempeñar.</p>
         
+        <p>Esta redistribución de responsabilidades implicó un cambio significativo para mí: ya no resolvía cosas del día a día ni era la primera línea de atención a los usuarios. Comencé a liderar proyectos, definir estrategias para su implementación, monitorear servidores y servicios crtíticos, gestionar proveedores TI, entre otras cosas.</p>
+
+        <p>El primer proyecto importante fue un nuevo módulo para registrar y dar trazabilidad a los Permisos de Embarque dentro del sistema de Comercio Exterior.</p>
+
+        <p>Este módulo permitió registrar permisos de embarque de forma atómica, aplicando reglas de negocio propias del Comercio Exterior. También permitió automatizar el registro de ordenes de gasto correspondientes al pago por los derechos de exportación, tasa de aduana, costo de digitalización, entre otros gastos correspondientes a cada exportación.</p>
+
+        <p><b>Reglas claras, atomicidad y automatización: estos fueron los pilares que convirtieron este proyecto en un éxito rotundo.</b></p>
+
         <h2>Libro de Sueldos Digital</h2>
         
         <p>Uno de los proyectos más destacados que me tocó desarrollar es sin duda el libro de sueldos digital. </p>
@@ -172,23 +182,16 @@ export const articlesData = [
         
         <p>Debía elegír una tecnología web para el desarrollo y fué PHP, podría decir que por su documentación oficial y su comunidad. Sobre todo la documentación, me recordaba mucho a aquel viejo libro de Visual FoxPro.</p>
         
-        <p>En este proyecto pude vivir la experiencia completa de desarrollo web: desde conectarme por SSH a un servidor hasta manejar usuarios reales con necesidades reales. También mi primer contacto con el estrés de tener "clientes" (aunque fueran amigos) dependiendo de tu código.</p>
+        <p>Este proyecto me permitió vivir una experiencia completa de desarrollo web: desde conectarme por SSH al servidor Linux, gestionar certificado SSL, usuarios y permisos, directorios, archivos, control de versión (git), testear mis endpoints con Postman, entre otras cosas.</p>
         
-        <h2>Diversificando experiencias: Analista Funcional mesa de ayuda y Desarrollador/Analista</h2>
-        
-        <p>En construcción.</p>
-
         <h2>Las tecnologías</h2>
+
+        <p>Qué feo se siente tener que encasillarse debajo del cartel de una tecnología cuando por dentro sentís el fuego de la curiosidad y el deseo de aprender. En fin, dejo una lista de tecnologías que he utilizado a continuación: </p>
         
-        <p>Mi stack tecnológico evolucionó orgánicamente, siempre guiado por necesidades reales más que por hype.</p>
+        <p>Visual FoxPro, SQL Server, MySQL, PHP, HTML, CSS, Bootstrap, JavaScript, JQuery, React, Node.js, PostgreSQL, MongoDB, C++, C#, Python, Git, n8n</p>
         
-        <p>Visual FoxPro fue mi caballo de batalla durante años. Suena vintage, pero era increíblemente productivo para aplicaciones empresariales. Me enseñó sobre bases de datos, interfaz de usuario y lógica de negocio integrada.</p>
+        <h2></h2>
         
-        <p>PHP me introdujo al desarrollo web. Me permitió crear soluciones rápido y me obligó a gestionar mi propio servidor.</p>
-        
-        <p>Después vino React.</p>
-        
-        <p>Node.js cerró el círculo: finalmente podía usar el mismo lenguaje en frontend y backend.</p>
         
         <h2>Lecciones aprendidas</h2>
        
