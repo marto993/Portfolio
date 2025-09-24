@@ -160,11 +160,43 @@ export const articlesData = [
         
         <p>Esta redistribución de responsabilidades implicó un cambio significativo para mí: ya no resolvía cosas del día a día ni era la primera línea de atención a los usuarios. Comencé a liderar proyectos, definir estrategias para su implementación, monitorear servidores y servicios crtíticos, gestionar proveedores TI, entre otras cosas.</p>
 
-        <p>El primer proyecto importante fue un nuevo módulo para registrar y dar trazabilidad a los Permisos de Embarque dentro del sistema de Comercio Exterior.</p>
+        <h2>Primer proyecto complejo</h2>
 
-        <p>Este módulo permitió registrar permisos de embarque de forma atómica, aplicando reglas de negocio propias del Comercio Exterior. También permitió automatizar el registro de ordenes de gasto correspondientes al pago por los derechos de exportación, tasa de aduana, costo de digitalización, entre otros gastos correspondientes a cada exportación.</p>
+        <p>Me tocó liderar el desarrollo de un nuevo módulo para registrar y dar trazabilidad a los Permisos de Embarque dentro del sistema de Comercio Exterior. </p>
 
-        <p><b>Reglas claras, atomicidad y automatización: estos fueron los pilares que convirtieron este proyecto en un éxito rotundo.</b></p>
+        <p>El proyecto comenzó con algo que nunca había hecho antes: liderar reuniones con múltiples áreas de la empresa. Tuve que coordinar entrevistas con referentes de Comercio Exterior, Tesorería, Administración y Contabilidad.</p>
+
+        <p>Cada área tenía su perspectiva del proceso, sus necesidades específicas y sus propias reglas de negocio que se debían respetar. Aquí tuve que encontrar los puntos en común, identificar las necesidades y definir un flujo de trabajo que funcionara para todos.</p>
+
+        <p>Fueron necesarias varias reuniones para entender el proceso y llegar a un consenso definitivo con todos los involucrados de cuál era el camino a seguir.</p>
+
+        <h3>Desarrollo iterativo (antes de conocer el término)</h3>
+
+        <p>Sin saberlo, estaba aplicando una metodología ágil. Cada semana mostraba avances a los usuarios clave, recogía feedback y ajustaba el rumbo según fuera necesario.</p>
+
+        <p>El módulo permitía registrar permisos de embarque de forma atómica, aplicando las reglas de negocio específicas del Comercio Exterior. Pero la parte que más me enorgullecía era la automatización: una vez que el usuario completaba el proceso, el sistema generaba automáticamente las órdenes de gasto correspondientes al pago de derechos de exportación, tasa de aduana, costo de digitalización y otros gastos asociados a cada exportación.</p>
+
+        <p>La automatización incluía la generación de comprobantes, el envío de emails de notificación y la creación de movimientos en los sistemas de tesorería, contabilidad y proveedores. Todo esto sucedía de forma automática al avanzar en determinados puntos del proceso.</p>
+
+        <h3>Capacitación y documentación: la otra mitad del proyecto</h3>
+
+        <p>Una vez terminado el desarrollo vino la parte más cercana al usuario: la capacitación y documentación de cada etapa del proceso.</p>
+
+        <p>Redacté manuales diferenciados para operadores y administradores. Los administradores de Tesorería necesitaban entender las configuraciones críticas que permitían que las automatizaciones funcionaran correctamente. Los operadores necesitaban una base de conocimientos que sirviera para su trabajo diario.</p>
+
+        <h3>El seguimiento: mejora continua</h3>
+
+        <p>Finalizada la implementación, establecí un proceso de seguimiento. Cada semana revisaba con los usuarios cómo estaba funcionando el sistema, y qué mejoras podían implementarse.</p>
+
+        <p>Esta retroalimentación constante permitió refinar el módulo durante varios meses. Pequeños ajustes en la interfaz, validaciones adicionales, nuevos reportes... ¿El resultado? 100% de satisfacción del usuario.</p>
+
+        <h3>Por qué fue un éxito rotundo</h3>
+
+        <p>El proyecto se completó antes del plazo estimado, los usuarios lo integraron en su día a día y logró automatizar un proceso que antes requería múltiples pasos manuales y coordinación constante entre áreas.</p>
+
+        <p>Aunque lo más importante fue darme cuenta de que podía liderar proyectos complejos de principio a fin y aprender MUCHÍSIMO en el proceso.</p>
+
+        <p><strong>Programar es solo una parte del trabajo. El resto es comunicación, análisis, gestión y, sobre todo, entender profundamente el problema que estás resolviendo.</strong></p>
 
         <h2>Libro de Sueldos Digital</h2>
         

@@ -927,11 +927,11 @@ function App() {
 
         {/* SEO dinámico */}
         <SEO 
-          title={currentPage === 'article' ? 'Artículo del Blog' : currentPage === 'blog' ? 'Blog' : 'Portfolio'}
+          title={currentPage === 'article' ? 'Artículo del Blog' : currentPage === 'blog' ? 'Blog' : 'Martín Di Geronimo - Especialista en Migración de Sistemas ERP'}
           description={currentPage === 'article' ? 'Lee el artículo completo en mi blog' : currentPage === 'blog' ? 'Reflexiones sobre desarrollo, tecnología y automatizaciones' : 'Desarrollador Full-Stack especializado en ERP y automatizaciones'}
           keywords= 'portfolio, blog, desarrollador, full-stack, especialista ERP, automatizaciones, n8n, desarrollo, software, programación'
           image="/Portfolio/assets/MDG.png"
-          url={`${window.location.origin}/Portfolio}`}
+          url={`${window.location.origin}/Portfolio`}
         />
       </div>
     </ErrorBoundary>
