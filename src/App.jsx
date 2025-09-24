@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   Menu, X, Github, Linkedin, Mail, ExternalLink, Download,
   Code, Zap, Brain, Coffee, ChevronDown, Send,
-  Database, Server, Smartphone, Globe, Workflow, ArrowRight
+  Database, Server, Smartphone, Globe, Workflow, ArrowRight, Users, Award, Target, BookOpen
 } from 'lucide-react';
 import BlogPage from './blog/pages/BlogPage';
 import ArticlePage from './blog/pages/ArticlePage';
@@ -203,7 +203,6 @@ function App() {
       benefits: ["Registro automático", "Extracción de datos", "Integración con Google Sheets", "Confirmación de registros"]
     }
   ];
-
 
   const scrollToSection = (href) => {
     if (href === '#blog') {
@@ -487,30 +486,58 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - MEJORADA */}
       <section id="about" className="section-padding">
         <div className="container-max">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold gradient-text mb-6">Sobre mí</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Desarrollador de Software con <span className="text-primary-400 font-semibold">+10 años de experiencia</span> en TI, 
               especializado en sistemas ERP y modernización tecnológica. Combino sólidas competencias técnicas con 
-              habilidades de comunicación para gestionar proyectos completos, con amplia experiencia en el desarrollo de soluciones a medida desde el análisis de requerimientos 
-              hasta la implementación, sirviendo como puente efectivo entre avance tecnológico y reglas de negocio.
+              liderazgo de equipos y habilidades de comunicación interdisciplinaria para gestionar proyectos complejos de principio a fin,
+              sirviendo como puente efectivo entre avance tecnológico y necesidades empresariales.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          {/* Logros destacados */}
+          <div className="text-center mb-12">
+            <div className="flex flex-wrap justify-center gap-4">
+              <span className="bg-accent-500/20 text-accent-300 px-4 py-2 rounded-full text-sm font-medium border border-accent-500/30 flex items-center gap-2">
+                <Award size={16} />
+                  Experto en Migraciones ERP
+              </span>
+              <span className="bg-primary-500/20 text-primary-300 px-4 py-2 rounded-full text-sm font-medium border border-primary-500/30 flex items-center gap-2">
+                <Users size={16} />
+                    Líder de Capacitaciones
+              </span>
+              <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium border border-purple-500/30 flex items-center gap-2">
+                <BookOpen size={16} />
+                Consultor en Mejora de Procesos
+              </span>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
             <div className="glass-effect rounded-2xl p-8 card-hover">
               <Code className="text-primary-400 mb-4" size={48} />
               <h3 className="text-2xl font-bold mb-4 text-white">Desarrollo a Medida</h3>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Creo soluciones desde cero utilizando tecnologías modernas con bases de datos robustas y estructuras de datos bien definidas.
-                Mi experiencia incluye desde sistemas legacy en Visual FoxPro hasta arquitecturas en la nube con AWS y GCP. 
-                Cada proyecto lo desarrollo pensando en escalabilidad, rendimiento y mantenibilidad a largo plazo.
+                Creo soluciones completas desde el análisis funcional hasta la implementación, con experiencia desde sistemas legacy 
+                (Visual FoxPro) hasta arquitecturas modernas en la nube. Cada proyecto lo desarrollo pensando en escalabilidad, 
+                rendimiento y mantenibilidad a largo plazo.
               </p>
+              <div className="space-y-3 mb-6">
+                <div className="text-sm text-gray-300">
+                  <strong>Destacados:</strong>
+                </div>
+                <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+                  <li>Permisos de Embarque</li>
+                  <li>Facturación Electrónica</li>
+                  <li>Libro de Sueldos Digital</li>
+                </ul>
+              </div>
               <div className="flex flex-wrap gap-2">
-                {['React', 'Node.js', 'Python', 'MySQL', 'MongoDB', 'PostgreSQL', 'AWS', 'GCP', 'Railway', 'Visual FoxPro'].map(tech => (
+                {['React', 'Node.js', 'Python', 'Visual FoxPro', 'MySQL', 'MongoDB', 'PostgreSQL', 'AWS', 'GCP', 'Railway'].map(tech => (
                   <span key={tech} className="bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm">
                     {tech}
                   </span>
@@ -520,14 +547,25 @@ function App() {
 
             <div className="glass-effect rounded-2xl p-8 card-hover">
               <Zap className="text-accent-400 mb-4" size={48} />
-              <h3 className="text-2xl font-bold mb-4 text-white">Automatización de Procesos</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Automatización & Procesos</h3>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Diseño workflows inteligentes con n8n que conectan sistemas heterogéneos y eliminan tareas manuales. 
-                Integro APIs REST, automatizo migraciones de datos y creo pipelines que mejoran la productividad empresarial. 
-                Mi enfoque combina análisis funcional con implementación técnica para lograr soluciones realmente efectivas.
+                Diseño workflows inteligentes que conectan sistemas heterogéneos y eliminan tareas manuales. 
+                Mi enfoque combina análisis funcional profundo con implementación técnica, aplicando metodologías ágiles 
+                para lograr soluciones realmente efectivas.
               </p>
+              <div className="space-y-3 mb-6">
+                <div className="text-sm text-gray-300">
+                  <strong>Especialidades:</strong>
+                </div>
+                <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+                  <li>Integración de sistemas empresariales</li>
+                  <li>Automatización de procesos B2B</li>
+                  <li>Pipelines de migración de datos</li>
+                  <li>Workflows inteligentes</li>
+                </ul>
+              </div>
               <div className="flex flex-wrap gap-2">
-                {['n8n', 'APIs', 'Webhooks', 'Integrations', 'Workflows'].map(tech => (
+                {['n8n', 'APIs REST', 'Webhooks', 'Workflows', 'Integrations'].map(tech => (
                   <span key={tech} className="bg-accent-500/20 text-accent-300 px-3 py-1 rounded-full text-sm">
                     {tech}
                   </span>
@@ -536,18 +574,69 @@ function App() {
             </div>
 
             <div className="glass-effect rounded-2xl p-8 card-hover">
-              <Brain className="text-purple-400 mb-4" size={48} />
-              <h3 className="text-2xl font-bold mb-4 text-white">Modernización de Sistemas</h3>
+              <Users className="text-purple-400 mb-4" size={48} />
+              <h3 className="text-2xl font-bold mb-4 text-white">Liderazgo & Gestión</h3>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Liderazgo en migraciones de sistemas legacy a plataformas modernas, gestionando proyectos de larga duración con equipos multidisciplinarios.
-                Desde el mapeo de estructuras de datos mediante análisis funcional, hasta el desarrollo de interfaces de migración, documentación técnica y programas de capacitación masiva.
+                Lidero migraciones de sistemas y gestiono proyectos de larga duración 
+                con equipos multidisciplinarios. Desde el mapeo de estructuras de datos hasta capacitación masiva, 
+                coordino todos los aspectos técnicos y humanos del proceso.
               </p>
+              <div className="space-y-3 mb-6">
+                <div className="text-sm text-gray-300">
+                  <strong>Competencias clave:</strong>
+                </div>
+                <ul className="text-sm text-gray-400 space-y-1 list-disc list-inside">
+                  <li>Coordinación de equipos técnicos y funcionales</li>
+                  <li>Gestión de stakeholders empresariales</li>
+                  <li>Desarrollo iterativo y metodologías ágiles</li>
+                  <li>Capacitación técnica y documentación</li>
+                </ul>
+              </div>
               <div className="flex flex-wrap gap-2">
-                {['Migración de Sistemas','Migración de Datos','Gestión','Liderazgo de Equipos','Capacitación','Documentación Técnica'].map(skill => (
+                {['Migración de Sistemas', 'Liderazgo', 'Capacitación', 'Documentación'].map(skill => (
                   <span key={skill} className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">
                     {skill}
                   </span>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Metodología de trabajo */}
+          <div className="glass-effect rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-6 text-white text-center">Metodología de Trabajo</h3>
+            
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="bg-primary-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Target size={32} className="text-primary-400" />
+                </div>
+                <h4 className="font-semibold mb-2 text-white">Análisis Funcional</h4>
+                <p className="text-sm text-gray-400">Entrevistas con stakeholders y mapeo detallado de procesos empresariales</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-accent-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Code size={32} className="text-accent-400" />
+                </div>
+                <h4 className="font-semibold mb-2 text-white">Desarrollo Iterativo</h4>
+                <p className="text-sm text-gray-400">Entregas frecuentes con feedback continuo y ajustes según necesidades</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <BookOpen size={32} className="text-purple-400" />
+                </div>
+                <h4 className="font-semibold mb-2 text-white">Capacitación</h4>
+                <p className="text-sm text-gray-400">Documentación completa y programas de capacitación diferenciados por roles</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-orange-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <ArrowRight size={32} className="text-orange-400" />
+                </div>
+                <h4 className="font-semibold mb-2 text-white">Seguimiento</h4>
+                <p className="text-sm text-gray-400">Mejora continua basada en retroalimentación y métricas de uso</p>
               </div>
             </div>
           </div>
@@ -620,32 +709,7 @@ function App() {
                       </div>
                     ))}
                   </div>
-                  {/* 
-                  <button className="button-primary">
-                    Solicitar Automatización Similar
-                  </button>
-                   */}
                 </div>
-                {/*
-                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <div className="glass-effect rounded-2xl p-4">
-                    <img 
-                      src={automation.video} 
-                      alt={`${automation.title} demo`}
-                      className="w-full rounded-lg"
-                    />
-                  </div>
-                  
-                  <div className="glass-effect rounded-2xl p-4">
-                    <h4 className="text-lg font-semibold mb-3 text-white">Flujo de trabajo</h4>
-                    <img 
-                      src={automation.workflow} 
-                      alt={`${automation.title} workflow`}
-                      className="w-full rounded-lg"
-                    />
-                  </div>
-                </div>
-                */}
               </div>
             ))}
           </div>
