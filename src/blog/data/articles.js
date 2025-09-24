@@ -248,4 +248,101 @@ export const articlesData = [
         </blockquote>
       </div>
     `
-  }];
+  }, 
+  {
+      slug: 'tokenizacion-activos-argentina-revolucion-financiera',
+      title: 'Tokenización de Activos en Argentina',
+      date: '2025-09-24',
+      excerpt: 'Argentina, pionero regional con el marco regulatorio más avanzado de Latinoamérica para tokenizar activos del mundo real.',
+      category: 'Fintech',
+      tags: ['tokenización', 'blockchain', 'fintech', 'argentina', 'regulación', 'CNV', 'inversión'],
+      featured: true,
+      content: `
+        <div>
+          
+          <h2>¿Qué es la tokenización de activos?</h2>
+          
+          <p>Imaginemos que tenés un departamento valuado en USD 100.000. La tokenización te permite dividir ese inmueble en, por ejemplo, 100.000 tokens digitales, donde cada token representa USD 1 de participación en la propiedad. Así, alguien puede invertir USD 100 y ser "dueño" del 0,1% de ese departamento.</p>
+          
+          <p>El token funciona como un certificado digital que se registra en blockchain, garantizando transparencia, trazabilidad e inmutabilidad. Es como tener acciones de una empresa, pero aplicado a bienes inmuebles, campos, obras de arte, o cualquier activo del mundo real.</p>
+          
+          <h2>El marco regulatorio argentino: pionero en la región</h2>
+          
+          <p>En junio de 2025, la Comisión Nacional de Valores (CNV) aprobó la <a href="https://www.boletinoficial.gob.ar/detalleAviso/primera/326947/20250613" target="_blank" rel="noopener noreferrer">Resolución General 1069</a>, estableciendo las primeras reglas del juego para tokenizar activos en Argentina.</p>
+          
+          <p><strong>Primera fase (<a href="https://www.boletinoficial.gob.ar/detalleAviso/primera/326947/20250613" target="_blank" rel="noopener noreferrer">RG 1069/2025</a>):</strong> Permite tokenizar fideicomisos financieros y fondos de inversión cerrados cuyos activos subyacentes sean bienes físicos (inmuebles, campos, facturas) que no coticen en mercados habilitados.</p>
+          
+          <p><strong>Segunda fase (<a href="https://www.boletinoficial.gob.ar/detalleAviso/primera/330173/20250821" target="_blank" rel="noopener noreferrer">RG 1081/2025</a>):</strong> Amplió el alcance a acciones, obligaciones negociables y CEDEARs, completando un régimen integral.</p>
+          
+          <p>El sistema funciona bajo un <strong>sandbox regulatorio</strong> hasta agosto de 2026, período durante el cual se pueden realizar emisiones. Las emisiones ya aprobadas mantienen su validez incluso después del período de prueba.</p>
+          
+          <h3>Los operadores: PSAV</h3>
+          
+          <p>Los <strong>Proveedores de Servicios de Activos Virtuales (PSAV)</strong> son los intermediarios autorizados para comercializar y custodiar digitalmente estos tokens. Deben cumplir procedimientos auditados y reportar cualquier irregularidad a la CNV, garantizando protección a los inversores.</p>
+          
+          <h2>Casos reales que ya funcionan en Argentina</h2>
+          
+          <h3>R3AL BLOCKS: el primer edificio tokenizado de Buenos Aires</h3>
+          
+          <p>La startup liderada por la ingeniera Débora Carrizo lanzó <strong>Conectia</strong>, el primer edificio tokenizado de la Ciudad de Buenos Aires. El proyecto permite invertir desde USD 100 en un inmueble que se entregará en diciembre de 2025, ubicado en Monserrat.</p>
+          
+          <p>"La tokenización no solo simplifica el acceso a bienes como edificios, vehículos o empresas, sino que también ofrece mayor liquidez, transparencia y eficiencia en la gestión de activos", explica Carrizo.</p>
+          
+          <h3>Raíz: liquidez inmediata en real estate</h3>
+          
+          <p>La fintech liderada por Alexandre Boccara permite invertir en proyectos inmobiliarios con rendimientos anuales en dólares. Su modelo ofrece liquidez inmediata y distribuye ingresos mensualmente.</p>
+          
+          <p>"La tokenización nos dio la posibilidad de ofrecer lo mejor de todos los mundos: tiene la estabilidad y seguridad del ladrillo y la accesibilidad de cualquier billetera virtual", destaca Boccara.</p>
+          
+          <h3>Otros proyectos en marcha</h3>
+          
+          <p><strong>MilAires</strong> (Villa Devoto): Proyecto inmobiliario donde se pueden adquirir tokens desde montos muy bajos.</p>
+          
+          <p>Plataformas tecnológicas como <strong>Koibanx</strong> y <strong>Rext</strong> también están desarrollando infraestructura para tokenizar distintos tipos de activos.</p>
+          
+          <h2>¿Qué se puede tokenizar actualmente?</h2>
+          
+          <p>Bajo la regulación actual, se pueden tokenizar:</p>
+          
+          <p>• <strong>Certificados de participación de fideicomisos financieros</strong> cuyo activo subyacente esté compuesto por inmuebles, créditos, facturas u otros activos del mundo real</p>
+          
+          <p>• <strong>Cuotapartes de fondos comunes de inversión cerrados</strong> con patrimonio integrado por activos reales</p>
+          
+          <p>• <strong>Acciones, obligaciones negociables y CEDEARs</strong> (desde la segunda fase)</p>
+          
+          <p>Sectores como energía, agro, gastronomía y hasta jugadores de tenis están siendo explorados por diferentes plataformas.</p>
+          
+          <h2>Ventajas y riesgos</h2>
+          
+          <h3>Ventajas</h3>
+          <p>• <strong>Democratización:</strong> Acceso a inversiones antes reservadas para grandes capitales</p>
+          <p>• <strong>Liquidez:</strong> Mayor facilidad para vender participaciones</p>
+          <p>• <strong>Transparencia:</strong> Toda la información queda registrada en blockchain</p>
+          <p>• <strong>Diversificación:</strong> Posibilidad de invertir pequeñas sumas en múltiples activos</p>
+          
+          <h3>Riesgos a considerar</h3>
+          <p>• <strong>Regulación en desarrollo:</strong> Estamos en período de prueba (sandbox)</p>
+          <p>• <strong>Riesgo tecnológico:</strong> Dependencia de plataformas digitales</p>
+          <p>• <strong>Riesgo de proyecto:</strong> Los activos subyacentes pueden no rendir lo esperado</p>
+          <p>• <strong>Liquidez limitada:</strong> Aunque prometida, aún falta desarrollar mercados secundarios robustos</p>
+          
+          <h2>Argentina en el contexto internacional</h2>
+          
+          <p>Roberto Silva, presidente de la CNV, destacó que estas regulaciones "ponen a Argentina nuevamente en la vanguardia regional y global". Efectivamente, el país se suma a jurisdicciones como España (Ley 6/2023), Brasil (Resolución CVM N° 29/2021) y Uruguay (Ley N° 20.345) que ya regulan la tokenización.</p>
+          
+          <p>La diferencia argentina es la amplitud del marco regulatorio y la implementación práctica inmediata a través del sandbox.</p>
+          
+          <h2>El futuro inmediato</h2>
+          
+          <p>Con 8.6 millones de argentinos operando criptomonedas (19% de la población según la Fundación Blockchain Argentina) y un ecosistema fintech en rápida expansión, el terreno está preparado para la adopción masiva de activos tokenizados.</p>
+          
+          <p>Las plataformas locales ya están demostrando casos de uso concretos, y la regulación proporciona el marco de confianza necesario para que tanto inversores como emisores participen con seguridad.</p>
+          
+          <hr>
+          
+          <blockquote>
+            <p><em>¿Conocías estos avances en tokenización de activos?. Si te gustó este artículo te invito a compartirlo en tus redes!</em></p>
+          </blockquote>
+        </div>
+      `
+}];
