@@ -345,4 +345,57 @@ export const articlesData = [
           </blockquote>
         </div>
       `
+},
+{
+  slug: 'primera-serendipia',
+  title: 'Primera serendipia',
+  date: '2025-09-28',
+  excerpt: 'Cuando dos mentes llegan a la misma solución de forma independiente.',
+  category: 'Reflexión',
+  tags: ['serendipia', 'colaboración', 'desarrollo', 'experiencia', 'junior'],
+  featured: false,
+  content: `
+    <div>
+      
+      <p>Esta es la historia de uno de los momentos que quedó grabado en mi memoria para siempre. De esas experiencias que trascienden y conectan con algo más profundo. El siguiente relato sucedió entre la primera y segunda semana de mi primer trabajo como desarrollador.</p>
+      
+      <p>Para entender bien esta historia necesito dar algo de contexto. En la empresa (en realidad grupo de empresas pesqueras con varios barcos) existía un sistema de reportes para visualizar las posiciones de todos los barcos de la flota. Este sistema tenía dos versiones: una básica que mostraba los barcos sobre una imagen estática de un mapa (opción limitada ya que no permitía zoom porque el mapa era una imagen fija), y otra más avanzada que abría el navegador predeterminado del usuario cargando Google Maps e incrustando cada uno de los barcos en sus coordenadas exactas. Esta versión avanzada permitía zoom para localizar exactamente la posición del barco en el mapa, además de dibujar las zonas de vedas de pesca.</p>
+      
+      <p>Mi compañero (desarrollador senior, trabajaba en la empresa hacía +15 años [Tipazo++]) estaba trabajando en mejorar justamente la versión de Google Maps para incorporarle más datos a cada barco que se veía en el mapa. La idea era que cuando el usuario hiciera click sobre un barco se desplegara un pequeño popup incrustado dentro del mapa que tuviera dos pestañas: una con información sobre la tripulación a bordo (legajo, apellido y nombre, categoría correspondiente al rango del tripulante, y totales de las cantidades), y otra sobre la producción que listara acumulado por día los partes de pesca, totalizando para saber la producción total que llevaba a bordo el barco. Hablamos de barcos factoría que cuentan con su propia planta de producción a bordo y pescan por más de 30 días.</p>
+      
+      <p>Un día en la oficina mi compañero me empezó a explicar lo que les acabo de contar, pero se encontraba atascado por una limitación técnica. Los barcos ya aparecían correctamente en el mapa de Google, eso funcionaba perfecto. El problema real era algo técnico: toda la información que se pretendía mostrar no cabía en el canal de comunicación disponible entre el sistema y el navegador.</p>
+      
+      <p>Simplemente no existían tipos ni estructuras de datos con la capacidad suficiente para servir toda la información y además en el formato necesario.</p>
+      
+      <p>Mi compañero llevaba algunas horas dándole vueltas al asunto. El problema era evidente y fácil de entender, pero la solución requería inventar un nuevo puente para enviar los datos al navegador y sobre eso nos quedamos charlando los minutos que quedaban del día laboral.</p>
+      
+      <p>Volví a mi casa pensando en ese problema, ilusionado de aportar mi primera solución. Recuerdo estar en el colectivo camino a casa construyendo ese puente técnico en mi cabeza. </p>
+      
+      <p>Para antes de cenar lo tenía resuelto. Se me ocurrió algo simple pero efectivo: desde el sistema guardar toda la información que no cupiera en la comunicación tradicional en archivos temporales, y además crear un pequeño script en JavaScript que se encargara de leer esos archivos (ya desde el navegador) e incrustar toda la información en la visualización por pantalla del usuario</p>
+      
+      <p>El proceso sería completamente transparente para el usuario. Luego los archivos temporales se podían borrar diariamente por política via GPO. Sin limitaciones de tamaño, sin complicaciones técnicas, una solución elegante que esquivaba las limitaciones de la comunicación directa.</p>
+      
+      <p>Al día siguiente llegué a la empresa (mi horario era de 13 a 17:30hs) con esa sensación única de cuando creés que encontraste la solución perfecta a un problema real. Y más siendo un junior al 100%, la posibilidad de aportar algo valioso a un compañero experimentado me llenaba de emoción.</p>
+      
+      <p>Saludé a mi compañero con una sonrisa que no podía disimular y fui directo al grano: "Che, ¿te acordás de la limitación que charlamos ayer del sistema de reportes con Google Maps?". Mi compañero me escuchó con atención, claramente interesado. En menos de dos minutos le expliqué toda la solución: archivos temporales, JavaScript, transparencia para el usuario. Un híper resumen, pero sabía que él me entendería a la primera. Y así fue.</p>
+      
+      <p>Lo que pasó después fue simplemente hermoso. Mi compañero me miró con una mezcla de sorpresa y alegría. Entre risas, me dijo: "¿Me creés que estuve toda la mañana programando exactamente eso?". Y procedió a mostrarme los avances que había hecho.</p>
+      
+      <p>No era broma. Mi compañero estaba desarrollando exactamente la misma solución. Exactamente. La. Misma. Solución. Dos mentes, trabajando de forma independiente, en un lapso de pocas horas, habían llegado al mismo lugar por caminos paralelos.</p>
+      
+      <p>Al ver que me había interesado genuinamente por el problema decidió derivarme el desarrollo para que continuara lo que él había empezado. Ya lo tenía resuelto en un 70%, restaba acomodar el diseño, añadir las zonas de vedas y corregir algunos errores menores. Completé aquella tarea en 2 días. Los barcos en Google Maps ahora mostraban toda la información detallada que habían solicitado.</p>
+      
+      <p>No hay forma de describir el shock de felicidad que uno recibe al experimentar una serendipia genuina. Simplemente no la hay. Esta experiencia puede ocurrir en muchos aspectos de la vida, pero hay una condición fundamental: tenés que estar abierto y dispuesto a colaborar de verdad. A entender el problema del otro, a querer ayudar desde el puro espíritu de cooperación, no porque sea tu obligación o "tu trabajo".</p>
+         
+      <p>Esta experiencia se quedó registrada para siempre en mi memoria y me inspiró a querer más. Es como una adicción, pero de las buenas: una que fortalece vínculos, que te invita a cooperar.</p>
+      
+      <p>Si sos desarrollador te invito a estar abierto a estos momentos, sobre todo si contás con un Seniority elevado. Esta serendipia sucedió no gracias a mí, sino por mérito de mi compañero experimentado que apenas se enfrentó al desafío decidió compartirlo conmigo.</p>
+      
+      <hr>
+      
+      <blockquote>
+        <p><em>¿Experimentaste alguna vez una serendipia en tu carrera? Te invito a que me cuentes la historia en el formulario de Contacto.</em></p>
+      </blockquote>
+    </div>
+  `
 }];
