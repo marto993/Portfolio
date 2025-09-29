@@ -398,4 +398,264 @@ export const articlesData = [
       </blockquote>
     </div>
   `
+},{
+  slug: 'ci-cd-github-actions-portfolio',
+  title: 'CI/CD con GitHub Actions: Automatizando el despliegue de mi Portfolio',
+  date: '2025-09-29',
+  excerpt: 'Cómo implementé un pipeline de integración y despliegue continuo con GitHub Actions para automatizar completamente el deployment de mi portfolio.',
+  category: 'DevOps',
+  tags: ['CI/CD', 'GitHub Actions', 'DevOps', 'automatización', 'deployment', 'GitHub Pages'],
+  featured: false,
+  content: `
+    <div>
+      
+      <p>Después de completar mi portfolio con blog integrado, me enfrenté a una realidad incómoda: cada vez que hacía un cambio (por más pequeño que fuera) tenía que ejecutar manualmente <code>npm run build</code>, esperar a que terminara, y luego hacer push del directorio <code>dist</code> a GitHub. Un proceso tedioso que consumía tiempo y aumentaba las chances de errores humanos.</p>
+      
+      <p>La solución: implementar un pipeline de CI/CD con GitHub Actions que automatizara completamente este proceso. Cada push a la rama <code>main</code> dispararía automáticamente el build y deployment a GitHub Pages.</p>
+      
+      <h2>¿Qué es CI/CD?</h2>
+      
+      <p>CI/CD son las siglas de <strong>Continuous Integration</strong> (Integración Continua) y <strong>Continuous Deployment</strong> (Despliegue Continuo). Son prácticas de DevOps que permiten a los equipos de desarrollo entregar código de forma más rápida y confiable.</p>
+      
+      <h3>Continuous Integration (CI)</h3>
+      
+      <p>La integración continua implica fusionar cambios de código frecuentemente en una rama principal (típicamente <code>main</code> o <code>master</code>), ejecutando automáticamente tests y builds para detectar problemas lo antes posible.</p>
+      
+      <p>El objetivo es simple: cuanto antes detectes un error, más fácil y barato es corregirlo.</p>
+      
+      <h3>Continuous Deployment (CD)</h3>
+      
+      <p>El despliegue continuo lleva la CI un paso más allá: cada cambio que pasa las pruebas se despliega automáticamente a producción. Esto elimina intervención manual, reduce errores humanos y acelera el ciclo de desarrollo.</p>
+      
+      <p>En mi caso, cada push a <code>main</code> genera automáticamente un build optimizado y lo publica en GitHub Pages, sin que yo tenga que hacer absolutamente nada más allá del commit inicial.</p>
+      
+      <h2>GitHub Actions</h2>
+      
+      <p>GitHub Actions es la plataforma de CI/CD integrada directamente en GitHub. Te permite automatizar workflows directamente desde tu repositorio mediante archivos YAML que definen los pasos a ejecutar.</p>
+      
+      <h3>Conceptos clave</h3>
+      
+      <p><strong>Workflows:</strong> Son archivos YAML ubicados en <code>.github/workflows/</code> que definen procesos automatizados.</p>
+      
+      <p><strong>Jobs:</strong> Cada workflow contiene uno o más jobs que se ejecutan en paralelo (por defecto) o secuencialmente.</p>
+      
+      <p><strong>Steps:</strong> Cada job contiene pasos individuales que se ejecutan secuencialmente.</p>
+      
+      <p><strong>Actions:</strong> Son módulos reutilizables que encapsulan lógica común. Pueden ser creados por GitHub, la comunidad, o por vos mismo.</p>
+      
+      <p><strong>Runners:</strong> Son los servidores que ejecutan tus workflows. GitHub proporciona runners hospedados (Ubuntu, Windows, macOS) o podés usar runners auto-hospedados.</p>
+      
+      <h2>Mi implementación paso a paso</h2>
+      
+      <p>Voy a desglosar el workflow que implementé para mi portfolio. El archivo completo está en <code>.github/workflows/deploy.yml</code>.</p>
+      
+      <h3>1. Configuración inicial y triggers</h3>
+      
+      <pre><code>name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:</code></pre>
+      
+      <p>El workflow se llama "Deploy Portfolio to GitHub Pages" y se activa de dos formas:</p>
+      
+      <p>• Automáticamente con cada push a la rama <code>main</code></p>
+      <p>• Manualmente desde la interfaz de GitHub (<code>workflow_dispatch</code>)</p>
+      
+      <p>La opción manual es útil para forzar un redeploy sin hacer cambios en el código, por ejemplo, si GitHub Pages tuvo algún problema.</p>
+      
+      <h3>2. Permisos del workflow</h3>
+      
+      <pre><code>jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write</code></pre>
+      
+      <p>Esta sección define los permisos necesarios para el job:</p>
+      
+      <p>• <code>contents: read</code> - Permite leer el código del repositorio</p>
+      <p>• <code>pages: write</code> - Crucial para publicar en GitHub Pages</p>
+      <p>• <code>id-token: write</code> - Necesario para autenticación segura con GitHub Pages</p>
+      
+      <p>Sin estos permisos específicos, el workflow fallaría al intentar desplegar.</p>
+      
+      <h3>3. Checkout del repositorio</h3>
+      
+      <pre><code>steps:
+  - name: Checkout repository
+    uses: actions/checkout@v4</code></pre>
+      
+      <p>El primer paso es obtener el código del repositorio. Uso la versión 4 de la action oficial de GitHub que clona el repo en el runner.</p>
+      
+      <h3>4. Setup de Node.js con caché</h3>
+      
+      <pre><code>- name: Setup Node.js
+  uses: actions/setup-node@v4
+  with:
+    node-version: '22'
+    cache: 'npm'</code></pre>
+      
+      <p>Aquí hay dos optimizaciones importantes:</p>
+      
+      <p><strong>Node 22:</strong> Especifico la versión exacta para garantizar reproducibilidad del build.</p>
+      
+      <p><strong>Cache de npm:</strong> Esta es la clave para acelerar el workflow. GitHub Actions cachea automáticamente <code>node_modules</code> usando el hash de <code>package-lock.json</code>. Si las dependencias no cambiaron, las restaura del caché en lugar de reinstalarlas desde cero.</p>
+      
+      <p>Esto puede reducir el tiempo de instalación de dependencias de 2-3 minutos a 10-20 segundos.</p>
+      
+      <h3>5. Instalación de dependencias</h3>
+      
+      <pre><code>- name: Install dependencies
+  run: npm ci</code></pre>
+      
+      <p>Uso <code>npm ci</code> en lugar de <code>npm install</code>. La diferencia es crucial:</p>
+      
+      <p>• <code>npm ci</code> es más rápido y determinista</p>
+      <p>• Borra <code>node_modules</code> existente antes de instalar</p>
+      <p>• Instala exactamente las versiones especificadas en <code>package-lock.json</code></p>
+      <p>• Falla si hay inconsistencias entre <code>package.json</code> y <code>package-lock.json</code></p>
+      
+      <p>Es el comando recomendado para entornos de CI/CD.</p>
+      
+      <h3>6. Build del proyecto</h3>
+      
+      <pre><code>- name: Build project
+  run: npm run build</code></pre>
+      
+      <p>Este paso ejecuta el script de build definido en <code>package.json</code>. En mi caso, Vite se encarga de:</p>
+      
+      <p>• Transpilar JSX a JavaScript</p>
+      <p>• Procesar Tailwind CSS</p>
+      <p>• Minificar archivos</p>
+      <p>• Optimizar assets</p>
+      <p>• Generar el directorio <code>dist</code></p>
+      
+      <p>El build usa la configuración de <code>vite.config.js</code> que incluye <code>base: '/Portfolio/'</code>, crítico para que las rutas funcionen correctamente en GitHub Pages.</p>
+      
+      <h3>7. Configuración de GitHub Pages</h3>
+      
+      <pre><code>- name: Setup Pages
+  uses: actions/configure-pages@v4</code></pre>
+      
+      <p>Esta action prepara el entorno para desplegar en GitHub Pages. Configura las URLs correctas y verifica que Pages esté habilitado en el repositorio.</p>
+      
+      <h3>8. Upload del artifact</h3>
+      
+      <pre><code>- name: Upload artifact
+  uses: actions/upload-pages-artifact@v3
+  with:
+    path: './dist'</code></pre>
+      
+      <p>Aquí subimos el directorio <code>dist</code> como un artifact. Los artifacts son archivos que persisten entre jobs y steps. En este caso, el artifact contiene todo el sitio estático generado.</p>
+      
+      <p>GitHub Actions comprime automáticamente el artifact para acelerar la transferencia.</p>
+      
+      <h3>9. Deploy a GitHub Pages</h3>
+      
+      <pre><code>- name: Deploy to GitHub Pages
+  id: deployment
+  uses: actions/deploy-pages@v4</code></pre>
+      
+      <p>El paso final toma el artifact y lo publica en GitHub Pages. La action maneja toda la complejidad de:</p>
+      
+      <p>• Autenticación con GitHub Pages</p>
+      <p>• Publicación del contenido</p>
+      <p>• Invalidación de caché</p>
+      <p>• Generación de la URL final</p>
+      
+      <h3>Configuración de Vite para GitHub Pages</h3>
+      
+      <p>Un detalle crítico en <code>vite.config.js</code> es el <code>base</code> path:</p>
+      
+      <pre><code>export default defineConfig({
+  plugins: [react()],
+  base: '/Portfolio/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+  }
+})</code></pre>
+      
+      <p>Sin <code>base: '/Portfolio/'</code>, todas las rutas fallarían porque GitHub Pages sirve el sitio desde <code>https://usuario.github.io/Portfolio/</code> y no desde la raíz.</p>
+      
+      <h3>Optimización del build</h3>
+      
+      <p>Desactivé sourcemaps en producción (<code>sourcemap: false</code>) para reducir el tamaño del artifact y acelerar el despliegue.</p>
+      
+      <h3>Separación de dependencias</h3>
+      
+      <p>En <code>package.json</code> separo claramente <code>dependencies</code> de <code>devDependencies</code>. Esto permite que en el futuro, si quisiera optimizar aún más, podría usar <code>npm ci --only=production</code> en el build.</p>
+      
+      <h2>Debugging y troubleshooting</h2>
+      
+      <p>Cuando un workflow falla, GitHub muestra logs detallados de cada step. Podés acceder desde la pestaña "Actions" de tu repositorio.</p>
+      
+      <p>Los errores más comunes que encontré:</p>
+      
+      <p><strong>Error de permisos:</strong> Si olvidás configurar <code>pages: write</code> en permissions, el deploy fallará con un error de autenticación.</p>
+      
+      <p><strong>Error de build:</strong> Si hay errores en el código, el paso de build fallará. Los logs mostrarán exactamente qué archivo y línea causó el problema.</p>
+      
+      <p><strong>Error de base path:</strong> Si el sitio carga pero todos los assets devuelven 404, probablemente olvidaste configurar <code>base</code> en Vite.</p>
+      
+      <h3>Testing local antes del push</h3>
+      
+      <p>Antes de hacer push, siempre ejecuto:</p>
+      
+      <pre><code>npm run build
+npm run preview</code></pre>
+      
+      <p>Esto me permite verificar que el build funciona correctamente y que el sitio se ve bien en el entorno de producción simulado.</p>
+      
+      <h3>Forzar redeploy</h3>
+      
+      <p>Si necesitás redesplegar sin hacer cambios, podés:</p>
+      
+      <p>• Usar la opción "Run workflow" en la pestaña Actions</p>
+      <p>• Hacer un commit vacío: <code>git commit --allow-empty -m "Trigger redeploy"</code></p>
+      
+      <h3>Caché corrupto</h3>
+      
+      <p>Si sospechás que el caché está causando problemas, GitHub permite limpiar manualmente el caché desde Settings → Actions → Caches.</p>
+      
+      <h3>Verificar permisos del repositorio</h3>
+      
+      <p>En Settings → Actions → General, asegurate de que "Workflow permissions" esté en "Read and write permissions". Sin esto, el workflow no podrá escribir en Pages.</p>
+      
+      <h2>Resultados y beneficios</h2>
+      
+      <p>Desde que implementé este workflow:</p>
+      
+      <p>• <strong>Tiempo de deployment:</strong> Automático</p>
+      <p>• <strong>Errores humanos:</strong> Eliminados por completo</p>
+      <p>• <strong>Flujo de trabajo:</strong> Simplificado a solo <code>git push</code></p>
+      <p>• <strong>Confiabilidad:</strong> El build es 100% reproducible</p>
+      <p>• <strong>Historial:</strong> Cada deployment queda registrado con logs completos</p>
+     
+      <h2>Algunas mejoras que se podrían implementar</h2>
+            
+      <p><strong>Testing automatizado:</strong> Agregar un job que ejecute tests antes del deploy</p>
+      
+      <p><strong>Linting:</strong> Incluir ESLint en el pipeline para mantener calidad del código</p>
+      
+      <p><strong>Deploy preview:</strong> Para PRs, crear deploys temporales de preview</p>
+      
+      <p><strong>Notificaciones:</strong> Integrar con Slack o Telegram para notificar cuando un deploy termina</p>
+      
+      <p><strong>Rollback automático:</strong> Si un deploy falla los smoke tests, revertir al estado anterior</p>
+     
+      <h3>Si todavía estás desplegando manualmente tus proyectos, te recomiendo que dediques una tarde a implementar tu primer workflow. La inversión inicial de tiempo se recupera rápidamente en productividad y paz mental.</h3>
+      
+      <hr>
+      
+      <blockquote>
+        <p><em>¿Necesitas implementar CI/CD en tus proyectos? Escribime en el formulario de contacto.</em></p>
+      </blockquote>
+    </div>
+  `
 }];
